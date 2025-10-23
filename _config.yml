@@ -1,0 +1,30 @@
+# GitHub Pages Configuration
+title: "Md Robiul Islam SAKIB - Portfolio"
+description: "Professional portfolio of VPoE & Full-Stack Lead"
+author: "Md Robiul Islam SAKIB"
+email: "mrobiulislamsakib@gmail.com"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore
+  - .github/
+
+# Include files
+include:
+  - _redirects
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Site settings
+baseurl: "/sakib-portfolio"
+url: "https://sakib-maho.github.io"
