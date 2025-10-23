@@ -15,14 +15,18 @@
     <meta property="og:url" content="https://sakib-maho.github.io/sakib-portfolio/">
     <meta property="og:title" content="Md Robiul Islam SAKIB - Portfolio">
     <meta property="og:description" content="VPoE & Full-Stack Lead with 3+ years experience in web development, AWS cloud infrastructure, and AI integration.">
-    <meta property="og:image" content="https://sakib-maho.github.io/sakib-portfolio/favicon-48x48.png">
+    <meta property="og:image" content="https://sakib-maho.github.io/sakib-portfolio/profile-photo-optimized.jpg">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="400">
+    <meta property="og:image:alt" content="Md Robiul Islam SAKIB - Professional Photo">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://sakib-maho.github.io/sakib-portfolio/">
     <meta property="twitter:title" content="Md Robiul Islam SAKIB - Portfolio">
     <meta property="twitter:description" content="VPoE & Full-Stack Lead with 3+ years experience in web development, AWS cloud infrastructure, and AI integration.">
-    <meta property="twitter:image" content="https://sakib-maho.github.io/sakib-portfolio/favicon-48x48.png">
+    <meta property="twitter:image" content="https://sakib-maho.github.io/sakib-portfolio/profile-photo-optimized.jpg">
+    <meta property="twitter:image:alt" content="Md Robiul Islam SAKIB - Professional Photo">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -220,6 +224,16 @@
             font-size: 4rem;
             color: white;
             margin: 0 auto;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 4px solid white;
+        }
+        
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
         }
 
         .about-content h3 {
@@ -692,7 +706,8 @@
                 <div class="about-grid">
                     <div class="about-image scroll-animate">
                         <div class="profile-img">
-                            <i class="fas fa-user"></i>
+                            <img src="profile-photo-optimized.jpg" alt="Md Robiul Islam SAKIB - Professional Photo" 
+                                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
                         </div>
                     </div>
                     <div class="about-content scroll-animate">
