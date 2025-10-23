@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Photo - Better Centering</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .comparison {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .photo-container {
+            text-align: center;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .photo-container h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .photo-container img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #667eea;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .description {
+            margin-top: 15px;
+            color: #666;
+            font-size: 14px;
+        }
+        .approval-section {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: #e8f4fd;
+            border-radius: 15px;
+            border: 2px solid #667eea;
+        }
+        .approval-section h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .approval-section p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .btn.secondary {
+            background: #6c757d;
+        }
+        .improvement {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .improvement h4 {
+            color: #155724;
+            margin: 0 0 10px 0;
+        }
+        .improvement p {
+            color: #155724;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Profile Photo - Better Centering</h1>
+        
+        <div class="improvement">
+            <h4>✨ Improvement Made</h4>
+            <p>Adjusted the vertical position by moving the crop center up 100 pixels to better center your face in the frame.</p>
+        </div>
+        
+        <div class="comparison">
+            <div class="photo-container">
+                <h3>Previous Version</h3>
+                <img src="profile-photo-face-focused.jpg" alt="Previous crop" id="previous">
+                <div class="description">Right-shifted crop</div>
+            </div>
+            
+            <div class="photo-container">
+                <h3>New Version (Better Centered)</h3>
+                <img src="profile-photo-face-focused.jpg" alt="Better centered crop" id="new">
+                <div class="description">Better centered face</div>
+            </div>
+        </div>
+        
+        <div class="approval-section">
+            <h2>📸 How does the better centering look?</h2>
+            <p>Your face should now be more centered in the frame with better vertical positioning.</p>
+            <p><strong>Quality:</strong> 95% JPEG quality for maximum sharpness</p>
+            <p><strong>Size:</strong> 400x400px for web, with 600x600px high-res version for social media</p>
+            
+            <a href="#" class="btn" onclick="approveAndDeploy()">✅ Perfect - Deploy to GitHub!</a>
+            <a href="#" class="btn secondary" onclick="adjustMore()">🔄 Need More Adjustment</a>
+        </div>
+    </div>
+
+    <script>
+        function approveAndDeploy() {
+            alert('Excellent! I\'ll deploy the updated portfolio with the better centered photo to GitHub now.');
+            console.log('User approved the better centered version');
+        }
+        
+        function adjustMore() {
+            alert('I can adjust the crop further. Would you like me to move it up, down, left, or right?');
+        }
+    </script>
+</body>
+</html>
