@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Visibility Improvement - SAKIB Portfolio</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .text-sample {
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .old-version {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+        }
+        .new-version {
+            background: #e8f4fd;
+            border: 2px solid #667eea;
+        }
+        .old-text {
+            color: #666;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        .new-text {
+            color: #333;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 0;
+        }
+        .improvement {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .improvement h4 {
+            color: #155724;
+            margin: 0 0 15px 0;
+        }
+        .improvement ul {
+            color: #155724;
+            margin: 0;
+            padding-left: 20px;
+        }
+        .improvement li {
+            margin: 8px 0;
+        }
+        .approval-section {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: #e8f4fd;
+            border-radius: 15px;
+            border: 2px solid #667eea;
+        }
+        .btn {
+            padding: 12px 30px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transition: transform 0.3s ease;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Text Visibility Improvement</h1>
+        
+        <div class="improvement">
+            <h4>✨ Improvements Made</h4>
+            <ul>
+                <li><strong>Color Change:</strong> Changed from #666 (light gray) to #333 (dark gray)</li>
+                <li><strong>Better Contrast:</strong> Much more readable against white background</li>
+                <li><strong>Font Weight:</strong> Added font-weight: 500 for better visibility</li>
+                <li><strong>Accessibility:</strong> Improved contrast ratio for better accessibility</li>
+            </ul>
+        </div>
+        
+        <div class="comparison">
+            <div class="text-sample old-version">
+                <h3>Before (Hard to Read)</h3>
+                <p class="old-text">Ready to collaborate on your next project? Let's connect!</p>
+            </div>
+            
+            <div class="text-sample new-version">
+                <h3>After (Much Better)</h3>
+                <p class="new-text">Ready to collaborate on your next project? Let's connect!</p>
+            </div>
+        </div>
+        
+        <div class="approval-section">
+            <h2>👀 Much Better Visibility!</h2>
+            <p>The text is now much more readable with better contrast and font weight.</p>
+            
+            <button class="btn" onclick="deployTextFix()">🚀 Deploy Text Visibility Fix!</button>
+        </div>
+    </div>
+
+    <script>
+        function deployTextFix() {
+            alert('Perfect! I\'ll deploy the improved text visibility to GitHub now.');
+            console.log('User approved the text visibility improvement');
+        }
+    </script>
+</body>
+</html>
