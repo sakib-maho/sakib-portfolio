@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Photo Confirmation - SAKIB Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .photo-container {
+            text-align: center;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .profile-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 4px solid white;
+        }
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .info {
+            background: #e8f4fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 2px solid #667eea;
+        }
+        .info h4 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .info p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .approval-section {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: #d4edda;
+            border-radius: 15px;
+            border: 2px solid #28a745;
+        }
+        .btn {
+            padding: 12px 30px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transition: transform 0.3s ease;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✅ Final Photo Confirmation</h1>
+        
+        <div class="photo-container">
+            <h3>Your Preferred Version</h3>
+            <div class="profile-img">
+                <img src="profile-photo-optimized.jpg" alt="Final Photo Choice">
+            </div>
+            <div class="info">
+                <h4>📸 Face-Focused Version (Your Choice)</h4>
+                <p><strong>Focus:</strong> Face and shoulders - perfect balance</p>
+                <p><strong>Style:</strong> Professional close-up</p>
+                <p><strong>Quality:</strong> High resolution, optimized for web</p>
+                <p><strong>Size:</strong> 78KB - perfect for fast loading</p>
+            </div>
+        </div>
+        
+        <div class="approval-section">
+            <h2>🎯 This is the version you preferred from preview.html!</h2>
+            <p>This face-focused version provides the perfect balance - not too zoomed in, not too wide. It focuses on your face while maintaining a professional appearance.</p>
+            
+            <button class="btn" onclick="deployNow()">🚀 Deploy This Version to GitHub!</button>
+        </div>
+    </div>
+
+    <script>
+        function deployNow() {
+            alert('Perfect! I\'ll deploy this face-focused version (your preferred choice) to GitHub now.');
+            console.log('User confirmed the face-focused version from preview.html');
+        }
+    </script>
+</body>
+</html>
