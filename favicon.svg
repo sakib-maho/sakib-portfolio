@@ -6,10 +6,10 @@
     </linearGradient>
   </defs>
   
-  <!-- Background circle -->
-  <circle cx="16" cy="16" r="15" fill="url(#gradient)" stroke="#fff" stroke-width="1"/>
+  <!-- Background circle with subtle shadow -->
+  <circle cx="16" cy="16" r="15" fill="url(#gradient)" stroke="#fff" stroke-width="0.5"/>
   
-  <!-- Letter S - simplified for small size -->
-  <text x="16" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="bold" 
-        text-anchor="middle" fill="#fff">S</text>
+  <!-- Letter S - optimized for small size -->
+  <text x="16" y="21" font-family="Arial, sans-serif" font-size="16" font-weight="700" 
+        text-anchor="middle" fill="#fff" stroke="#fff" stroke-width="0.2">S</text>
 </svg>
