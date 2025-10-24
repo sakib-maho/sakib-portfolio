@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Blue Portfolio Preview</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #4facfe 0%, #667eea 50%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .preview-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .color-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .color-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .color-swatch {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .color-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .color-hex {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .primary-highlight {
+            border: 3px solid #4facfe;
+            box-shadow: 0 0 20px rgba(79, 172, 254, 0.5);
+        }
+
+        .preview-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .preview-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .header-preview {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(25px);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-preview {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #4facfe;
+            text-shadow: 2px 2px 4px rgba(79, 172, 254, 0.3);
+        }
+
+        .nav-preview {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-preview a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-preview {
+            text-align: center;
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .btn-preview {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-preview {
+            background: linear-gradient(135deg, #ffffff, #f8f9ff);
+            color: #4facfe;
+            box-shadow: 0 15px 40px rgba(79, 172, 254, 0.15);
+        }
+
+        .btn-secondary-preview {
+            background: transparent;
+            color: white;
+            border: 3px solid rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #4facfe, #667eea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .feature-description {
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .apply-btn {
+            background: linear-gradient(135deg, #4facfe, #667eea);
+            color: white;
+            border: none;
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 40px rgba(79, 172, 254, 0.3);
+        }
+
+        .apply-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(79, 172, 254, 0.4);
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .comparison-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .comparison-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .comparison-description {
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <h1>☁️ Sky Blue Portfolio Preview</h1>
+        
+        <div class="color-showcase">
+            <div class="color-card primary-highlight">
+                <div class="color-swatch" style="background: #4facfe;">Primary</div>
+                <div class="color-name">Sky Blue ⭐</div>
+                <div class="color-hex">#4facfe</div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #667eea;">Secondary</div>
+                <div class="color-name">Ocean Blue</div>
+                <div class="color-hex">#667eea</div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #764ba2;">Accent</div>
+                <div class="color-name">Deep Purple</div>
+                <div class="color-hex">#764ba2</div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #f093fb;">Tertiary</div>
+                <div class="color-name">Pink Glow</div>
+                <div class="color-hex">#f093fb</div>
+            </div>
+        </div>
+
+        <div class="preview-section">
+            <h2 class="preview-title">Header Preview</h2>
+            <div class="header-preview">
+                <div class="logo-preview">SAKIB</div>
+                <div class="nav-preview">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Experience</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview-section">
+            <h2 class="preview-title">Hero Section Preview</h2>
+            <div class="hero-preview">
+                <h1 class="hero-title">Md Robiul Islam SAKIB</h1>
+                <p class="hero-subtitle">Vice President of Engineering & Full-Stack Lead</p>
+                <div>
+                    <a href="#" class="btn-preview btn-primary-preview">
+                        <i class="fas fa-code"></i>
+                        View Projects
+                    </a>
+                    <a href="#" class="btn-preview btn-secondary-preview">
+                        <i class="fas fa-envelope"></i>
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison">
+            <div class="comparison-card">
+                <h3 class="comparison-title">🌊 Ocean Breeze (Before)</h3>
+                <p class="comparison-description">
+                    Ocean Blue (#667eea) was the primary color, creating a deeper, more traditional professional look with calming blue tones.
+                </p>
+            </div>
+            <div class="comparison-card primary-highlight">
+                <h3 class="comparison-title">☁️ Sky Blue (Now)</h3>
+                <p class="comparison-description">
+                    Sky Blue (#4facfe) is now the primary color, creating a brighter, more energetic and modern appearance that suggests innovation and clarity.
+                </p>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">☁️</div>
+                <h3 class="feature-title">Bright & Energetic</h3>
+                <p class="feature-description">Sky Blue creates a more vibrant, energetic feel that suggests innovation and forward-thinking.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3 class="feature-title">Modern Appeal</h3>
+                <p class="feature-description">The brighter blue gives your portfolio a more contemporary, tech-forward appearance.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💡</div>
+                <h3 class="feature-title">Clarity & Focus</h3>
+                <p class="feature-description">Sky Blue suggests clarity of thought and focus, perfect for a VPoE role.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3 class="feature-title">Professional Balance</h3>
+                <p class="feature-description">Maintains professionalism while adding energy and modern appeal.</p>
+            </div>
+        </div>
+
+        <div class="preview-section">
+            <h2 class="preview-title">🎯 Why Sky Blue is Perfect for Your Portfolio</h2>
+            <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    <strong>☁️ Bright & Modern:</strong> Sky Blue creates a more vibrant, contemporary feel that stands out in the tech industry.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    <strong>🚀 Innovation Focus:</strong> The brighter blue suggests cutting-edge technology and innovative thinking.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    <strong>💡 Clarity & Vision:</strong> Sky Blue conveys clarity of thought and strategic vision - perfect for leadership roles.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    <strong>✨ Memorable Impact:</strong> The brighter color creates a more memorable and distinctive brand identity.
+                </p>
+            </div>
+        </div>
+
+        <button class="apply-btn" onclick="applySkyBlue()">
+            ☁️ Apply Sky Blue to Portfolio
+        </button>
+    </div>
+
+    <script>
+        function applySkyBlue() {
+            alert('☁️ Sky Blue palette has been applied to your enhanced portfolio!\n\n✅ Sky Blue is now the primary color\n✅ All gradients updated\n✅ Brighter, more energetic appearance\n✅ Modern and innovative feel\n\nYour portfolio now features the vibrant Sky Blue color scheme!');
+        }
+    </script>
+</body>
+</html>

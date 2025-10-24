@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Visibility Fix Preview</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+        }
+
+        .preview-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .header-demo {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1.2rem 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .header-demo.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(25px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-demo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Old Logo Style */
+        .logo-old {
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* New Logo Style */
+        .logo-new {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #1a1a1a;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-demo.scrolled .logo-new {
+            color: #667eea;
+            text-shadow: 2px 2px 4px rgba(102, 126, 234, 0.3);
+        }
+
+        .nav-links-demo {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links-demo a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hero Section Demo */
+        .hero-demo {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            padding: 4rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        /* Old Hero Title */
+        .hero-title-old {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #ffffff, #f0f0f0, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* New Hero Title */
+        .hero-title-new {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .description {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .improvements {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            margin-top: 2rem;
+        }
+
+        .improvements h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .improvements ul {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+        }
+
+        .improvements li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toggle-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <h2>🔍 Text Visibility Fix Preview</h2>
+        
+        <div class="comparison">
+            <div>
+                <h3 style="color: white; text-align: center; margin-bottom: 1rem;">❌ Before (Hard to Read)</h3>
+                
+                <div class="header-demo">
+                    <div class="nav-demo">
+                        <div class="logo-old">SAKIB</div>
+                        <ul class="nav-links-demo">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="hero-demo">
+                    <h1 class="hero-title-old">Md Robiul Islam SAKIB</h1>
+                    <p>Vice President of Engineering & Full-Stack Lead</p>
+                </div>
+                
+                <div class="description">Gradient text that's hard to read against background</div>
+            </div>
+
+            <div>
+                <h3 style="color: white; text-align: center; margin-bottom: 1rem;">✅ After (Clear & Visible)</h3>
+                
+                <div class="header-demo" id="headerDemo">
+                    <div class="nav-demo">
+                        <div class="logo-new">SAKIB</div>
+                        <ul class="nav-links-demo">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="hero-demo">
+                    <h1 class="hero-title-new">Md Robiul Islam SAKIB</h1>
+                    <p>Vice President of Engineering & Full-Stack Lead</p>
+                </div>
+                
+                <div class="description">Solid white text with strong shadows for perfect visibility</div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <button class="toggle-btn" onclick="toggleHeader()">Toggle Header Scroll Effect</button>
+        </div>
+
+        <div class="improvements">
+            <h3>🚀 Visibility Improvements Made:</h3>
+            <ul>
+                <li><strong>Header Logo:</strong> Changed from gradient text to solid dark color with shadow</li>
+                <li><strong>Hero Title:</strong> Changed from gradient text to solid white with strong shadows</li>
+                <li><strong>Text Shadows:</strong> Added multiple shadow layers for better contrast</li>
+                <li><strong>Scroll Effect:</strong> Logo changes to brand color when header scrolls</li>
+                <li><strong>Navigation Links:</strong> Enhanced with subtle shadows for better readability</li>
+                <li><strong>Contrast:</strong> Much better contrast against all background colors</li>
+                <li><strong>Accessibility:</strong> Improved readability for all users</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleHeader() {
+            const headerDemo = document.getElementById('headerDemo');
+            headerDemo.classList.toggle('scrolled');
+        }
+    </script>
+</body>
+</html>

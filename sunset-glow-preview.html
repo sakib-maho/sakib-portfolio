@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunset Glow Portfolio Preview</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 50%, #ffeb3b 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .preview-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .color-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .color-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .color-swatch {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .color-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .color-hex {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .primary-highlight {
+            border: 3px solid #ff6b6b;
+            box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+        }
+
+        .preview-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .preview-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .header-preview {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(25px);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-preview {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #ff6b6b;
+            text-shadow: 2px 2px 4px rgba(255, 107, 107, 0.3);
+        }
+
+        .nav-preview {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-preview a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-preview {
+            text-align: center;
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .btn-preview {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-preview {
+            background: linear-gradient(135deg, #ffffff, #fff8f0);
+            color: #ff6b6b;
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.15);
+        }
+
+        .btn-secondary-preview {
+            background: transparent;
+            color: white;
+            border: 3px solid rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ff6b6b, #ffa726);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .feature-description {
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .apply-btn {
+            background: linear-gradient(135deg, #ff6b6b, #ffa726);
+            color: white;
+            border: none;
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.3);
+        }
+
+        .apply-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(255, 107, 107, 0.4);
+        }
+
+        .character-traits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .trait-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        .trait-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .trait-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ff6b6b, #ffa726);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .trait-description {
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .sunset-animation {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .sunset-animation::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: sunsetShimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes sunsetShimmer {
+            0% { left: -100%; }
+            50% { left: 100%; }
+            100% { left: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <h1>🌅 Sunset Glow Portfolio Preview</h1>
+        
+        <div class="color-showcase">
+            <div class="color-card primary-highlight">
+                <div class="color-swatch" style="background: #ff6b6b;">Primary</div>
+                <div class="color-name">Sunset Red ⭐</div>
+                <div class="color-hex">#ff6b6b</div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #ffa726;">Secondary</div>
+                <div class="color-name">Golden Orange</div>
+                <div class="color-hex">#ffa726</div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #ffeb3b;">Accent</div>
+                <div class="color-name">Bright Yellow</div>
+                <div class="color-hex">#ffeb3b</div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #ff9800;">Tertiary</div>
+                <div class="color-name">Deep Orange</div>
+                <div class="color-hex">#ff9800</div>
+            </div>
+        </div>
+
+        <div class="preview-section sunset-animation">
+            <h2 class="preview-title">Header Preview</h2>
+            <div class="header-preview">
+                <div class="logo-preview">SAKIB</div>
+                <div class="nav-preview">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Experience</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview-section sunset-animation">
+            <h2 class="preview-title">Hero Section Preview</h2>
+            <div class="hero-preview">
+                <h1 class="hero-title">Md Robiul Islam SAKIB</h1>
+                <p class="hero-subtitle">Vice President of Engineering & Full-Stack Lead</p>
+                <div>
+                    <a href="#" class="btn-preview btn-primary-preview">
+                        <i class="fas fa-code"></i>
+                        View Projects
+                    </a>
+                    <a href="#" class="btn-preview btn-secondary-preview">
+                        <i class="fas fa-envelope"></i>
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="character-traits">
+            <div class="trait-card">
+                <div class="trait-icon">🔥</div>
+                <h3 class="trait-title">Passionate Leader</h3>
+                <p class="trait-description">Warm, energetic colors that reflect your passion for technology and leadership. Perfect for inspiring teams and driving innovation.</p>
+            </div>
+            <div class="trait-card">
+                <div class="trait-icon">🚀</div>
+                <h3 class="trait-title">Dynamic Innovator</h3>
+                <p class="trait-description">Sunset colors suggest energy, creativity, and forward momentum. Ideal for showcasing your innovative approach to engineering.</p>
+            </div>
+            <div class="trait-card">
+                <div class="trait-icon">💡</div>
+                <h3 class="trait-title">Creative Problem Solver</h3>
+                <p class="trait-description">The warm, creative palette reflects your ability to think outside the box and find unique solutions to complex challenges.</p>
+            </div>
+            <div class="trait-card">
+                <div class="trait-icon">🌟</div>
+                <h3 class="trait-title">Memorable Presence</h3>
+                <p class="trait-description">Sunset Glow creates a distinctive, memorable brand that stands out in the tech industry while maintaining professionalism.</p>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🌅</div>
+                <h3 class="feature-title">Warm & Inviting</h3>
+                <p class="feature-description">Sunset colors create a welcoming, approachable feel that makes you more relatable to clients and team members.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">High Energy</h3>
+                <p class="feature-description">The vibrant colors convey energy, enthusiasm, and a dynamic approach to technology leadership.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3 class="feature-title">Creative Edge</h3>
+                <p class="feature-description">Perfect for showcasing your creative problem-solving skills and innovative thinking in AI and technology.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏆</div>
+                <h3 class="feature-title">Stand Out</h3>
+                <p class="feature-description">While most tech portfolios use blue/gray, Sunset Glow makes you memorable and distinctive in the industry.</p>
+            </div>
+        </div>
+
+        <div class="preview-section">
+            <h2 class="preview-title">🎯 Why Sunset Glow Perfectly Matches Your Character</h2>
+            <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    <strong>🔥 Passionate Leadership:</strong> The warm, energetic colors reflect your passion for technology and your ability to inspire and lead engineering teams.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    <strong>🚀 Dynamic Innovation:</strong> Sunset colors suggest energy, creativity, and forward momentum - perfect for a VPoE driving cutting-edge AI solutions.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    <strong>💡 Creative Problem Solving:</strong> The warm, creative palette reflects your ability to think outside the box and find unique solutions.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    <strong>🌟 Memorable Impact:</strong> While most tech portfolios are blue/gray, Sunset Glow makes you stand out and creates a lasting impression.
+                </p>
+            </div>
+        </div>
+
+        <button class="apply-btn" onclick="applySunsetGlow()">
+            🌅 Apply Sunset Glow to Portfolio
+        </button>
+    </div>
+
+    <script>
+        function applySunsetGlow() {
+            alert('🌅 Sunset Glow palette has been applied to your enhanced portfolio!\n\n✅ Warm, energetic colors applied\n✅ Perfect match for your passionate character\n✅ Creative and innovative appearance\n✅ Memorable and distinctive branding\n\nYour portfolio now reflects your dynamic, creative personality!');
+        }
+    </script>
+</body>
+</html>

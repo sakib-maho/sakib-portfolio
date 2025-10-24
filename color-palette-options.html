@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Recommended Color Palette Options</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: white;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .palette-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .palette-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .palette-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .palette-description {
+            color: #ccc;
+            margin-bottom: 2rem;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .color-swatches {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .color-swatch {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .color-swatch:hover {
+            transform: scale(1.1);
+        }
+
+        .preview-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .preview-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .preview-content {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .preview-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+        }
+
+        .preview-nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .preview-nav a {
+            color: #ccc;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .preview-nav a:hover {
+            color: #fff;
+        }
+
+        .preview-hero {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 1rem;
+        }
+
+        .preview-hero h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .preview-hero p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .select-btn {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .select-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Palette 1: Ocean Breeze */
+        .palette-1 .preview-logo {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+        .palette-1 .preview-hero {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        /* Palette 2: Sunset Glow */
+        .palette-2 .preview-logo {
+            background: linear-gradient(135deg, #ff6b6b, #ffa726);
+            color: white;
+        }
+        .palette-2 .preview-hero {
+            background: linear-gradient(135deg, #ff6b6b, #ffa726);
+        }
+
+        /* Palette 3: Forest Deep */
+        .palette-3 .preview-logo {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+        }
+        .palette-3 .preview-hero {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+
+        /* Palette 4: Midnight Blue */
+        .palette-4 .preview-logo {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+        }
+        .palette-4 .preview-hero {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+
+        /* Palette 5: Royal Purple */
+        .palette-5 .preview-logo {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            color: white;
+        }
+        .palette-5 .preview-hero {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+        }
+
+        /* Palette 6: Fire Orange */
+        .palette-6 .preview-logo {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+        }
+        .palette-6 .preview-hero {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+
+        .ai-analysis {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-top: 4rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .ai-analysis h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .analysis-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .analysis-item h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .analysis-item p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .recommendation {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .recommendation h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .recommendation p {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 AI-Recommended Color Palettes</h1>
+        
+        <div class="palette-grid">
+            <!-- Palette 1: Ocean Breeze -->
+            <div class="palette-card palette-1">
+                <h3 class="palette-title">🌊 Ocean Breeze</h3>
+                <p class="palette-description">Professional and calming, perfect for tech portfolios. Creates trust and reliability.</p>
+                
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #667eea;" title="#667eea">#667eea</div>
+                    <div class="color-swatch" style="background: #764ba2;" title="#764ba2">#764ba2</div>
+                    <div class="color-swatch" style="background: #f093fb;" title="#f093fb">#f093fb</div>
+                    <div class="color-swatch" style="background: #4facfe;" title="#4facfe">#4facfe</div>
+                </div>
+
+                <div class="preview-section">
+                    <div class="preview-title">Header Preview</div>
+                    <div class="preview-content">
+                        <div class="preview-logo">SAKIB</div>
+                        <div class="preview-nav">
+                            <a href="#">Home</a>
+                            <a href="#">About</a>
+                            <a href="#">Projects</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-section">
+                    <div class="preview-title">Hero Preview</div>
+                    <div class="preview-hero">
+                        <h2>Md Robiul Islam SAKIB</h2>
+                        <p>Vice President of Engineering & Full-Stack Lead</p>
+                    </div>
+                </div>
+
+                <button class="select-btn" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white;" onclick="selectPalette(1)">
+                    Select Ocean Breeze
+                </button>
+            </div>
+
+            <!-- Palette 2: Sunset Glow -->
+            <div class="palette-card palette-2">
+                <h3 class="palette-title">🌅 Sunset Glow</h3>
+                <p class="palette-description">Warm and energetic, great for creative portfolios. Shows passion and innovation.</p>
+                
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #ff6b6b;" title="#ff6b6b">#ff6b6b</div>
+                    <div class="color-swatch" style="background: #ffa726;" title="#ffa726">#ffa726</div>
+                    <div class="color-swatch" style="background: #ffeb3b;" title="#ffeb3b">#ffeb3b</div>
+                    <div class="color-swatch" style="background: #ff9800;" title="#ff9800">#ff9800</div>
+                </div>
+
+                <div class="preview-section">
+                    <div class="preview-title">Header Preview</div>
+                    <div class="preview-content">
+                        <div class="preview-logo">SAKIB</div>
+                        <div class="preview-nav">
+                            <a href="#">Home</a>
+                            <a href="#">About</a>
+                            <a href="#">Projects</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-section">
+                    <div class="preview-title">Hero Preview</div>
+                    <div class="preview-hero">
+                        <h2>Md Robiul Islam SAKIB</h2>
+                        <p>Vice President of Engineering & Full-Stack Lead</p>
+                    </div>
+                </div>
+
+                <button class="select-btn" style="background: linear-gradient(135deg, #ff6b6b, #ffa726); color: white;" onclick="selectPalette(2)">
+                    Select Sunset Glow
+                </button>
+            </div>
+
+            <!-- Palette 3: Forest Deep -->
+            <div class="palette-card palette-3">
+                <h3 class="palette-title">🌲 Forest Deep</h3>
+                <p class="palette-description">Natural and growth-oriented, perfect for sustainable tech and AI portfolios.</p>
+                
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #2ecc71;" title="#2ecc71">#2ecc71</div>
+                    <div class="color-swatch" style="background: #27ae60;" title="#27ae60">#27ae60</div>
+                    <div class="color-swatch" style="background: #16a085;" title="#16a085">#16a085</div>
+                    <div class="color-swatch" style="background: #1abc9c;" title="#1abc9c">#1abc9c</div>
+                </div>
+
+                <div class="preview-section">
+                    <div class="preview-title">Header Preview</div>
+                    <div class="preview-content">
+                        <div class="preview-logo">SAKIB</div>
+                        <div class="preview-nav">
+                            <a href="#">Home</a>
+                            <a href="#">About</a>
+                            <a href="#">Projects</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-section">
+                    <div class="preview-title">Hero Preview</div>
+                    <div class="preview-hero">
+                        <h2>Md Robiul Islam SAKIB</h2>
+                        <p>Vice President of Engineering & Full-Stack Lead</p>
+                    </div>
+                </div>
+
+                <button class="select-btn" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: white;" onclick="selectPalette(3)">
+                    Select Forest Deep
+                </button>
+            </div>
+
+            <!-- Palette 4: Midnight Blue -->
+            <div class="palette-card palette-4">
+                <h3 class="palette-title">🌙 Midnight Blue</h3>
+                <p class="palette-description">Professional and trustworthy, ideal for corporate and enterprise portfolios.</p>
+                
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #3498db;" title="#3498db">#3498db</div>
+                    <div class="color-swatch" style="background: #2980b9;" title="#2980b9">#2980b9</div>
+                    <div class="color-swatch" style="background: #5dade2;" title="#5dade2">#5dade2</div>
+                    <div class="color-swatch" style="background: #85c1e9;" title="#85c1e9">#85c1e9</div>
+                </div>
+
+                <div class="preview-section">
+                    <div class="preview-title">Header Preview</div>
+                    <div class="preview-content">
+                        <div class="preview-logo">SAKIB</div>
+                        <div class="preview-nav">
+                            <a href="#">Home</a>
+                            <a href="#">About</a>
+                            <a href="#">Projects</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-section">
+                    <div class="preview-title">Hero Preview</div>
+                    <div class="preview-hero">
+                        <h2>Md Robiul Islam SAKIB</h2>
+                        <p>Vice President of Engineering & Full-Stack Lead</p>
+                    </div>
+                </div>
+
+                <button class="select-btn" style="background: linear-gradient(135deg, #3498db, #2980b9); color: white;" onclick="selectPalette(4)">
+                    Select Midnight Blue
+                </button>
+            </div>
+
+            <!-- Palette 5: Royal Purple -->
+            <div class="palette-card palette-5">
+                <h3 class="palette-title">👑 Royal Purple</h3>
+                <p class="palette-description">Luxurious and innovative, perfect for AI/ML and cutting-edge tech portfolios.</p>
+                
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #9b59b6;" title="#9b59b6">#9b59b6</div>
+                    <div class="color-swatch" style="background: #8e44ad;" title="#8e44ad">#8e44ad</div>
+                    <div class="color-swatch" style="background: #bb8fce;" title="#bb8fce">#bb8fce</div>
+                    <div class="color-swatch" style="background: #d2b4de;" title="#d2b4de">#d2b4de</div>
+                </div>
+
+                <div class="preview-section">
+                    <div class="preview-title">Header Preview</div>
+                    <div class="preview-content">
+                        <div class="preview-logo">SAKIB</div>
+                        <div class="preview-nav">
+                            <a href="#">Home</a>
+                            <a href="#">About</a>
+                            <a href="#">Projects</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-section">
+                    <div class="preview-title">Hero Preview</div>
+                    <div class="preview-hero">
+                        <h2>Md Robiul Islam SAKIB</h2>
+                        <p>Vice President of Engineering & Full-Stack Lead</p>
+                    </div>
+                </div>
+
+                <button class="select-btn" style="background: linear-gradient(135deg, #9b59b6, #8e44ad); color: white;" onclick="selectPalette(5)">
+                    Select Royal Purple
+                </button>
+            </div>
+
+            <!-- Palette 6: Fire Orange -->
+            <div class="palette-card palette-6">
+                <h3 class="palette-title">🔥 Fire Orange</h3>
+                <p class="palette-description">Bold and energetic, great for startups and dynamic tech companies.</p>
+                
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #e74c3c;" title="#e74c3c">#e74c3c</div>
+                    <div class="color-swatch" style="background: #c0392b;" title="#c0392b">#c0392b</div>
+                    <div class="color-swatch" style="background: #ec7063;" title="#ec7063">#ec7063</div>
+                    <div class="color-swatch" style="background: #f1948a;" title="#f1948a">#f1948a</div>
+                </div>
+
+                <div class="preview-section">
+                    <div class="preview-title">Header Preview</div>
+                    <div class="preview-content">
+                        <div class="preview-logo">SAKIB</div>
+                        <div class="preview-nav">
+                            <a href="#">Home</a>
+                            <a href="#">About</a>
+                            <a href="#">Projects</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-section">
+                    <div class="preview-title">Hero Preview</div>
+                    <div class="preview-hero">
+                        <h2>Md Robiul Islam SAKIB</h2>
+                        <p>Vice President of Engineering & Full-Stack Lead</p>
+                    </div>
+                </div>
+
+                <button class="select-btn" style="background: linear-gradient(135deg, #e74c3c, #c0392b); color: white;" onclick="selectPalette(6)">
+                    Select Fire Orange
+                </button>
+            </div>
+        </div>
+
+        <div class="ai-analysis">
+            <h2>🤖 AI Analysis & Recommendations</h2>
+            
+            <div class="analysis-grid">
+                <div class="analysis-item">
+                    <h3>🎯 Best for Tech Portfolios</h3>
+                    <p><strong>Ocean Breeze</strong> and <strong>Midnight Blue</strong> are most recommended for professional tech portfolios. They convey trust, reliability, and technical expertise while maintaining excellent readability.</p>
+                </div>
+
+                <div class="analysis-item">
+                    <h3>🚀 Best for Innovation</h3>
+                    <p><strong>Royal Purple</strong> and <strong>Forest Deep</strong> are perfect for AI/ML and cutting-edge technology portfolios. They suggest innovation, growth, and forward-thinking.</p>
+                </div>
+
+                <div class="analysis-item">
+                    <h3>💼 Best for Corporate</h3>
+                    <p><strong>Midnight Blue</strong> and <strong>Ocean Breeze</strong> work best for enterprise and corporate environments. They're professional, trustworthy, and widely accepted in business contexts.</p>
+                </div>
+
+                <div class="analysis-item">
+                    <h3>🎨 Best for Creativity</h3>
+                    <p><strong>Sunset Glow</strong> and <strong>Fire Orange</strong> are ideal for creative portfolios and startups. They show energy, passion, and dynamic thinking.</p>
+                </div>
+            </div>
+
+            <div class="recommendation">
+                <h3>🏆 Top Recommendation for Your Portfolio</h3>
+                <p>Based on your role as <strong>VPoE & Full-Stack Lead</strong> with AI integration expertise, I recommend <strong>Ocean Breeze</strong> or <strong>Royal Purple</strong>. Ocean Breeze provides the perfect balance of professionalism and innovation, while Royal Purple emphasizes your cutting-edge AI work.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function selectPalette(paletteNumber) {
+            const palettes = {
+                1: {
+                    name: "Ocean Breeze",
+                    primary: "#667eea",
+                    secondary: "#764ba2",
+                    accent: "#f093fb",
+                    tertiary: "#4facfe"
+                },
+                2: {
+                    name: "Sunset Glow",
+                    primary: "#ff6b6b",
+                    secondary: "#ffa726",
+                    accent: "#ffeb3b",
+                    tertiary: "#ff9800"
+                },
+                3: {
+                    name: "Forest Deep",
+                    primary: "#2ecc71",
+                    secondary: "#27ae60",
+                    accent: "#16a085",
+                    tertiary: "#1abc9c"
+                },
+                4: {
+                    name: "Midnight Blue",
+                    primary: "#3498db",
+                    secondary: "#2980b9",
+                    accent: "#5dade2",
+                    tertiary: "#85c1e9"
+                },
+                5: {
+                    name: "Royal Purple",
+                    primary: "#9b59b6",
+                    secondary: "#8e44ad",
+                    accent: "#bb8fce",
+                    tertiary: "#d2b4de"
+                },
+                6: {
+                    name: "Fire Orange",
+                    primary: "#e74c3c",
+                    secondary: "#c0392b",
+                    accent: "#ec7063",
+                    tertiary: "#f1948a"
+                }
+            };
+
+            const selectedPalette = palettes[paletteNumber];
+            
+            // Store the selected palette
+            localStorage.setItem('selectedPalette', JSON.stringify(selectedPalette));
+            
+            // Show confirmation
+            alert(`🎨 ${selectedPalette.name} palette selected!\n\nPrimary: ${selectedPalette.primary}\nSecondary: ${selectedPalette.secondary}\nAccent: ${selectedPalette.accent}\nTertiary: ${selectedPalette.tertiary}\n\nThis palette will be applied to your portfolio.`);
+            
+            // Update button text
+            event.target.textContent = '✅ Selected!';
+            event.target.style.background = 'linear-gradient(135deg, #2ecc71, #27ae60)';
+        }
+
+        // Show selected palette on load
+        window.addEventListener('load', () => {
+            const selected = localStorage.getItem('selectedPalette');
+            if (selected) {
+                const palette = JSON.parse(selected);
+                console.log('Selected palette:', palette);
+            }
+        });
+    </script>
+</body>
+</html>
