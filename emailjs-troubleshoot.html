@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmailJS Troubleshooting Guide</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 50%, #ffeb3b 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .issue-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .issue-section h3 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: monospace;
+            color: #333;
+            border-left: 4px solid #ff6b6b;
+        }
+
+        .highlight {
+            background: rgba(255, 107, 107, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        .warning {
+            background: rgba(255, 193, 7, 0.1);
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            color: #856404;
+        }
+
+        .success {
+            background: rgba(76, 175, 80, 0.1);
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            color: #2e7d32;
+        }
+
+        .error {
+            background: rgba(244, 67, 54, 0.1);
+            border: 2px solid #f44336;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            color: #c62828;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #ff6b6b, #ffa726);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 1rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 107, 107, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 EmailJS Troubleshooting</h1>
+        <p>Let's fix your contact form step by step!</p>
+        
+        <div class="error">
+            <h3>❌ Issue: No Email Received</h3>
+            <p>Let's check the most common causes and fix them:</p>
+        </div>
+
+        <div class="issue-section">
+            <h3>1. 📧 Check Your Email Template</h3>
+            <p><strong>Problem:</strong> Template ID might be wrong or template doesn't exist</p>
+            <p><strong>Solution:</strong> Go to EmailJS dashboard and verify:</p>
+            <div class="code-block">
+Template ID: template_portfolio_contact
+Service ID: service_4e9hnz8
+Public Key: YLOk-vC5Cng21AaTV
+            </div>
+            <p>✅ Make sure the template exists and has these variables: {{subject}}, {{from_name}}, {{from_email}}, {{message}}</p>
+        </div>
+
+        <div class="issue-section">
+            <h3>2. 📬 Check Email Service</h3>
+            <p><strong>Problem:</strong> Gmail service might not be properly configured</p>
+            <p><strong>Solution:</strong> In EmailJS dashboard:</p>
+            <p>• Go to "Email Services"</p>
+            <p>• Make sure Gmail service is active</p>
+            <p>• Verify it's connected to mrobiulislamsakib@gmail.com</p>
+            <p>• Check if service ID matches: <span class="highlight">service_4e9hnz8</span></p>
+        </div>
+
+        <div class="issue-section">
+            <h3>3. 🗂️ Check Spam/Junk Folder</h3>
+            <p><strong>Problem:</strong> Email might be in spam folder</p>
+            <p><strong>Solution:</strong></p>
+            <p>• Check your Gmail spam/junk folder</p>
+            <p>• Look for emails from "noreply@emailjs.com" or similar</p>
+            <p>• Mark as "Not Spam" if found</p>
+        </div>
+
+        <div class="issue-section">
+            <h3>4. 🔍 Check Browser Console</h3>
+            <p><strong>Problem:</strong> JavaScript errors might be preventing email sending</p>
+            <p><strong>Solution:</strong></p>
+            <p>• Open browser Developer Tools (F12)</p>
+            <p>• Go to "Console" tab</p>
+            <p>• Try sending the form again</p>
+            <p>• Look for any red error messages</p>
+        </div>
+
+        <div class="issue-section">
+            <h3>5. 🧪 Test with Different Template ID</h3>
+            <p><strong>Problem:</strong> Template ID might be incorrect</p>
+            <p><strong>Solution:</strong> Try using a default template ID:</p>
+            <div class="code-block">
+// Try this instead:
+emailjs.send('service_4e9hnz8', 'template_default', formData)
+            </div>
+        </div>
+
+        <div class="warning">
+            <h3>⚠️ Common Issues:</h3>
+            <p>• <strong>Template doesn't exist:</strong> Create template in EmailJS dashboard</p>
+            <p>• <strong>Service not connected:</strong> Reconnect Gmail service</p>
+            <p>• <strong>Wrong email address:</strong> Verify mrobiulislamsakib@gmail.com is correct</p>
+            <p>• <strong>EmailJS quota exceeded:</strong> Check your free tier usage</p>
+        </div>
+
+        <div class="success">
+            <h3>✅ Quick Fix Steps:</h3>
+            <p><strong>1.</strong> Go to <a href="https://dashboard.emailjs.com/" target="_blank">EmailJS Dashboard</a></p>
+            <p><strong>2.</strong> Check "Email Services" - make sure Gmail is connected</p>
+            <p><strong>3.</strong> Check "Email Templates" - make sure template exists</p>
+            <p><strong>4.</strong> Check "Account" - verify your email address</p>
+            <p><strong>5.</strong> Test with a simple template first</p>
+        </div>
+
+        <a href="https://dashboard.emailjs.com/" target="_blank" class="btn">
+            🔧 Open EmailJS Dashboard
+        </a>
+
+        <div class="issue-section">
+            <h3>🆘 Still Not Working?</h3>
+            <p>If none of the above fixes work, try this alternative approach:</p>
+            <p>• Create a new email template with a different name</p>
+            <p>• Use the default template ID: <span class="highlight">template_default</span></p>
+            <p>• Or create a simple mailto link as backup</p>
+        </div>
+    </div>
+</body>
+</html>

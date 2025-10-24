@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmailJS Template for Portfolio Contact Form</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 50%, #ffeb3b 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .template-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .template-section h3 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-family: monospace;
+            color: #333;
+            border-left: 4px solid #ff6b6b;
+            white-space: pre-wrap;
+            text-align: left;
+        }
+
+        .highlight {
+            background: rgba(255, 107, 107, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        .copy-btn {
+            background: linear-gradient(135deg, #ff6b6b, #ffa726);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+
+        .copy-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .instructions {
+            background: rgba(76, 175, 80, 0.1);
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            color: #2e7d32;
+        }
+
+        .warning {
+            background: rgba(255, 193, 7, 0.1);
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📧 EmailJS Template</h1>
+        <p>Complete template for your portfolio contact form</p>
+        
+        <div class="template-section">
+            <h3>📝 Email Template (Copy this to EmailJS)</h3>
+            <p>In your EmailJS dashboard, go to "Email Templates" → "Create New Template" and use this:</p>
+            
+            <div class="code-block" id="email-template">Subject: Portfolio Contact: {{subject}}
+
+From: {{from_name}}
+Email: {{from_email}}
+
+Message:
+{{message}}
+
+---
+This message was sent from your portfolio contact form.
+Reply directly to: {{from_email}}</div>
+            
+            <button class="copy-btn" onclick="copyToClipboard('email-template')">
+                📋 Copy Email Template
+            </button>
+        </div>
+
+        <div class="template-section">
+            <h3>🔧 HTML Template (Alternative)</h3>
+            <p>If you prefer HTML formatting, use this version:</p>
+            
+            <div class="code-block" id="html-template">&lt;h2&gt;Portfolio Contact Form&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Subject:&lt;/strong&gt; {{subject}}&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;From:&lt;/strong&gt; {{from_name}}&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; {{from_email}}&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Message:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;{{message}}&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;This message was sent from your portfolio contact form.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reply to:&lt;/strong&gt; {{from_email}}&lt;/p&gt;</div>
+            
+            <button class="copy-btn" onclick="copyToClipboard('html-template')">
+                📋 Copy HTML Template
+            </button>
+        </div>
+
+        <div class="instructions">
+            <h3>✅ Setup Instructions:</h3>
+            <p><strong>1.</strong> Go to <a href="https://www.emailjs.com/" target="_blank">emailjs.com</a> and create account</p>
+            <p><strong>2.</strong> Add Gmail service (for mrobiulislamsakib@gmail.com)</p>
+            <p><strong>3.</strong> Create new email template and paste the template above</p>
+            <p><strong>4.</strong> Save template and note the <span class="highlight">Template ID</span></p>
+            <p><strong>5.</strong> Get your <span class="highlight">Service ID</span> and <span class="highlight">Public Key</span></p>
+            <p><strong>6.</strong> Update your portfolio code with these 3 values</p>
+        </div>
+
+        <div class="warning">
+            <h3>⚠️ Important Variables:</h3>
+            <p>Make sure these variables are in your template:</p>
+            <p>• <span class="highlight">{{subject}}</span> - Form subject field</p>
+            <p>• <span class="highlight">{{from_name}}</span> - Sender's name</p>
+            <p>• <span class="highlight">{{from_email}}</span> - Sender's email</p>
+            <p>• <span class="highlight">{{message}}</span> - Form message</p>
+        </div>
+
+        <div class="template-section">
+            <h3>📧 What You'll Receive:</h3>
+            <p>After setup, when someone fills your contact form, you'll get an email like this:</p>
+            
+            <div class="code-block">Subject: Portfolio Contact: Job Opportunity
+
+From: John Smith
+Email: john@company.com
+
+Message:
+Hi Sakib,
+
+I saw your portfolio and I'm impressed with your work. 
+We have a VPoE position at our company and would love 
+to discuss this opportunity with you.
+
+Best regards,
+John Smith
+
+---
+This message was sent from your portfolio contact form.
+Reply directly to: john@company.com</div>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            const text = element.textContent;
+            
+            navigator.clipboard.writeText(text).then(function() {
+                // Show success feedback
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = '✅ Copied!';
+                button.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = 'linear-gradient(135deg, #ff6b6b, #ffa726)';
+                }, 2000);
+            }).catch(function(err) {
+                alert('Failed to copy. Please select and copy manually.');
+            });
+        }
+    </script>
+</body>
+</html>

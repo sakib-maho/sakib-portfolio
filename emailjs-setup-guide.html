@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmailJS Setup Guide</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 50%, #ffeb3b 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .step {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #ff6b6b, #ffa726);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .step h3 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .step p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: monospace;
+            color: #333;
+            border-left: 4px solid #ff6b6b;
+        }
+
+        .highlight {
+            background: rgba(255, 107, 107, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        .warning {
+            background: rgba(255, 193, 7, 0.1);
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            color: #856404;
+        }
+
+        .success {
+            background: rgba(76, 175, 80, 0.1);
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            color: #2e7d32;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #ff6b6b, #ffa726);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 1rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 107, 107, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📧 EmailJS Setup Guide</h1>
+        <p>Make your contact form functional in 5 easy steps!</p>
+        
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3>Create EmailJS Account</h3>
+            <p>Go to <a href="https://www.emailjs.com/" target="_blank">emailjs.com</a> and create a free account.</p>
+            <p>✅ Free tier includes 200 emails per month</p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3>Add Email Service</h3>
+            <p>In your EmailJS dashboard, go to "Email Services" and add your email provider:</p>
+            <p>• Gmail (recommended for mrobiulislamsakib@gmail.com)</p>
+            <p>• Outlook, Yahoo, or any other email service</p>
+            <p>✅ You'll get a <span class="highlight">Service ID</span></p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">3</div>
+            <h3>Create Email Template</h3>
+            <p>Go to "Email Templates" and create a new template with these variables:</p>
+            <div class="code-block">
+Subject: {{subject}}<br>
+From: {{from_name}} ({{from_email}})<br>
+Message: {{message}}
+            </div>
+            <p>✅ You'll get a <span class="highlight">Template ID</span></p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">4</div>
+            <h3>Get Public Key</h3>
+            <p>Go to "Account" → "General" and copy your <span class="highlight">Public Key</span></p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">5</div>
+            <h3>Update Your Portfolio</h3>
+            <p>Replace these placeholders in your <code>index.html</code> file:</p>
+            <div class="code-block">
+emailjs.init("<span class="highlight">YOUR_EMAILJS_PUBLIC_KEY</span>");<br>
+emailjs.send('<span class="highlight">YOUR_SERVICE_ID</span>', '<span class="highlight">YOUR_TEMPLATE_ID</span>', formData)
+            </div>
+        </div>
+
+        <div class="warning">
+            <h3>⚠️ Important Notes:</h3>
+            <p>• Keep your Public Key, Service ID, and Template ID secure</p>
+            <p>• Test the form after setup to ensure it works</p>
+            <p>• Check your email spam folder for test messages</p>
+        </div>
+
+        <div class="success">
+            <h3>✅ What Happens Next:</h3>
+            <p>• Users fill out your contact form</p>
+            <p>• EmailJS sends the message to your email</p>
+            <p>• You receive professional emails with all form data</p>
+            <p>• Users see success/error messages</p>
+        </div>
+
+        <a href="https://www.emailjs.com/" target="_blank" class="btn">
+            🚀 Start EmailJS Setup
+        </a>
+
+        <div class="step">
+            <h3>📧 Your Email Configuration:</h3>
+            <p><strong>Recipient Email:</strong> mrobiulislamsakib@gmail.com</p>
+            <p><strong>Form Fields:</strong> Name, Email, Subject, Message</p>
+            <p><strong>Success Message:</strong> "Message sent successfully! I'll get back to you soon."</p>
+        </div>
+    </div>
+</body>
+</html>
