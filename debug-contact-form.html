@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Contact Form</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background: #ff6b6b;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        button:hover {
+            background: #ff5252;
+        }
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .message {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+            display: none;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .debug {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Debug Contact Form</h1>
+        <p>Let's test your EmailJS configuration step by step.</p>
+        
+        <div class="debug" id="debug-info">
+            <h3>Debug Information:</h3>
+            <p id="emailjs-status">Checking EmailJS...</p>
+            <p id="form-status">Form ready</p>
+        </div>
+
+        <form id="debug-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="Test User" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="test@example.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" value="Debug Test" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required>This is a debug test message from the portfolio contact form.</textarea>
+            </div>
+            
+            <button type="submit" id="send-btn">Send Test Message</button>
+        </form>
+
+        <div class="message" id="result-message"></div>
+    </div>
+
+    <script>
+        // Debug information
+        document.addEventListener('DOMContentLoaded', function() {
+            const debugInfo = document.getElementById('debug-info');
+            const emailjsStatus = document.getElementById('emailjs-status');
+            const formStatus = document.getElementById('form-status');
+            
+            // Check if EmailJS is loaded
+            if (typeof emailjs !== 'undefined') {
+                emailjsStatus.innerHTML = '✅ EmailJS loaded successfully';
+                emailjsStatus.style.color = 'green';
+                
+                // Initialize EmailJS
+                try {
+                    emailjs.init("YLOk-vC5Cng21AaTV");
+                    emailjsStatus.innerHTML += '<br>✅ EmailJS initialized with public key';
+                } catch (error) {
+                    emailjsStatus.innerHTML += '<br>❌ EmailJS initialization failed: ' + error.message;
+                    emailjsStatus.style.color = 'red';
+                }
+            } else {
+                emailjsStatus.innerHTML = '❌ EmailJS not loaded';
+                emailjsStatus.style.color = 'red';
+            }
+            
+            // Check form elements
+            const nameField = document.getElementById('name');
+            const emailField = document.getElementById('email');
+            const subjectField = document.getElementById('subject');
+            const messageField = document.getElementById('message');
+            
+            if (nameField && emailField && subjectField && messageField) {
+                formStatus.innerHTML = '✅ All form fields found';
+                formStatus.style.color = 'green';
+            } else {
+                formStatus.innerHTML = '❌ Some form fields missing';
+                formStatus.style.color = 'red';
+            }
+        });
+
+        // Form submission
+        document.getElementById('debug-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const sendBtn = document.getElementById('send-btn');
+            const resultMessage = document.getElementById('result-message');
+            
+            // Show loading state
+            sendBtn.disabled = true;
+            sendBtn.textContent = 'Sending...';
+            resultMessage.style.display = 'none';
+            
+            // Get form data
+            const formData = {
+                subject: document.getElementById('subject').value,
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
+                message: document.getElementById('message').value,
+                email: "mrobiulislamsakib@gmail.com",
+                name: "Sakib"
+            };
+            
+            console.log('Sending form data:', formData);
+            
+            // Send email using EmailJS
+            emailjs.send("service_4e9hnz8", "template_256xc48", formData)
+                .then(function(response) {
+                    console.log('EmailJS Success:', response);
+                    resultMessage.className = 'message success';
+                    resultMessage.innerHTML = '✅ SUCCESS! Email sent successfully. Check your inbox at mrobiulislamsakib@gmail.com';
+                    resultMessage.style.display = 'block';
+                    
+                    // Reset form
+                    document.getElementById('debug-form').reset();
+                }, function(error) {
+                    console.error('EmailJS Error:', error);
+                    resultMessage.className = 'message error';
+                    resultMessage.innerHTML = '❌ ERROR: ' + error.text + '<br>Status: ' + error.status + '<br>Details: ' + JSON.stringify(error);
+                    resultMessage.style.display = 'block';
+                })
+                .finally(function() {
+                    // Reset button
+                    sendBtn.disabled = false;
+                    sendBtn.textContent = 'Send Test Message';
+                });
+        });
+    </script>
+</body>
+</html>

@@ -1645,19 +1645,19 @@
                         <form id="contact-form">
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required>
+                                <input type="text" id="name" name="name" autocomplete="name" required>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" autocomplete="email" required>
                             </div>
                             <div class="form-group">
                                 <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" required>
+                                <input type="text" id="subject" name="subject" autocomplete="off" required>
                             </div>
                             <div class="form-group">
                                 <label for="message">Message</label>
-                                <textarea id="message" name="message" required></textarea>
+                                <textarea id="message" name="message" autocomplete="off" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary" id="send-button">
                                 <i class="fas fa-paper-plane"></i>
@@ -1861,69 +1861,88 @@
             emailjs.init("YLOk-vC5Cng21AaTV");
         })();
 
-        // Contact form functionality
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
+        // Contact form functionality (using working debug form code)
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            if (!contactForm) {
+                console.error('Contact form not found!');
+                return;
+            }
             
-            const sendButton = document.getElementById('send-button');
-            const buttonText = document.getElementById('button-text');
-            const formMessages = document.getElementById('form-messages');
-            
-            // Show loading state
-            sendButton.disabled = true;
-            buttonText.textContent = 'Sending...';
-            sendButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            
-            // Get form data
-            const formData = {
-                from_name: document.getElementById('name').value,
-                from_email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value,
-                to_email: 'mrobiulislamsakib@gmail.com'
-            };
-            
-            // Send email using EmailJS
-            emailjs.send('service_4e9hnz8', 'template_256xc48', formData)
-                .then(function(response) {
-                    // Success
-                    formMessages.style.display = 'block';
-                    formMessages.style.background = 'rgba(76, 175, 80, 0.1)';
-                    formMessages.style.color = '#4CAF50';
-                    formMessages.style.border = '2px solid #4CAF50';
-                    formMessages.innerHTML = '<i class="fas fa-check-circle"></i> Message sent successfully! I\'ll get back to you soon.';
-                    
-                    // Reset form
-                    document.getElementById('contact-form').reset();
-                    
-                    // Reset button
-                    sendButton.disabled = false;
-                    buttonText.textContent = 'Send Message';
-                    sendButton.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-                    
-                    // Hide message after 5 seconds
-                    setTimeout(() => {
-                        formMessages.style.display = 'none';
-                    }, 5000);
-                    
-                }, function(error) {
-                    // Error
-                    formMessages.style.display = 'block';
-                    formMessages.style.background = 'rgba(244, 67, 54, 0.1)';
-                    formMessages.style.color = '#f44336';
-                    formMessages.style.border = '2px solid #f44336';
-                    formMessages.innerHTML = '<i class="fas fa-exclamation-circle"></i> Sorry, there was an error sending your message. Please try again or contact me directly.';
-                    
-                    // Reset button
-                    sendButton.disabled = false;
-                    buttonText.textContent = 'Send Message';
-                    sendButton.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-                    
-                    // Hide message after 5 seconds
-                    setTimeout(() => {
-                        formMessages.style.display = 'none';
-                    }, 5000);
-                });
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const sendButton = document.getElementById('send-button');
+                const formMessages = document.getElementById('form-messages');
+                
+                // Check if elements exist
+                if (!sendButton) {
+                    console.error('Send button not found!');
+                    return;
+                }
+                if (!formMessages) {
+                    console.error('Form messages element not found!');
+                    return;
+                }
+                
+                // Store original button content
+                const originalButtonContent = sendButton.innerHTML;
+                
+                // Show loading state
+                sendButton.disabled = true;
+                sendButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                
+                // Get form data (exact same as working debug form)
+                const formData = {
+                    subject: document.getElementById('subject').value,
+                    from_name: document.getElementById('name').value,
+                    from_email: document.getElementById('email').value,
+                    message: document.getElementById('message').value,
+                    email: "mrobiulislamsakib@gmail.com",
+                    name: "Sakib"
+                };
+                
+                console.log('Sending form data:', formData);
+                
+                // Send email using EmailJS (exact same code as working debug form)
+                emailjs.send("service_4e9hnz8", "template_256xc48", formData)
+                    .then(function(response) {
+                        console.log('EmailJS Success:', response);
+                        // Success
+                        formMessages.style.display = 'block';
+                        formMessages.style.background = 'rgba(76, 175, 80, 0.1)';
+                        formMessages.style.color = '#4CAF50';
+                        formMessages.style.border = '2px solid #4CAF50';
+                        formMessages.innerHTML = '<i class="fas fa-check-circle"></i> Message sent successfully! I\'ll get back to you soon.';
+                        
+                        // Reset form
+                        document.getElementById('contact-form').reset();
+                        
+                        // Hide message after 5 seconds
+                        setTimeout(() => {
+                            formMessages.style.display = 'none';
+                        }, 5000);
+                        
+                    }, function(error) {
+                        console.error('EmailJS Error:', error);
+                        // Error
+                        formMessages.style.display = 'block';
+                        formMessages.style.background = 'rgba(244, 67, 54, 0.1)';
+                        formMessages.style.color = '#f44336';
+                        formMessages.style.border = '2px solid #f44336';
+                        formMessages.innerHTML = '<i class="fas fa-exclamation-circle"></i> Sorry, there was an error sending your message. Please try again or contact me directly.';
+                        
+                        // Hide message after 5 seconds
+                        setTimeout(() => {
+                            formMessages.style.display = 'none';
+                        }, 5000);
+                    })
+                    .finally(function() {
+                        // Reset button
+                        sendButton.disabled = false;
+                        sendButton.innerHTML = originalButtonContent;
+                    });
+            });
         });
     </script>
 </body>
