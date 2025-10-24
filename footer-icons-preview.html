@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Icons Preview</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preview-container {
+            text-align: center;
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .old-footer, .new-footer {
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .old-footer {
+            background: #333;
+            color: white;
+        }
+
+        .new-footer {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .new-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.5), transparent);
+        }
+
+        h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        /* Old Footer Icons */
+        .old-social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .old-social-link {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .old-social-link:hover {
+            color: #667eea;
+        }
+
+        /* New Footer Icons */
+        .new-social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .new-social-link {
+            color: white;
+            font-size: 1.8rem;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            padding: 1rem;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .new-social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            transform: scale(0);
+            transition: transform 0.3s ease;
+            z-index: -1;
+        }
+
+        .new-social-link:hover::before {
+            transform: scale(1);
+        }
+
+        .new-social-link:hover {
+            color: white;
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .new-social-link:active {
+            transform: translateY(-2px) scale(1.05);
+        }
+
+        .description {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .improvements {
+            background: #f8f9ff;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .improvements h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .improvements ul {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .improvements li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <h2>🎨 Footer Icons Comparison</h2>
+        
+        <div class="comparison">
+            <div class="old-footer">
+                <h3>❌ Old Design</h3>
+                <div class="old-social-links">
+                    <a href="#" class="old-social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="old-social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="old-social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="description">Plain icons with basic hover effect</div>
+            </div>
+
+            <div class="new-footer">
+                <h3>✅ New Design</h3>
+                <div class="new-social-links">
+                    <a href="#" class="new-social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="new-social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="new-social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="description">Circular buttons with gradient hover effects</div>
+            </div>
+        </div>
+
+        <div class="improvements">
+            <h3>🚀 Improvements Made:</h3>
+            <ul>
+                <li><strong>Circular Design:</strong> Icons now have circular backgrounds for better visual appeal</li>
+                <li><strong>Gradient Hover:</strong> Beautiful gradient background appears on hover</li>
+                <li><strong>3D Effects:</strong> Icons lift up and scale on hover for depth</li>
+                <li><strong>Better Spacing:</strong> Increased gap between icons for cleaner look</li>
+                <li><strong>Enhanced Footer:</strong> Gradient background with subtle top border</li>
+                <li><strong>Shadow Effects:</strong> Glowing shadows on hover for premium feel</li>
+                <li><strong>Responsive Design:</strong> Smaller icons on mobile devices</li>
+                <li><strong>Smooth Animations:</strong> Cubic-bezier easing for professional feel</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

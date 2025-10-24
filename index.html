@@ -561,27 +561,77 @@
 
         /* Footer */
         .footer {
-            background: #333;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
             color: white;
             text-align: center;
-            padding: 2rem 0;
+            padding: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.5), transparent);
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
         .social-link {
             color: white;
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
+            font-size: 1.8rem;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+            box-sizing: border-box;
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            transform: scale(0);
+            transition: transform 0.3s ease;
+            z-index: -1;
+        }
+
+        .social-link:hover::before {
+            transform: scale(1);
         }
 
         .social-link:hover {
-            color: #667eea;
+            color: white;
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .social-link:active {
+            transform: translateY(-2px) scale(1.05);
         }
 
         /* Responsive Design */
@@ -624,6 +674,18 @@
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+            }
+
+            .social-links {
+                gap: 1.5rem;
+            }
+
+            .social-link {
+                width: 50px;
+                height: 50px;
+                min-width: 50px;
+                min-height: 50px;
+                font-size: 1.5rem;
             }
         }
 
