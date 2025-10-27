@@ -7,8 +7,42 @@
     
     <!-- Meta Tags for SEO and Social Media -->
     <meta name="description" content="Professional portfolio of Md Robiul Islam SAKIB - Vice President of Engineering & Full-Stack Lead with 3+ years experience in web development, AWS cloud infrastructure, and AI integration.">
-    <meta name="keywords" content="VPoE, Full-Stack Developer, AWS, AI Integration, Django, React, Node.js, Flutter, Portfolio">
+    <meta name="keywords" content="VPoE, Full-Stack Developer, AWS, AI Integration, Django, React, Node.js, Flutter, Portfolio, Engineering Lead, BrandCloud">
     <meta name="author" content="Md Robiul Islam SAKIB">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Md Robiul Islam SAKIB",
+        "jobTitle": "Vice President of Engineering",
+        "description": "VPoE & Full-Stack Lead with 3+ years experience in web development, AWS cloud infrastructure, and AI integration",
+        "url": "https://sakib-maho.github.io/sakib-portfolio/",
+        "image": "https://sakib-maho.github.io/sakib-portfolio/profile-photo-optimized.jpg",
+        "email": "mrobiulislamsakib@gmail.com",
+        "sameAs": [
+            "https://linkedin.com/in/msakib162004",
+            "https://github.com/sakib-maho"
+        ],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "BrandCloud Inc."
+        },
+        "knowsAbout": [
+            "Full-Stack Development",
+            "AWS Cloud Infrastructure",
+            "AI Integration",
+            "Django",
+            "React",
+            "Node.js",
+            "Flutter"
+        ]
+    }
+    </script>
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -29,12 +63,12 @@
     <meta property="twitter:image:alt" content="Md Robiul Islam SAKIB - Professional Photo">
     
     <!-- Favicon - SVG First for Modern Browsers -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon-48x48.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=4">
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=4">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=4">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=4">
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png?v=4">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-48x48.png?v=4">
     
     <!-- External Stylesheets -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -50,26 +84,26 @@
         }
 
         :root {
-            --primary-gradient: linear-gradient(135deg, #ff6b6b 0%, #ffa726 50%, #ffeb3b 100%);
-            --secondary-gradient: linear-gradient(135deg, #ff6b6b 0%, #ffa726 100%);
-            --accent-gradient: linear-gradient(135deg, #ffa726 0%, #ffeb3b 100%);
+            --primary-gradient: linear-gradient(135deg, #8e44ad 0%, #9b59b6 50%, #3498db 100%);
+            --secondary-gradient: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+            --accent-gradient: linear-gradient(135deg, #9b59b6 0%, #3498db 100%);
             --dark-gradient: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
             --glass-bg: rgba(255, 255, 255, 0.1);
             --glass-border: rgba(255, 255, 255, 0.2);
-            --shadow-light: 0 8px 32px rgba(255, 107, 107, 0.1);
-            --shadow-medium: 0 15px 40px rgba(255, 107, 107, 0.15);
-            --shadow-heavy: 0 25px 60px rgba(255, 107, 107, 0.2);
-            --sunset-primary: #ff6b6b;
-            --sunset-secondary: #ffa726;
-            --sunset-accent: #ffeb3b;
-            --sunset-tertiary: #ff9800;
+            --shadow-light: 0 8px 32px rgba(142, 68, 173, 0.1);
+            --shadow-medium: 0 15px 40px rgba(142, 68, 173, 0.15);
+            --shadow-heavy: 0 25px 60px rgba(142, 68, 173, 0.2);
+            --sunset-primary: #8e44ad;
+            --sunset-secondary: #9b59b6;
+            --sunset-accent: #3498db;
+            --sunset-tertiary: #6c3483;
         }
 
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: #1a1a1a;
-            background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 50%, #ffeb3b 100%);
+            color: #2c3e50;
+            background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 50%, #3498db 100%);
             min-height: 100vh;
             overflow-x: hidden;
             position: relative;
@@ -122,7 +156,7 @@
 
         .header.scrolled .logo {
             color: var(--sunset-primary);
-            text-shadow: 2px 2px 4px rgba(255, 107, 107, 0.3);
+            text-shadow: 2px 2px 4px rgba(142, 68, 173, 0.3);
         }
 
         .nav {
@@ -135,7 +169,7 @@
         .logo {
             font-size: 2rem;
             font-weight: 900;
-            color: #1a1a1a;
+            color: #2c3e50;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
             position: relative;
             animation: logoGlow 3s ease-in-out infinite;
@@ -154,7 +188,7 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #1a1a1a;
+            color: #2c3e50;
             font-weight: 600;
             position: relative;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -243,6 +277,176 @@
             animation: slideInUp 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s both;
         }
 
+        /* Enhanced Typing Animation */
+        .typing-animation {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            animation: typing 4s steps(40, end), glowEffect 4s ease-in-out;
+        }
+
+        .typing-animation::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shimmer 2s ease-in-out infinite;
+            opacity: 0;
+        }
+
+        .typing-animation.typing-complete::after {
+            animation: completionGlow 1s ease-out forwards;
+        }
+
+        @keyframes typing {
+            0% { 
+                width: 0; 
+                letter-spacing: 0;
+            }
+            50% { 
+                letter-spacing: 2px;
+            }
+            100% { 
+                width: 100%; 
+                letter-spacing: 0;
+            }
+        }
+
+        @keyframes glowEffect {
+            0% { 
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+            }
+            50% { 
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+            }
+            100% { 
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+            }
+        }
+
+        @keyframes shimmer {
+            0% { 
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            50% { 
+                opacity: 1;
+            }
+            100% { 
+                opacity: 0;
+                transform: translateX(100%);
+            }
+        }
+
+        @keyframes completionGlow {
+            0% { 
+                opacity: 0;
+                transform: scale(1);
+            }
+            50% { 
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            100% { 
+                opacity: 0;
+                transform: scale(1.1);
+            }
+        }
+
+
+        /* Advanced Particle System */
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float-particle 20s infinite linear;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .particle:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.5);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .particle.trail {
+            background: linear-gradient(135deg, rgba(142, 68, 173, 0.3), rgba(52, 152, 219, 0.3));
+            animation: trail-particle 15s infinite linear;
+        }
+
+        .particle.magnetic {
+            animation: magnetic-particle 25s infinite linear;
+        }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes trail-particle {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0.5);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+                transform: translateY(90vh) rotate(36deg) scale(1);
+            }
+            50% {
+                transform: translateY(50vh) rotate(180deg) scale(1.2);
+            }
+            90% {
+                opacity: 0.8;
+                transform: translateY(10vh) rotate(324deg) scale(1);
+            }
+            100% {
+                transform: translateY(-10vh) rotate(360deg) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes magnetic-particle {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            25% {
+                transform: translateY(75vh) rotate(90deg) translateX(20px);
+            }
+            50% {
+                transform: translateY(50vh) rotate(180deg) translateX(-20px);
+            }
+            75% {
+                transform: translateY(25vh) rotate(270deg) translateX(20px);
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10vh) rotate(360deg) translateX(0px);
+                opacity: 0;
+            }
+        }
+
         @keyframes slideInUp {
             from {
                 opacity: 0;
@@ -296,7 +500,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #ffffff, #fff8f0);
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
             color: var(--sunset-primary);
             box-shadow: var(--shadow-medium);
         }
@@ -338,7 +542,7 @@
             font-size: 3.5rem;
             font-weight: 900;
             margin-bottom: 2rem;
-            color: #1a1a1a;
+            color: #2c3e50;
             position: relative;
             animation: titleGlow 2s ease-in-out infinite;
         }
@@ -364,7 +568,7 @@
         .section-subtitle {
             text-align: center;
             font-size: 1.4rem;
-            color: #4a5568;
+            color: #34495e;
             margin-bottom: 5rem;
             max-width: 800px;
             margin-left: auto;
@@ -400,35 +604,179 @@
             box-shadow: var(--shadow-heavy);
             border: 8px solid white;
             position: relative;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            animation: profileFloat 6s ease-in-out infinite;
-        }
-
-        @keyframes profileFloat {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(2deg); }
+            transition: transform 0.3s ease;
+            animation: borderPulse 3s ease-in-out infinite, borderGlow 2s ease-in-out infinite alternate;
         }
 
         .profile-img:hover {
-            transform: scale(1.05) rotate(5deg);
+            transform: scale(1.05);
+            animation-play-state: paused;
         }
 
+        /* Animated Border Effects */
         .profile-img::before {
             content: '';
             position: absolute;
-            top: -4px;
-            left: -4px;
-            right: -4px;
-            bottom: -4px;
-            background: var(--primary-gradient);
+            top: -12px;
+            left: -12px;
+            right: -12px;
+            bottom: -12px;
             border-radius: 50%;
+            background: linear-gradient(45deg, var(--sunset-primary), var(--sunset-secondary), var(--sunset-accent), var(--sunset-primary));
+            background-size: 400% 400%;
+            animation: borderRotate 4s linear infinite, borderShimmer 2s ease-in-out infinite;
             z-index: -1;
-            animation: rotate 8s linear infinite;
         }
 
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        .profile-img::after {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(142, 68, 173, 0.3) 0%, transparent 70%);
+            animation: borderPulse 3s ease-in-out infinite, borderGlow 2s ease-in-out infinite alternate;
+            z-index: -2;
+        }
+
+        @keyframes borderPulse {
+            0%, 100% { 
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            50% { 
+                transform: scale(1.05);
+                opacity: 1;
+            }
+        }
+
+        @keyframes borderGlow {
+            0% { 
+                box-shadow: 
+                    0 0 20px rgba(142, 68, 173, 0.5),
+                    0 0 40px rgba(142, 68, 173, 0.3),
+                    0 0 60px rgba(142, 68, 173, 0.1);
+            }
+            100% { 
+                box-shadow: 
+                    0 0 30px rgba(142, 68, 173, 0.8),
+                    0 0 60px rgba(142, 68, 173, 0.5),
+                    0 0 90px rgba(142, 68, 173, 0.2);
+            }
+        }
+
+        @keyframes borderRotate {
+            0% { 
+                transform: rotate(0deg);
+                background-position: 0% 50%;
+            }
+            50% { 
+                background-position: 100% 50%;
+            }
+            100% { 
+                transform: rotate(360deg);
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes borderShimmer {
+            0% { 
+                opacity: 0.6;
+            }
+            50% { 
+                opacity: 1;
+            }
+            100% { 
+                opacity: 0.6;
+            }
+        }
+
+        /* Real Autumn Leaf Images */
+        .about-image {
+            position: relative;
+        }
+
+        .about-image .autumn-leaf {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: floatLeaves 10s linear infinite;
+            opacity: 0.9;
+            transform-origin: center;
+        }
+
+        /* New Beautiful Autumn Leaf from Flaticon */
+        .about-image .autumn-leaf:nth-child(1) {
+            top: 15%;
+            left: 8%;
+            animation-delay: 0s;
+            animation-duration: 8s;
+            background-image: url('autumn-leaf-new.png');
+        }
+
+        .about-image .autumn-leaf:nth-child(2) {
+            top: 8%;
+            right: 15%;
+            animation-delay: 2s;
+            animation-duration: 12s;
+            background-image: url('autumn-leaf-new.png');
+        }
+
+        .about-image .autumn-leaf:nth-child(3) {
+            bottom: 15%;
+            left: 12%;
+            animation-delay: 4s;
+            animation-duration: 10s;
+            background-image: url('autumn-leaf-new.png');
+        }
+
+        .about-image .autumn-leaf:nth-child(4) {
+            bottom: 8%;
+            right: 8%;
+            animation-delay: 6s;
+            animation-duration: 14s;
+            background-image: url('autumn-leaf-new.png');
+        }
+
+        .about-image .autumn-leaf:nth-child(5) {
+            top: 45%;
+            left: 3%;
+            animation-delay: 1s;
+            animation-duration: 9s;
+            background-image: url('autumn-leaf-new.png');
+        }
+
+        .about-image .autumn-leaf:nth-child(6) {
+            top: 45%;
+            right: 3%;
+            animation-delay: 3s;
+            animation-duration: 11s;
+            background-image: url('autumn-leaf-new.png');
+        }
+
+        @keyframes floatLeaves {
+            0% { 
+                transform: rotate(0deg) translateX(280px) rotate(0deg);
+                opacity: 0;
+            }
+            10% { 
+                opacity: 0.9;
+            }
+            50% {
+                transform: rotate(180deg) translateX(280px) rotate(-180deg) scale(1.2);
+            }
+            90% { 
+                opacity: 0.9;
+            }
+            100% { 
+                transform: rotate(360deg) translateX(280px) rotate(-360deg);
+                opacity: 0;
+            }
         }
         
         .profile-img img {
@@ -441,7 +789,7 @@
         .about-content h3 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
-            color: #1a1a1a;
+            color: #2c3e50;
             font-weight: 800;
             background: linear-gradient(135deg, var(--sunset-primary), var(--sunset-secondary));
             -webkit-background-clip: text;
@@ -451,7 +799,7 @@
 
         .about-content p {
             font-size: 1.2rem;
-            color: #4a5568;
+            color: #34495e;
             margin-bottom: 2.5rem;
             line-height: 1.9;
         }
@@ -507,10 +855,187 @@
             to { transform: scale(1); opacity: 1; }
         }
 
-        .stat-label {
-            color: #4a5568;
-            font-size: 1.1rem;
+        /* Animated Counter */
+        .counter {
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--sunset-primary), var(--sunset-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .counter.animate {
+            animation: countUp 2s ease-out;
+        }
+
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Progress Bars */
+        .progress-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 0.5rem 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--primary-gradient);
+            border-radius: 4px;
+            width: 0%;
+            transition: width 2s ease-out;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
             font-weight: 600;
+        }
+
+        /* Skill Level Indicators */
+        .skill-level {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        .skill-level.expert {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+        }
+
+        .skill-level.advanced {
+            background: linear-gradient(135deg, #3498db, #5dade2);
+            color: white;
+        }
+
+        /* Parallax Effects */
+        .parallax-element {
+            transform: translateZ(0);
+            will-change: transform;
+        }
+
+        /* 3D Transform Effects */
+        .card-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease;
+        }
+
+        .card-3d:hover {
+            transform: rotateY(10deg) rotateX(5deg);
+        }
+
+        /* Staggered Animations */
+        .stagger-animation {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .stagger-animation.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-animation:nth-child(1) { transition-delay: 0.1s; }
+        .stagger-animation:nth-child(2) { transition-delay: 0.2s; }
+        .stagger-animation:nth-child(3) { transition-delay: 0.3s; }
+        .stagger-animation:nth-child(4) { transition-delay: 0.4s; }
+        .stagger-animation:nth-child(5) { transition-delay: 0.5s; }
+        .stagger-animation:nth-child(6) { transition-delay: 0.6s; }
+
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            
+            .typing-animation {
+                animation: none;
+            }
+            
+            .particle {
+                display: none; /* Disable particles on mobile for performance */
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+            
+            .scroll-progress {
+                height: 3px;
+            }
+        }
+
+        /* Touch-friendly Interactions */
+        @media (hover: none) and (pointer: coarse) {
+            .skill-tag:hover, .tech-tag:hover,
+            .stat-item:hover, .project-card:hover {
+                transform: none;
+            }
+            
+            .btn:hover {
+                transform: none;
+            }
+        }
+
+        /* Performance Optimizations */
+        .will-change-transform {
+            will-change: transform;
+        }
+
+        .will-change-opacity {
+            will-change: opacity;
+        }
+
+        /* Performance Optimizations */
+        .lazy-load {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+
+        /* Image Optimization */
+        img {
+            max-width: 100%;
+            height: auto;
+            loading: lazy;
+        }
+
+        /* Critical CSS inlined */
+        .critical-css {
+            display: none;
+        }
+
+        /* Preload critical resources */
+        .preload-hint {
+            display: none;
         }
 
         /* Enhanced Skills Section */
@@ -550,7 +1075,7 @@
         .skill-category h4 {
             font-size: 1.6rem;
             margin-bottom: 2.5rem;
-            color: #1a1a1a;
+            color: #2c3e50;
             font-weight: 800;
         }
 
@@ -699,18 +1224,18 @@
             font-size: 1.6rem;
             font-weight: 800;
             margin-bottom: 0.8rem;
-            color: #1a1a1a;
+            color: #2c3e50;
         }
 
         .timeline-company {
-            color: #4a5568;
+            color: #34495e;
             font-weight: 600;
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
         }
 
         .timeline-description {
-            color: #4a5568;
+            color: #34495e;
             line-height: 1.8;
             font-size: 1.1rem;
         }
@@ -730,6 +1255,7 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 1px solid rgba(102, 126, 234, 0.1);
             position: relative;
+            transform-style: preserve-3d;
         }
 
         .project-card::before {
@@ -740,11 +1266,37 @@
             right: 0;
             height: 5px;
             background: var(--primary-gradient);
+            z-index: 1;
+        }
+
+        .project-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(142, 68, 173, 0.05), rgba(52, 152, 219, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .project-card:hover::after {
+            opacity: 1;
         }
 
         .project-card:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: var(--shadow-heavy);
+            transform: translateY(-15px) rotateX(5deg) rotateY(5deg) scale(1.02);
+            box-shadow: 
+                0 25px 60px rgba(142, 68, 173, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+        }
+
+        .project-card:active {
+            transform: translateY(-10px) rotateX(2deg) rotateY(2deg) scale(0.98);
+            transition: all 0.1s ease;
         }
 
         .project-image {
@@ -778,7 +1330,7 @@
             font-size: 1.6rem;
             font-weight: 800;
             margin-bottom: 0.8rem;
-            color: #1a1a1a;
+            color: #2c3e50;
         }
 
         .project-role {
@@ -789,7 +1341,7 @@
         }
 
         .project-description {
-            color: #4a5568;
+            color: #34495e;
             margin-bottom: 2rem;
             line-height: 1.8;
             font-size: 1.1rem;
@@ -841,7 +1393,7 @@
 
         /* Enhanced Contact Section */
         .contact {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 50%, #ffeb3b 100%);
+            background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 50%, #3498db 100%);
             color: white;
             position: relative;
             overflow: hidden;
@@ -1020,6 +1572,185 @@
             transform: translateY(-4px) scale(1.1);
         }
 
+        /* Scroll Progress Indicator */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: var(--primary-gradient);
+            z-index: 9999;
+            transition: width 0.1s ease;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 50%, #3498db 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Enhanced Button Interactions */
+        .btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s;
+            z-index: 1;
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+            z-index: 0;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .btn:active::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn:active {
+            transform: translateY(-1px) scale(0.98);
+            transition: all 0.1s ease;
+        }
+
+        /* Ripple Effect */
+        .btn.ripple {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn.ripple .ripple-effect {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            pointer-events: none;
+        }
+
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* Micro-interactions */
+        .skill-tag, .tech-tag, .stat-item, .project-card {
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .skill-tag:hover, .tech-tag:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .stat-item:hover, .project-card:hover {
+            transform: translateY(-8px);
+        }
+
+        /* Smooth Scroll Behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Social Media Links Enhancement */
+        .social-link {
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
@@ -1174,9 +1905,17 @@
 </head>
 <body>
     <!-- Loading Screen -->
-    <div class="loading" id="loading">
-        <div class="spinner"></div>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
     </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
     <!-- Particle Animation -->
     <div class="particles" id="particles"></div>
@@ -1199,13 +1938,15 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Md Robiul Islam SAKIB</h1>
+                <h1 class="typing-animation">Md Robiul Islam SAKIB</h1>
                 <p class="subtitle">Vice President of Engineering & Full-Stack Lead</p>
                 <p class="description">
                     Experienced VPoE with 3+ years in web/mobile development, AWS cloud infrastructure, 
                     and AI integration. Leading engineering teams at BrandCloud Inc. to deliver 
                     high-performance, secure, and user-centric applications.
                 </p>
+                
+                
                 <div class="cta-buttons">
                     <a href="#projects" class="btn btn-primary">
                         <i class="fas fa-code"></i>
@@ -1236,6 +1977,13 @@
                             <img src="profile-photo-optimized.jpg" alt="Md Robiul Islam SAKIB - Professional Photo" 
                                  style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
                         </div>
+                        <!-- Simple Working Autumn Leaves -->
+                        <div class="autumn-leaf"></div>
+                        <div class="autumn-leaf"></div>
+                        <div class="autumn-leaf"></div>
+                        <div class="autumn-leaf"></div>
+                        <div class="autumn-leaf"></div>
+                        <div class="autumn-leaf"></div>
                     </div>
                     <div class="about-content scroll-animate">
                         <h3>VPoE & Full-Stack Lead</h3>
@@ -1252,19 +2000,19 @@
                         
                         <div class="stats">
                             <div class="stat">
-                                <span class="stat-number">3+</span>
+                                <span class="stat-number counter" data-target="3">0</span>
                                 <span class="stat-label">Years Experience</span>
                             </div>
                             <div class="stat">
-                                <span class="stat-number">68</span>
+                                <span class="stat-number counter" data-target="68">0</span>
                                 <span class="stat-label">GitHub Repos</span>
                             </div>
                             <div class="stat">
-                                <span class="stat-number">12</span>
+                                <span class="stat-number counter" data-target="12">0</span>
                                 <span class="stat-label">Team Members Led</span>
                             </div>
                             <div class="stat">
-                                <span class="stat-number">100%</span>
+                                <span class="stat-number counter" data-target="100">0</span>
                                 <span class="stat-label">Code Compliance</span>
                             </div>
                         </div>
@@ -1285,67 +2033,67 @@
                     <div class="skill-category scroll-animate">
                         <h4><i class="fas fa-code"></i> Backend Development</h4>
                         <div class="skill-tags">
-                            <span class="skill-tag">Django</span>
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">Express</span>
-                            <span class="skill-tag">Golang</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag stagger-animation">Django</span>
+                            <span class="skill-tag stagger-animation">Node.js</span>
+                            <span class="skill-tag stagger-animation">Express</span>
+                            <span class="skill-tag stagger-animation">Golang</span>
+                            <span class="skill-tag stagger-animation">Python</span>
+                            <span class="skill-tag stagger-animation">REST APIs</span>
                         </div>
                     </div>
                     
                     <div class="skill-category scroll-animate">
                         <h4><i class="fas fa-laptop-code"></i> Frontend Development</h4>
                         <div class="skill-tags">
-                            <span class="skill-tag">Next.js</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">Vue.js</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">TypeScript</span>
-                            <span class="skill-tag">Flutter</span>
+                            <span class="skill-tag stagger-animation">Next.js</span>
+                            <span class="skill-tag stagger-animation">React</span>
+                            <span class="skill-tag stagger-animation">Vue.js</span>
+                            <span class="skill-tag stagger-animation">JavaScript</span>
+                            <span class="skill-tag stagger-animation">TypeScript</span>
+                            <span class="skill-tag stagger-animation">Flutter</span>
                         </div>
                     </div>
                     
                     <div class="skill-category scroll-animate">
                         <h4><i class="fas fa-database"></i> Databases & Storage</h4>
                         <div class="skill-tags">
-                            <span class="skill-tag">PostgreSQL</span>
-                            <span class="skill-tag">Redis</span>
-                            <span class="skill-tag">ChromaDB</span>
-                            <span class="skill-tag">DynamoDB</span>
-                            <span class="skill-tag">MinIO</span>
+                            <span class="skill-tag stagger-animation">PostgreSQL</span>
+                            <span class="skill-tag stagger-animation">Redis</span>
+                            <span class="skill-tag stagger-animation">ChromaDB</span>
+                            <span class="skill-tag stagger-animation">DynamoDB</span>
+                            <span class="skill-tag stagger-animation">MinIO</span>
                         </div>
                     </div>
                     
                     <div class="skill-category scroll-animate">
                         <h4><i class="fas fa-cloud"></i> Cloud & DevOps</h4>
                         <div class="skill-tags">
-                            <span class="skill-tag">AWS</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">Nginx</span>
-                            <span class="skill-tag">CI/CD</span>
-                            <span class="skill-tag">Vercel</span>
+                            <span class="skill-tag stagger-animation">AWS</span>
+                            <span class="skill-tag stagger-animation">Docker</span>
+                            <span class="skill-tag stagger-animation">Nginx</span>
+                            <span class="skill-tag stagger-animation">CI/CD</span>
+                            <span class="skill-tag stagger-animation">Vercel</span>
                         </div>
                     </div>
                     
                     <div class="skill-category scroll-animate">
                         <h4><i class="fas fa-robot"></i> AI/ML Integration</h4>
                         <div class="skill-tags">
-                            <span class="skill-tag">OpenAI GPT</span>
-                            <span class="skill-tag">Claude</span>
-                            <span class="skill-tag">Gemini</span>
-                            <span class="skill-tag">ChromaDB</span>
-                            <span class="skill-tag">Vibecoding</span>
+                            <span class="skill-tag stagger-animation">OpenAI GPT</span>
+                            <span class="skill-tag stagger-animation">Claude</span>
+                            <span class="skill-tag stagger-animation">Gemini</span>
+                            <span class="skill-tag stagger-animation">ChromaDB</span>
+                            <span class="skill-tag stagger-animation">Vibecoding</span>
                         </div>
                     </div>
                     
                     <div class="skill-category scroll-animate">
                         <h4><i class="fas fa-mobile-alt"></i> Mobile Development</h4>
                         <div class="skill-tags">
-                            <span class="skill-tag">Flutter</span>
-                            <span class="skill-tag">iOS</span>
-                            <span class="skill-tag">Android</span>
-                            <span class="skill-tag">Dart</span>
+                            <span class="skill-tag stagger-animation">Flutter</span>
+                            <span class="skill-tag stagger-animation">iOS</span>
+                            <span class="skill-tag stagger-animation">Android</span>
+                            <span class="skill-tag stagger-animation">Dart</span>
                         </div>
                     </div>
                 </div>
@@ -1696,8 +2444,27 @@
         // Loading screen
         window.addEventListener('load', () => {
             setTimeout(() => {
-                document.getElementById('loading').classList.add('hidden');
+                document.getElementById('loadingOverlay').classList.add('hidden');
             }, 1500);
+        });
+
+        // Scroll Progress Indicator
+        window.addEventListener('scroll', function() {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
+
+        // Back to Top Button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
         });
 
         // Enhanced header scroll effect
@@ -1943,6 +2710,309 @@
                         sendButton.innerHTML = originalButtonContent;
                     });
             });
+        });
+
+        // Enhanced micro-interactions
+        document.querySelectorAll('.skill-tag, .tech-tag, .stat-item, .project-card').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Enhanced Button Ripple Effects
+        document.querySelectorAll('.btn').forEach(button => {
+            button.classList.add('ripple');
+            
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple-effect');
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Enhanced social link interactions
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.1)';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Advanced Particle Animation
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 60;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                
+                // Random particle type
+                const particleTypes = ['', 'trail', 'magnetic'];
+                const randomType = particleTypes[Math.floor(Math.random() * particleTypes.length)];
+                particle.className = `particle ${randomType}`;
+                
+                // Random size between 2px and 8px
+                const size = Math.random() * 6 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                
+                // Random horizontal position
+                particle.style.left = Math.random() * 100 + '%';
+                
+                // Random animation delay
+                particle.style.animationDelay = Math.random() * 25 + 's';
+                
+                // Random animation duration based on type
+                let duration;
+                if (randomType === 'trail') {
+                    duration = Math.random() * 8 + 12; // 12-20s
+                } else if (randomType === 'magnetic') {
+                    duration = Math.random() * 10 + 20; // 20-30s
+                } else {
+                    duration = Math.random() * 10 + 15; // 15-25s
+                }
+                particle.style.animationDuration = duration + 's';
+                
+                // Add click interaction
+                particle.addEventListener('click', function() {
+                    this.style.animationPlayState = 'paused';
+                    this.style.transform = 'scale(2) rotate(180deg)';
+                    this.style.background = 'rgba(255, 255, 255, 0.8)';
+                    this.style.boxShadow = '0 0 30px rgba(255, 255, 255, 0.8)';
+                    
+                    setTimeout(() => {
+                        this.style.animationPlayState = 'running';
+                        this.style.transform = '';
+                        this.style.background = '';
+                        this.style.boxShadow = '';
+                    }, 1000);
+                });
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Mouse interaction with particles
+        let mouseX = 0, mouseY = 0;
+        document.addEventListener('mousemove', function(e) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            // Create magnetic effect for nearby particles
+            const particles = document.querySelectorAll('.particle');
+            particles.forEach(particle => {
+                const rect = particle.getBoundingClientRect();
+                const particleX = rect.left + rect.width / 2;
+                const particleY = rect.top + rect.height / 2;
+                
+                const distance = Math.sqrt(
+                    Math.pow(mouseX - particleX, 2) + Math.pow(mouseY - particleY, 2)
+                );
+                
+                if (distance < 100) {
+                    const force = (100 - distance) / 100;
+                    const angle = Math.atan2(mouseY - particleY, mouseX - particleX);
+                    const moveX = Math.cos(angle) * force * 10;
+                    const moveY = Math.sin(angle) * force * 10;
+                    
+                    particle.style.transform = `translate(${moveX}px, ${moveY}px) scale(${1 + force * 0.5})`;
+                } else {
+                    particle.style.transform = '';
+                }
+            });
+        });
+
+        // Initialize particles when page loads
+        createParticles();
+
+        // Enhanced Typing Animation Completion Effect
+        setTimeout(() => {
+            const typingElement = document.querySelector('.typing-animation');
+            if (typingElement) {
+                typingElement.classList.add('typing-complete');
+            }
+        }, 4000); // After typing animation completes
+
+        // Animated Counter Function
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            
+            function updateCounter() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.floor(start);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                    if (target === 100) element.textContent += '%';
+                    if (target === 3) element.textContent += '+';
+                }
+            }
+            
+            updateCounter();
+        }
+
+        // Counter Animation on Scroll
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    counter.classList.add('animate');
+                    animateCounter(counter, target);
+                    counterObserver.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Observe all counters
+        document.querySelectorAll('.counter').forEach(counter => {
+            counterObserver.observe(counter);
+        });
+
+        // Progress Bar Animation
+        const progressObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressFill = entry.target;
+                    const width = progressFill.getAttribute('data-width');
+                    setTimeout(() => {
+                        progressFill.style.width = width + '%';
+                    }, 500);
+                    progressObserver.unobserve(progressFill);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Observe all progress bars
+        document.querySelectorAll('.progress-fill').forEach(progress => {
+            progressObserver.observe(progress);
+        });
+
+        // Staggered Animation Observer
+        const staggerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const container = entry.target;
+                    const staggerElements = container.querySelectorAll('.stagger-animation');
+                    
+                    staggerElements.forEach((element, index) => {
+                        setTimeout(() => {
+                            element.classList.add('animate');
+                        }, index * 100);
+                    });
+                    
+                    staggerObserver.unobserve(container);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        // Observe skill categories for staggered animations
+        document.querySelectorAll('.skill-category').forEach(category => {
+            staggerObserver.observe(category);
+        });
+
+        // Parallax Effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.parallax-element');
+            
+            parallaxElements.forEach(element => {
+                const speed = element.dataset.speed || 0.5;
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Lazy Loading for Images
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.classList.add('loaded');
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+
+        lazyImages.forEach(img => {
+            imageObserver.observe(img);
+        });
+
+        // Performance Monitoring
+        if ('performance' in window) {
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    const perfData = performance.getEntriesByType('navigation')[0];
+                    console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+                }, 0);
+            });
+        }
+
+        // Service Worker Registration (if available)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Analytics and Performance Tracking
+        function trackEvent(eventName, eventData = {}) {
+            // Google Analytics or other tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, eventData);
+            }
+        }
+
+        // Track important interactions
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                trackEvent('button_click', {
+                    button_text: btn.textContent.trim(),
+                    button_href: btn.href || 'no-href'
+                });
+            });
+        });
+
+        // Track scroll depth
+        let maxScroll = 0;
+        window.addEventListener('scroll', () => {
+            const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            if (scrollPercent > maxScroll) {
+                maxScroll = scrollPercent;
+                if (maxScroll % 25 === 0) { // Track every 25%
+                    trackEvent('scroll_depth', {
+                        scroll_percent: maxScroll
+                    });
+                }
+            }
         });
     </script>
 </body>
