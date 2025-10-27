@@ -2491,7 +2491,7 @@
             });
         });
 
-        // Enhanced scroll animations
+        // Enhanced scroll animations - Start immediately on page load
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -100px 0px'
@@ -2505,10 +2505,26 @@
             });
         }, observerOptions);
 
-        // Observe all scroll-animate elements
-        document.querySelectorAll('.scroll-animate').forEach(el => {
-            observer.observe(el);
-        });
+        // Trigger animations immediately for elements in viewport
+        function triggerImmediateAnimations() {
+            document.querySelectorAll('.scroll-animate').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
+                
+                if (isInViewport) {
+                    // Add a small delay for staggered effect
+                    setTimeout(() => {
+                        el.classList.add('visible');
+                    }, Math.random() * 300);
+                } else {
+                    // Still observe for when they come into view
+                    observer.observe(el);
+                }
+            });
+        }
+
+        // Trigger immediate animations on page load
+        triggerImmediateAnimations();
 
         // Enhanced form submission
         document.querySelector('form').addEventListener('submit', function(e) {
@@ -2873,7 +2889,7 @@
             updateCounter();
         }
 
-        // Counter Animation on Scroll
+        // Counter Animation - Start immediately for visible counters
         const counterObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -2886,12 +2902,26 @@
             });
         }, { threshold: 0.5 });
 
-        // Observe all counters
-        document.querySelectorAll('.counter').forEach(counter => {
-            counterObserver.observe(counter);
-        });
+        // Trigger counter animations immediately for visible elements
+        function triggerImmediateCounters() {
+            document.querySelectorAll('.counter').forEach(counter => {
+                const rect = counter.getBoundingClientRect();
+                const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
+                
+                if (isInViewport) {
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    counter.classList.add('animate');
+                    animateCounter(counter, target);
+                } else {
+                    counterObserver.observe(counter);
+                }
+            });
+        }
 
-        // Progress Bar Animation
+        // Trigger immediate counter animations
+        triggerImmediateCounters();
+
+        // Progress Bar Animation - Start immediately for visible progress bars
         const progressObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -2905,12 +2935,27 @@
             });
         }, { threshold: 0.5 });
 
-        // Observe all progress bars
-        document.querySelectorAll('.progress-fill').forEach(progress => {
-            progressObserver.observe(progress);
-        });
+        // Trigger progress bar animations immediately for visible elements
+        function triggerImmediateProgressBars() {
+            document.querySelectorAll('.progress-fill').forEach(progress => {
+                const rect = progress.getBoundingClientRect();
+                const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
+                
+                if (isInViewport) {
+                    const width = progress.getAttribute('data-width');
+                    setTimeout(() => {
+                        progress.style.width = width + '%';
+                    }, 500);
+                } else {
+                    progressObserver.observe(progress);
+                }
+            });
+        }
 
-        // Staggered Animation Observer
+        // Trigger immediate progress bar animations
+        triggerImmediateProgressBars();
+
+        // Staggered Animation Observer - Start immediately for visible elements
         const staggerObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -2928,10 +2973,27 @@
             });
         }, { threshold: 0.3 });
 
-        // Observe skill categories for staggered animations
-        document.querySelectorAll('.skill-category').forEach(category => {
-            staggerObserver.observe(category);
-        });
+        // Trigger staggered animations immediately for visible elements
+        function triggerImmediateStaggeredAnimations() {
+            document.querySelectorAll('.skill-category').forEach(category => {
+                const rect = category.getBoundingClientRect();
+                const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
+                
+                if (isInViewport) {
+                    const staggerElements = category.querySelectorAll('.stagger-animation');
+                    staggerElements.forEach((element, index) => {
+                        setTimeout(() => {
+                            element.classList.add('animate');
+                        }, index * 100);
+                    });
+                } else {
+                    staggerObserver.observe(category);
+                }
+            });
+        }
+
+        // Trigger immediate staggered animations
+        triggerImmediateStaggeredAnimations();
 
         // Parallax Effect
         window.addEventListener('scroll', () => {
