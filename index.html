@@ -2148,13 +2148,14 @@ function hideLoader() {
     const loader = document.getElementById('loader');
     if (loader) loader.classList.add('hidden');
 }
-window.addEventListener('load', () => setTimeout(hideLoader, 800));
+window.addEventListener('load', () => {
+    setTimeout(hideLoader, 800);
+    // Init EmailJS after all deferred scripts have loaded
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init('YLOk-vC5Cng21AaTV');
+    }
+});
 setTimeout(hideLoader, 2000); // safety fallback — never stuck
-
-// ===== EMAILJS INIT (safe — only if script loaded) =====
-if (typeof emailjs !== 'undefined') {
-    emailjs.init('YLOk-vC5Cng21AaTV');
-}
 
 // ===== SCROLL PROGRESS =====
 window.addEventListener('scroll', () => {
