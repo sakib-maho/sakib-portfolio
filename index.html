@@ -220,6 +220,33 @@
     }
     .nav-cta::after { display: none !important; }
 
+    /* Language Toggle */
+    .lang-toggle {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-left: 8px;
+    }
+    .lang-btn {
+        padding: 4px 10px;
+        border-radius: 50px;
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--text-3);
+        font-size: 0.72rem;
+        font-weight: 700;
+        cursor: pointer;
+        font-family: 'JetBrains Mono', monospace;
+        letter-spacing: 0.05em;
+        transition: var(--transition);
+    }
+    .lang-btn:hover { color: var(--text-1); border-color: var(--border-h); }
+    .lang-btn.active {
+        background: linear-gradient(135deg, var(--cyan), var(--purple));
+        border-color: transparent;
+        color: #fff;
+    }
+
     /* Hamburger */
     .hamburger {
         display: none;
@@ -1441,7 +1468,7 @@
 <!-- Loader -->
 <div id="loader">
     <div class="loader-ring"></div>
-    <div class="loader-text">Initializing...</div>
+    <div class="loader-text" data-i18n="loader.text">Initializing...</div>
 </div>
 
 <!-- Scroll Progress -->
@@ -1463,12 +1490,16 @@
     <nav>
         <a href="#home" class="logo">SAKIB.ai</a>
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+            <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Let's Talk</a></li>
         </ul>
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ja">JP</button>
+        </div>
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
             <span></span><span></span><span></span>
         </button>
@@ -1480,11 +1511,15 @@
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobile-menu">
-    <a href="#about" class="mobile-link">About</a>
-    <a href="#skills" class="mobile-link">Skills</a>
-    <a href="#experience" class="mobile-link">Experience</a>
-    <a href="#projects" class="mobile-link">Projects</a>
-    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="#about" class="mobile-link" data-i18n="nav.about">About</a>
+    <a href="#skills" class="mobile-link" data-i18n="nav.skills">Skills</a>
+    <a href="#experience" class="mobile-link" data-i18n="nav.experience">Experience</a>
+    <a href="#projects" class="mobile-link" data-i18n="nav.projects">Projects</a>
+    <a href="#contact" class="mobile-link" data-i18n="nav.contact">Contact</a>
+    <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ja">JP</button>
+    </div>
 </div>
 
 <!-- ===== HERO ===== -->
@@ -1494,22 +1529,22 @@
             <div class="hero-text">
                 <div class="hero-badge">
                     <span class="dot"></span>
-                    Open to AI & Engineering roles
+                    <span data-i18n="hero.badge">Open to AI & Engineering roles</span>
                 </div>
                 <h1 class="hero-name">Robiul Islam <span class="name-glow">SAKIB</span></h1>
                 <div class="hero-role" id="hero-role">AI Developer & Engineering Lead</div>
-                <p class="hero-desc">
+                <p class="hero-desc" data-i18n-html="hero.desc">
                     Building intelligent systems that think. LLM integrations, RAG pipelines, and cloud-native architectures — from idea to production at <span style="color:var(--cyan);font-weight:600;">BrandCloud Inc.</span>
                 </p>
                 <div class="hero-actions">
                     <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-rocket"></i> View My Work
+                        <i class="fas fa-rocket"></i> <span data-i18n="hero.cta1">View My Work</span>
                     </a>
                     <a href="#contact" class="btn btn-ghost">
-                        <i class="fas fa-paper-plane"></i> Get In Touch
+                        <i class="fas fa-paper-plane"></i> <span data-i18n="hero.cta2">Get In Touch</span>
                     </a>
                     <a href="sakib-cv.pdf" download class="btn btn-cv">
-                        <i class="fas fa-download"></i> Download CV
+                        <i class="fas fa-download"></i> <span data-i18n="hero.cta3">Download CV</span>
                     </a>
                 </div>
             </div>
@@ -1521,18 +1556,18 @@
                 <div class="hero-photo-glow"></div>
                 <div class="float-badge top-right">
                     <i class="fas fa-brain" style="color:var(--cyan)"></i>
-                    AI Developer
+                    <span data-i18n="hero.float1">AI Developer</span>
                 </div>
                 <div class="float-badge bottom-left">
                     <i class="fas fa-location-dot" style="color:var(--purple)"></i>
-                    Tokyo, Japan
+                    <span data-i18n="hero.float2">Tokyo, Japan</span>
                 </div>
             </div>
         </div>
     </div>
     <div class="scroll-hint">
         <div class="line"></div>
-        scroll
+        <span data-i18n="scroll.hint">scroll</span>
     </div>
 </section>
 
@@ -1570,35 +1605,35 @@
 <!-- ===== ABOUT ===== -->
 <section id="about">
     <div class="container">
-        <div class="section-label fade-up">about me</div>
-        <h2 class="section-title fade-up">VP of Engineering who speaks AI.</h2>
+        <div class="section-label fade-up" data-i18n="about.label">about me</div>
+        <h2 class="section-title fade-up" data-i18n="about.title">VP of Engineering who speaks AI.</h2>
         <div class="about-grid">
             <div class="about-text fade-up">
-                <p>
+                <p data-i18n-html="about.p1">
                     I'm <span class="about-highlight">Sakib</span> — a Vice President of Engineering and AI Developer with 4+ years building production-grade intelligent systems. Currently leading engineering at <span class="about-highlight">BrandCloud Inc. (NDI Division)</span> in Tokyo, Japan.
                 </p>
-                <p>
+                <p data-i18n-html="about.p2">
                     My work sits at the intersection of <span class="about-highlight">AI/LLM integration</span> and full-stack engineering. I design RAG pipelines, orchestrate multi-agent workflows with Claude & GPT-4, and deploy everything on <span class="about-highlight">AWS cloud infrastructure</span> with Docker and CI/CD.
                 </p>
-                <p>
+                <p data-i18n="about.p3">
                     I lead a team of 12 engineers, mentoring them from code review to architecture decisions. I believe the best AI applications are built by people who understand both the models and the systems around them.
                 </p>
                 <div class="stats-row">
                     <div class="stat-card fade-up">
                         <span class="stat-num" data-target="4" data-suffix="+">0</span>
-                        <span class="stat-label">Years Building</span>
+                        <span class="stat-label" data-i18n="stat.years">Years Building</span>
                     </div>
                     <div class="stat-card fade-up">
                         <span class="stat-num" data-target="12">0</span>
-                        <span class="stat-label">Engineers Led</span>
+                        <span class="stat-label" data-i18n="stat.engineers">Engineers Led</span>
                     </div>
                     <div class="stat-card fade-up">
                         <span class="stat-num" data-target="86">0</span>
-                        <span class="stat-label">GitHub Repos</span>
+                        <span class="stat-label" data-i18n="stat.repos">GitHub Repos</span>
                     </div>
                     <div class="stat-card fade-up">
                         <span class="stat-num" data-target="6">0</span>
-                        <span class="stat-label">AI Projects Shipped</span>
+                        <span class="stat-label" data-i18n="stat.ai">AI Projects Shipped</span>
                     </div>
                 </div>
             </div>
@@ -1609,12 +1644,12 @@
                     <div class="about-photo-overlay"></div>
                 </div>
                 <div class="about-card-float">
-                    <div class="label">Currently building</div>
-                    <div class="value">AI Video Pipeline</div>
+                    <div class="label" data-i18n="about.building.label">Currently building</div>
+                    <div class="value" data-i18n="about.building.value">AI Video Pipeline</div>
                     <div style="margin-top:12px;" class="label">Status</div>
                     <div style="display:flex;align-items:center;gap:6px;margin-top:4px;">
                         <span style="width:7px;height:7px;background:var(--emerald);border-radius:50%;display:inline-block;animation:pulse 2s infinite;"></span>
-                        <span style="font-size:0.85rem;color:var(--emerald);font-weight:600;">Open to work</span>
+                        <span style="font-size:0.85rem;color:var(--emerald);font-weight:600;" data-i18n="about.status">Open to work</span>
                     </div>
                 </div>
             </div>
@@ -1625,15 +1660,15 @@
 <!-- ===== SKILLS ===== -->
 <section id="skills">
     <div class="container">
-        <div class="section-label fade-up">technical skills</div>
-        <h2 class="section-title fade-up">The full stack — and then some.</h2>
-        <p class="section-sub fade-up">From LLM fine-tuning to Flutter apps. I go deep where it matters.</p>
+        <div class="section-label fade-up" data-i18n="skills.label">technical skills</div>
+        <h2 class="section-title fade-up" data-i18n="skills.title">The full stack — and then some.</h2>
+        <p class="section-sub fade-up" data-i18n="skills.sub">From LLM fine-tuning to Flutter apps. I go deep where it matters.</p>
 
         <div class="bento-grid">
             <!-- AI/ML — wide -->
             <div class="bento-card wide fade-up">
                 <div class="bento-icon cyan"><i class="fas fa-robot"></i></div>
-                <h4>AI / ML Integration</h4>
+                <h4 data-i18n="skills.ai">AI / ML Integration</h4>
                 <div class="ai-tools-list">
                     <div class="ai-tool-item">
                         <span class="ai-tool-name"><i class="fas fa-circle-nodes" style="color:var(--cyan);margin-right:8px"></i>OpenAI GPT-4 / GPT-4o</span>
@@ -1657,7 +1692,7 @@
             <!-- Backend -->
             <div class="bento-card fade-up">
                 <div class="bento-icon purple"><i class="fas fa-server"></i></div>
-                <h4>Backend Development</h4>
+                <h4 data-i18n="skills.backend">Backend Development</h4>
                 <div class="tag-cloud">
                     <span class="tag">Django</span>
                     <span class="tag">Node.js</span>
@@ -1673,7 +1708,7 @@
             <!-- Frontend -->
             <div class="bento-card fade-up">
                 <div class="bento-icon cyan"><i class="fas fa-code"></i></div>
-                <h4>Frontend Development</h4>
+                <h4 data-i18n="skills.frontend">Frontend Development</h4>
                 <div class="tag-cloud">
                     <span class="tag">Next.js</span>
                     <span class="tag">React</span>
@@ -1687,7 +1722,7 @@
             <!-- Cloud & DevOps -->
             <div class="bento-card fade-up">
                 <div class="bento-icon green"><i class="fas fa-cloud"></i></div>
-                <h4>Cloud & DevOps</h4>
+                <h4 data-i18n="skills.cloud">Cloud & DevOps</h4>
                 <div class="tag-cloud">
                     <span class="tag">AWS</span>
                     <span class="tag">Docker</span>
@@ -1701,7 +1736,7 @@
             <!-- Databases -->
             <div class="bento-card fade-up">
                 <div class="bento-icon pink"><i class="fas fa-database"></i></div>
-                <h4>Databases & Storage</h4>
+                <h4 data-i18n="skills.db">Databases & Storage</h4>
                 <div class="tag-cloud">
                     <span class="tag">PostgreSQL</span>
                     <span class="tag">Redis</span>
@@ -1714,7 +1749,7 @@
             <!-- Mobile -->
             <div class="bento-card fade-up">
                 <div class="bento-icon purple"><i class="fas fa-mobile-screen"></i></div>
-                <h4>Mobile Development</h4>
+                <h4 data-i18n="skills.mobile">Mobile Development</h4>
                 <div class="tag-cloud">
                     <span class="tag">Flutter</span>
                     <span class="tag">Dart</span>
@@ -1729,9 +1764,9 @@
 <!-- ===== EXPERIENCE ===== -->
 <section id="experience">
     <div class="container">
-        <div class="section-label fade-up">career journey</div>
-        <h2 class="section-title fade-up">From intern to<br>VP of Engineering.</h2>
-        <p class="section-sub fade-up">4+ years. 5 pivotal chapters. One consistent drive to build.</p>
+        <div class="section-label fade-up" data-i18n="exp.label">career journey</div>
+        <h2 class="section-title fade-up" data-i18n-html="exp.title">From intern to<br>VP of Engineering.</h2>
+        <p class="section-sub fade-up" data-i18n="exp.sub">4+ years. 5 pivotal chapters. One consistent drive to build.</p>
 
         <div class="timeline">
             <!-- VPoE -->
@@ -1861,16 +1896,16 @@
 <!-- ===== PROJECTS ===== -->
 <section id="projects">
     <div class="container">
-        <div class="section-label fade-up">featured projects</div>
-        <h2 class="section-title fade-up">Things I've built.</h2>
-        <p class="section-sub fade-up">Production systems across AI, mobile, and cloud — solving real problems.</p>
+        <div class="section-label fade-up" data-i18n="proj.label">featured projects</div>
+        <h2 class="section-title fade-up" data-i18n="proj.title">Things I've built.</h2>
+        <p class="section-sub fade-up" data-i18n="proj.sub">Production systems across AI, mobile, and cloud — solving real problems.</p>
 
         <div class="filter-row fade-up">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="ai">AI / LLM</button>
-            <button class="filter-btn" data-filter="mobile">Mobile</button>
-            <button class="filter-btn" data-filter="backend">Backend</button>
-            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn active" data-filter="all" data-i18n="filter.all">All</button>
+            <button class="filter-btn" data-filter="ai" data-i18n="filter.ai">AI / LLM</button>
+            <button class="filter-btn" data-filter="mobile" data-i18n="filter.mobile">Mobile</button>
+            <button class="filter-btn" data-filter="backend" data-i18n="filter.backend">Backend</button>
+            <button class="filter-btn" data-filter="web" data-i18n="filter.web">Web</button>
         </div>
 
         <div class="projects-grid" id="projects-grid">
@@ -1890,7 +1925,7 @@
                         <span class="tech-pill">Docker</span>
                     </div>
                     <div class="project-links">
-                        <span class="project-link" style="color:var(--text-3);cursor:default;border-bottom:none;"><i class="fas fa-lock"></i> Private / NDA</span>
+                        <span class="project-link" style="color:var(--text-3);cursor:default;border-bottom:none;"><i class="fas fa-lock"></i> <span data-i18n="proj.private">Private / NDA</span></span>
                     </div>
                 </div>
             </div>
@@ -1910,7 +1945,7 @@
                         <span class="tech-pill">Vercel</span>
                     </div>
                     <div class="project-links">
-                        <span class="project-link" style="color:var(--text-3);cursor:default;border-bottom:none;"><i class="fas fa-lock"></i> Private / NDA</span>
+                        <span class="project-link" style="color:var(--text-3);cursor:default;border-bottom:none;"><i class="fas fa-lock"></i> <span data-i18n="proj.private">Private / NDA</span></span>
                     </div>
                 </div>
             </div>
@@ -2048,49 +2083,49 @@
 <!-- ===== CONTACT ===== -->
 <section id="contact">
     <div class="container">
-        <div class="section-label fade-up">contact</div>
-        <h2 class="section-title fade-up">Let's build something<br>intelligent together.</h2>
-        <p class="section-sub fade-up">Open to AI engineering projects, leadership roles, and interesting conversations.</p>
+        <div class="section-label fade-up" data-i18n="contact.label">contact</div>
+        <h2 class="section-title fade-up" data-i18n-html="contact.title">Let's build something<br>intelligent together.</h2>
+        <p class="section-sub fade-up" data-i18n="contact.sub">Open to AI engineering projects, leadership roles, and interesting conversations.</p>
 
         <div class="contact-grid">
             <div class="contact-info-block fade-up">
-                <h3>Get in touch</h3>
-                <p>Whether you have a project that needs AI integration, a team that needs technical leadership, or just want to talk about the future of LLMs — my inbox is open.</p>
+                <h3 data-i18n="contact.heading">Get in touch</h3>
+                <p data-i18n="contact.desc">Whether you have a project that needs AI integration, a team that needs technical leadership, or just want to talk about the future of LLMs — my inbox is open.</p>
 
                 <div class="contact-items">
                     <a href="mailto:mrobiulislamsakib@gmail.com" class="contact-item">
                         <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
                         <div class="contact-item-text">
-                            <span class="contact-item-label">Email</span>
+                            <span class="contact-item-label" data-i18n="contact.email.label">Email</span>
                             <span class="contact-item-value">mrobiulislamsakib@gmail.com</span>
                         </div>
                     </a>
                     <a href="tel:+819095345799" class="contact-item">
                         <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
                         <div class="contact-item-text">
-                            <span class="contact-item-label">Phone</span>
+                            <span class="contact-item-label" data-i18n="contact.phone.label">Phone</span>
                             <span class="contact-item-value">+81-90-9534-5799</span>
                         </div>
                     </a>
                     <a href="https://linkedin.com/in/msakib162004" target="_blank" rel="noopener noreferrer" class="contact-item">
                         <div class="contact-item-icon" style="background:rgba(124,58,237,0.12);color:var(--purple)"><i class="fab fa-linkedin"></i></div>
                         <div class="contact-item-text">
-                            <span class="contact-item-label">LinkedIn</span>
+                            <span class="contact-item-label" data-i18n="contact.linkedin.label">LinkedIn</span>
                             <span class="contact-item-value">linkedin.com/in/msakib162004</span>
                         </div>
                     </a>
                     <a href="https://github.com/sakib-maho" target="_blank" rel="noopener noreferrer" class="contact-item">
                         <div class="contact-item-icon" style="background:rgba(255,255,255,0.06);color:var(--text-1)"><i class="fab fa-github"></i></div>
                         <div class="contact-item-text">
-                            <span class="contact-item-label">GitHub</span>
+                            <span class="contact-item-label" data-i18n="contact.github.label">GitHub</span>
                             <span class="contact-item-value">github.com/sakib-maho</span>
                         </div>
                     </a>
                     <div class="contact-item" style="cursor:default;">
                         <div class="contact-item-icon" style="background:rgba(16,185,129,0.12);color:var(--emerald)"><i class="fas fa-location-dot"></i></div>
                         <div class="contact-item-text">
-                            <span class="contact-item-label">Location</span>
-                            <span class="contact-item-value">Tsurumaki, Tokyo, Japan</span>
+                            <span class="contact-item-label" data-i18n="contact.location.label">Location</span>
+                            <span class="contact-item-value" data-i18n="contact.location.value">Tsurumaki, Tokyo, Japan</span>
                         </div>
                     </div>
                 </div>
@@ -2100,25 +2135,25 @@
                 <form id="contact-form" novalidate>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
+                            <label for="name" data-i18n="form.name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required data-i18n-placeholder="form.name.ph">
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required>
+                            <label for="email" data-i18n="form.email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required data-i18n-placeholder="form.email.ph">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                        <label for="subject" data-i18n="form.subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What's this about?" required data-i18n-placeholder="form.subject.ph">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Tell me about your project or idea..." required></textarea>
+                        <label for="message" data-i18n="form.message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project or idea..." required data-i18n-placeholder="form.message.ph"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" id="send-btn" style="width:100%;justify-content:center;">
                         <i class="fas fa-paper-plane" id="btn-icon"></i>
-                        <span id="btn-text">Send Message</span>
+                        <span id="btn-text" data-i18n="form.send">Send Message</span>
                     </button>
                     <div id="form-status"></div>
                 </form>
@@ -2132,7 +2167,7 @@
     <div class="container">
         <div class="footer-inner">
             <a href="#home" class="footer-logo">SAKIB.ai</a>
-            <p class="footer-copy">&copy; 2025 Md Robiul Islam SAKIB. All rights reserved.</p>
+            <p class="footer-copy" data-i18n="footer.copy">© 2025 Md Robiul Islam SAKIB. All rights reserved.</p>
             <div class="footer-social">
                 <a href="https://linkedin.com/in/msakib162004" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/sakib-maho" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -2270,7 +2305,7 @@ setTimeout(() => {
 }, 3500);
 
 // ===== ROLE TYPEWRITER =====
-const roles = [
+let roles = [
     'AI Developer & Engineering Lead',
     'LLM Integration Architect',
     'Full-Stack Engineer',
@@ -2485,6 +2520,204 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
         });
     });
 });
+
+// ===== i18n LANGUAGE SUPPORT =====
+const translations = {
+    en: {
+        'loader.text': 'Initializing...',
+        'nav.about': 'About',
+        'nav.skills': 'Skills',
+        'nav.experience': 'Experience',
+        'nav.projects': 'Projects',
+        'nav.contact': "Let's Talk",
+        'hero.badge': 'Open to AI & Engineering roles',
+        'hero.desc': 'Building intelligent systems that think. LLM integrations, RAG pipelines, and cloud-native architectures — from idea to production at <span style="color:var(--cyan);font-weight:600;">BrandCloud Inc.</span>',
+        'hero.cta1': 'View My Work',
+        'hero.cta2': 'Get In Touch',
+        'hero.cta3': 'Download CV',
+        'hero.float1': 'AI Developer',
+        'hero.float2': 'Tokyo, Japan',
+        'scroll.hint': 'scroll',
+        'about.label': 'about me',
+        'about.title': 'VP of Engineering who speaks AI.',
+        'about.p1': 'I\'m <span class="about-highlight">Sakib</span> — a Vice President of Engineering and AI Developer with 4+ years building production-grade intelligent systems. Currently leading engineering at <span class="about-highlight">BrandCloud Inc. (NDI Division)</span> in Tokyo, Japan.',
+        'about.p2': 'My work sits at the intersection of <span class="about-highlight">AI/LLM integration</span> and full-stack engineering. I design RAG pipelines, orchestrate multi-agent workflows with Claude & GPT-4, and deploy everything on <span class="about-highlight">AWS cloud infrastructure</span> with Docker and CI/CD.',
+        'about.p3': 'I lead a team of 12 engineers, mentoring them from code review to architecture decisions. I believe the best AI applications are built by people who understand both the models and the systems around them.',
+        'stat.years': 'Years Building',
+        'stat.engineers': 'Engineers Led',
+        'stat.repos': 'GitHub Repos',
+        'stat.ai': 'AI Projects Shipped',
+        'about.building.label': 'Currently building',
+        'about.building.value': 'AI Video Pipeline',
+        'about.status': 'Open to work',
+        'skills.label': 'technical skills',
+        'skills.title': 'The full stack — and then some.',
+        'skills.sub': 'From LLM fine-tuning to Flutter apps. I go deep where it matters.',
+        'skills.ai': 'AI / ML Integration',
+        'skills.backend': 'Backend Development',
+        'skills.frontend': 'Frontend Development',
+        'skills.cloud': 'Cloud & DevOps',
+        'skills.db': 'Databases & Storage',
+        'skills.mobile': 'Mobile Development',
+        'exp.label': 'career journey',
+        'exp.title': 'From intern to<br>VP of Engineering.',
+        'exp.sub': '4+ years. 5 pivotal chapters. One consistent drive to build.',
+        'proj.label': 'featured projects',
+        'proj.title': "Things I've built.",
+        'proj.sub': 'Production systems across AI, mobile, and cloud — solving real problems.',
+        'filter.all': 'All',
+        'filter.ai': 'AI / LLM',
+        'filter.mobile': 'Mobile',
+        'filter.backend': 'Backend',
+        'filter.web': 'Web',
+        'proj.private': 'Private / NDA',
+        'contact.label': 'contact',
+        'contact.title': "Let's build something<br>intelligent together.",
+        'contact.sub': 'Open to AI engineering projects, leadership roles, and interesting conversations.',
+        'contact.heading': 'Get in touch',
+        'contact.desc': "Whether you have a project that needs AI integration, a team that needs technical leadership, or just want to talk about the future of LLMs — my inbox is open.",
+        'contact.email.label': 'Email',
+        'contact.phone.label': 'Phone',
+        'contact.linkedin.label': 'LinkedIn',
+        'contact.github.label': 'GitHub',
+        'contact.location.label': 'Location',
+        'contact.location.value': 'Tsurumaki, Tokyo, Japan',
+        'form.name': 'Name',
+        'form.email': 'Email',
+        'form.subject': 'Subject',
+        'form.message': 'Message',
+        'form.name.ph': 'Your name',
+        'form.email.ph': 'your@email.com',
+        'form.subject.ph': "What's this about?",
+        'form.message.ph': 'Tell me about your project or idea...',
+        'form.send': 'Send Message',
+        'footer.copy': '© 2025 Md Robiul Islam SAKIB. All rights reserved.',
+    },
+    ja: {
+        'loader.text': '読み込み中...',
+        'nav.about': '私について',
+        'nav.skills': 'スキル',
+        'nav.experience': '経歴',
+        'nav.projects': 'プロジェクト',
+        'nav.contact': 'お問い合わせ',
+        'hero.badge': 'AI・エンジニアリング職を探しています',
+        'hero.desc': '思考するインテリジェントシステムを構築しています。LLM統合、RAGパイプライン、クラウドネイティブアーキテクチャ — アイデアから本番環境まで、<span style="color:var(--cyan);font-weight:600;">BrandCloud Inc.</span>で実現しています。',
+        'hero.cta1': '実績を見る',
+        'hero.cta2': '連絡する',
+        'hero.cta3': 'CVをダウンロード',
+        'hero.float1': 'AIデベロッパー',
+        'hero.float2': '東京・日本',
+        'scroll.hint': 'スクロール',
+        'about.label': '私について',
+        'about.title': 'AIを語るエンジニアリングVP。',
+        'about.p1': '私は<span class="about-highlight">Sakib</span>です。4年以上の経験を持つVPエンジニアリング兼AIデベロッパーとして、本番グレードのインテリジェントシステムを構築してきました。現在は東京の<span class="about-highlight">BrandCloud Inc.（NDI部門）</span>でエンジニアリングをリードしています。',
+        'about.p2': '私の仕事は<span class="about-highlight">AI/LLM統合</span>とフルスタックエンジニアリングの交差点にあります。RAGパイプラインの設計、Claude & GPT-4を使ったマルチエージェントワークフローの調整、<span class="about-highlight">AWSクラウドインフラ</span>上でのDockerとCI/CDを用いたデプロイを担当しています。',
+        'about.p3': '12人のエンジニアチームをリードし、コードレビューからアーキテクチャの意思決定まで指導しています。最高のAIアプリケーションは、モデルとその周辺システムの両方を理解した人によって構築されると信じています。',
+        'stat.years': '年の経験',
+        'stat.engineers': 'エンジニアをリード',
+        'stat.repos': 'GitHubリポジトリ',
+        'stat.ai': 'AIプロジェクト出荷',
+        'about.building.label': '現在開発中',
+        'about.building.value': 'AI 動画パイプライン',
+        'about.status': '求職中',
+        'skills.label': '技術スキル',
+        'skills.title': 'フルスタック — そしてそれ以上。',
+        'skills.sub': 'LLMファインチューニングからFlutterアプリまで。重要なところに深く踏み込みます。',
+        'skills.ai': 'AI / ML 統合',
+        'skills.backend': 'バックエンド開発',
+        'skills.frontend': 'フロントエンド開発',
+        'skills.cloud': 'クラウド & DevOps',
+        'skills.db': 'データベース & ストレージ',
+        'skills.mobile': 'モバイル開発',
+        'exp.label': 'キャリア',
+        'exp.title': 'インターンから<br>エンジニアリングVPへ。',
+        'exp.sub': '4年以上。5つの重要な章。一貫したビルドへの情熱。',
+        'proj.label': '主要プロジェクト',
+        'proj.title': '私が構築したもの。',
+        'proj.sub': 'AI、モバイル、クラウド全般の本番システム — 実際の問題を解決。',
+        'filter.all': 'すべて',
+        'filter.ai': 'AI / LLM',
+        'filter.mobile': 'モバイル',
+        'filter.backend': 'バックエンド',
+        'filter.web': 'ウェブ',
+        'proj.private': 'プライベート / NDA',
+        'contact.label': 'コンタクト',
+        'contact.title': '一緒にインテリジェントな<br>ものを作りましょう。',
+        'contact.sub': 'AIエンジニアリングプロジェクト、リーダーシップの役割、興味深い会話を歓迎します。',
+        'contact.heading': 'お問い合わせ',
+        'contact.desc': 'AI統合が必要なプロジェクト、技術的なリーダーシップが必要なチーム、またはLLMの未来について話したい方 — いつでもメッセージをお待ちしています。',
+        'contact.email.label': 'メール',
+        'contact.phone.label': '電話',
+        'contact.linkedin.label': 'LinkedIn',
+        'contact.github.label': 'GitHub',
+        'contact.location.label': '所在地',
+        'contact.location.value': '鶴巻・東京・日本',
+        'form.name': 'お名前',
+        'form.email': 'メールアドレス',
+        'form.subject': '件名',
+        'form.message': 'メッセージ',
+        'form.name.ph': 'お名前を入力',
+        'form.email.ph': 'メールアドレスを入力',
+        'form.subject.ph': 'ご用件は何ですか？',
+        'form.message.ph': 'プロジェクトやアイデアについて教えてください...',
+        'form.send': '送信する',
+        'footer.copy': '© 2025 Md Robiul Islam SAKIB. 無断複写・転載を禁じます。',
+    }
+};
+
+const rolesEN = [
+    'AI Developer & Engineering Lead',
+    'LLM Integration Architect',
+    'Full-Stack Engineer',
+    'VP of Engineering @ BrandCloud'
+];
+const rolesJA = [
+    'AIデベロッパー & エンジニアリングリード',
+    'LLM統合アーキテクト',
+    'フルスタックエンジニア',
+    'BrandCloud VPエンジニアリング'
+];
+
+function setLanguage(lang) {
+    const t = translations[lang];
+    if (!t) return;
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key] !== undefined) el.textContent = t[key];
+    });
+
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.dataset.i18nHtml;
+        if (t[key] !== undefined) el.innerHTML = t[key];
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.dataset.i18nPlaceholder;
+        if (t[key] !== undefined) el.placeholder = t[key];
+    });
+
+    // Update typewriter roles array
+    const newRoles = lang === 'ja' ? rolesJA : rolesEN;
+    roles.splice(0, roles.length, ...newRoles);
+
+    // Update active button state
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+
+    localStorage.setItem('portfolio-lang', lang);
+}
+
+// Lang toggle click handler
+document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+});
+
+// Restore saved language preference
+const savedLang = localStorage.getItem('portfolio-lang');
+if (savedLang && savedLang !== 'en') setLanguage(savedLang);
 </script>
 </body>
 </html>
