@@ -1,74 +1,80 @@
-# 🚀 Md Robiul Islam SAKIB - Portfolio
+# Md Robiul Islam Sakib - Portfolio
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://sakib-maho.github.io/sakib-portfolio/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/msakib162004)
 
-## 👨‍💻 About Me
+Personal portfolio website presenting engineering experience, selected projects, and contact information.
 
-**Vice President of Engineering (VPoE) & Full-Stack Lead** with **3+ years of experience** in web and mobile development, AWS cloud infrastructure, and AI integration. Currently leading engineering teams at BrandCloud Inc. (NDI Division) in Bangladesh.
+## Live Demo
 
-## 🌐 Live Portfolio
+- Website: [sakib-maho.github.io/sakib-portfolio](https://sakib-maho.github.io/sakib-portfolio/)
 
-**🔗 [View Live Portfolio](https://sakib-maho.github.io/sakib-portfolio/)**
+## Preview
 
-## 🎯 Key Expertise
+![Portfolio preview](./Sakib_protfolio.PNG)
 
-- **Leadership:** VPoE role with team management experience
-- **Full-Stack Development:** Django, Node.js, React, Next.js, Flutter
-- **Cloud & DevOps:** AWS, Docker, CI/CD pipelines
-- **AI Integration:** OpenAI GPT, Claude, Gemini, ChromaDB
-- **Mobile Development:** Flutter (iOS & Android)
+## Highlights
 
-## 🚀 Featured Projects
+- Professional summary and technical experience
+- Featured project section with practical outcomes
+- Contact section for hiring and collaboration
+- Lightweight static setup deployable via GitHub Pages
 
-### 1. KnowledgeLinks AI
-AI-powered enterprise knowledge management system with multi-LLM integration.
+## Tech Stack
 
-### 2. Benrimono
-On-demand delivery and errand service app with cross-platform mobile development.
+- HTML, CSS, JavaScript
+- Responsive layout and custom visual assets
+- GitHub Pages for hosting
 
-### 3. Go API with Swagger
-Structured REST API with comprehensive documentation and PostgreSQL integration.
+## Run Locally
 
-## 📊 Portfolio Statistics
+### Option 1: Open directly
 
-- **📁 GitHub Repositories:** 68 (100% copyright compliant)
-- **👥 Team Members Led:** Up to 12 engineers
-- **🏗️ Infrastructure Managed:** AWS multi-service architecture
-- **🤖 AI Integration:** Multiple LLM implementations in production
+Open `index.html` in your browser.
 
-## 🛠️ Technologies
+### Option 2: Use a local web server (recommended)
 
-### Backend
-- Django, Node.js, Express, Golang, Python
+```bash
+python3 -m http.server 8080
+```
 
-### Frontend
-- Next.js, React, Vue.js, JavaScript, TypeScript, Flutter
+Then open [http://localhost:8080](http://localhost:8080).
 
-### Cloud & DevOps
-- AWS (EC2, RDS, S3, CloudFront, IAM, Route 53)
-- Docker, Docker Compose, Nginx, CI/CD
+## Project Structure
 
-### AI/ML
-- OpenAI GPT, Anthropic Claude, Google Gemini
-- ChromaDB, Vector databases
+- `index.html` - Main portfolio page
+- `README.md` - Project documentation
+- `Sakib_protfolio.PNG` - Portfolio preview image
+- `favicon.svg` / `favicon-sunset.svg` - Favicon assets
+- `*-preview.html` and `*-analysis.html` - Design experiments and review pages
 
-### Databases
-- PostgreSQL, Redis, DynamoDB, MinIO
+## Customization
 
-## 📞 Contact
+To adapt this portfolio for your own use:
 
-- **📧 Email:** mrobiulislamsakib@gmail.com
-- **📱 Phone:** +81-90-9534-5799
-- **📍 Location:** Tokyo, Japan
-- **💼 LinkedIn:** [linkedin.com/in/msakib162004](https://linkedin.com/in/msakib162004)
-- **🐙 GitHub:** [github.com/sakib-maho](https://github.com/sakib-maho)
+1. Update hero/about text in `index.html`
+2. Replace project details with your best work
+3. Update contact links (GitHub, LinkedIn, email)
+4. Replace preview image and favicon assets as needed
 
-## 📄 License
+## Deployment
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This repository is configured for static hosting via GitHub Pages.
 
----
+If you deploy manually:
 
-*Built with ❤️ using modern web technologies*
+1. Push changes to `main`
+2. In repository settings, enable Pages from `main` branch
+3. Confirm the published URL
+
+## Contact
+
+- Email: `mrobiulislamsakib@gmail.com`
+- Location: Tokyo, Japan
+- LinkedIn: [linkedin.com/in/msakib162004](https://linkedin.com/in/msakib162004)
+- GitHub: [github.com/sakib-maho](https://github.com/sakib-maho)
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE).
