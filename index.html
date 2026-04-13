@@ -18,7 +18,7 @@
         "jobTitle": "AI Developer & Vice President of Engineering",
         "description": "AI Developer and VPoE building intelligent systems with LLMs, RAG pipelines, and cloud-native architectures.",
         "url": "https://sakib-maho.github.io/sakib-portfolio/",
-        "image": "https://sakib-maho.github.io/sakib-portfolio/profile-photo-hires.jpg",
+        "image": "https://sakib-maho.github.io/sakib-portfolio/Sakib_protfolio.PNG",
         "email": "mrobiulislamsakib@gmail.com",
         "sameAs": ["https://linkedin.com/in/msakib162004","https://github.com/sakib-maho"],
         "worksFor": {"@type": "Organization","name": "BrandCloud Inc."}
@@ -29,11 +29,11 @@
     <meta property="og:url" content="https://sakib-maho.github.io/sakib-portfolio/">
     <meta property="og:title" content="Sakib — AI Developer & Engineering Lead">
     <meta property="og:description" content="Building intelligent systems with LLMs, RAG pipelines, and cloud-native architectures.">
-    <meta property="og:image" content="https://sakib-maho.github.io/sakib-portfolio/profile-photo-hires.jpg">
+    <meta property="og:image" content="https://sakib-maho.github.io/sakib-portfolio/Sakib_protfolio.PNG">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Sakib — AI Developer & Engineering Lead">
     <meta property="twitter:description" content="Building intelligent systems with LLMs, RAG pipelines, and cloud-native architectures.">
-    <meta property="twitter:image" content="https://sakib-maho.github.io/sakib-portfolio/profile-photo-hires.jpg">
+    <meta property="twitter:image" content="https://sakib-maho.github.io/sakib-portfolio/Sakib_protfolio.PNG">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg?v=6">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon.svg?v=6">
@@ -513,6 +513,7 @@
     .hero-photo-ring img {
         width: 100%; height: 100%;
         object-fit: cover;
+        object-position: center top;
         border-radius: 50%;
         border: 4px solid var(--bg);
         display: block;
@@ -520,9 +521,9 @@
 
     .hero-photo-glow {
         position: absolute;
-        inset: -20px;
+        inset: -28px;
         border-radius: 50%;
-        background: radial-gradient(circle, var(--glow-c) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba(0,212,255,0.28) 0%, rgba(124,58,237,0.12) 50%, transparent 70%);
         z-index: -1;
         animation: glowPulse 3s ease-in-out infinite;
     }
@@ -659,19 +660,20 @@
         height: 420px;
         border-radius: 32px;
         overflow: hidden;
-        border: 1px solid var(--border);
+        border: 1px solid var(--border-h);
+        box-shadow: 0 0 40px rgba(0,212,255,0.12), 0 0 80px rgba(124,58,237,0.08), 0 20px 60px rgba(0,0,0,0.5);
     }
     .about-photo-wrap img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: top;
-        filter: grayscale(20%) contrast(1.05);
+        object-position: center top;
+        filter: contrast(1.05) saturate(1.05);
     }
     .about-photo-overlay {
         position: absolute;
         inset: 0;
-        background: linear-gradient(to top, var(--surface) 0%, transparent 40%);
+        background: linear-gradient(to top, rgba(5,5,8,0.65) 0%, transparent 30%);
     }
 
     .about-card-float {
@@ -1033,7 +1035,7 @@
         position: absolute;
         top: 16px; right: 16px;
         background: linear-gradient(135deg, var(--cyan), var(--purple));
-        color: white;
+        color: var(--text-1);
         font-size: 0.65rem;
         font-weight: 700;
         letter-spacing: 0.1em;
@@ -1285,7 +1287,7 @@
 
         .about-grid { grid-template-columns: 1fr; gap: 48px; }
         .about-visual { display: flex; justify-content: center; }
-        .about-photo-wrap { width: 100%; max-width: 320px; height: 340px; }
+        .about-photo-wrap { width: 100%; max-width: min(320px, 90vw); height: 340px; }
         .about-card-float { display: none; }
 
         .bento-grid { grid-template-columns: 1fr; }
@@ -1451,6 +1453,18 @@
         box-shadow: 0 4px 16px rgba(16,185,129,0.2);
     }
 
+    /* ===== FOCUS / KEYBOARD ACCESSIBILITY ===== */
+    :focus-visible {
+        outline: 2px solid var(--cyan);
+        outline-offset: 3px;
+        border-radius: 4px;
+    }
+    .nav-links a:focus-visible,
+    .mobile-menu a:focus-visible { border-radius: 6px; }
+    .btn:focus-visible           { outline-offset: 4px; border-radius: var(--radius); }
+    .project-card:focus-visible,
+    .bento-card:focus-visible    { outline-offset: 6px; border-radius: var(--radius-lg); }
+
     /* ===== PREFERS REDUCED MOTION ===== */
     @media (prefers-reduced-motion: reduce) {
         *, *::before, *::after {
@@ -1556,7 +1570,7 @@
 
             <div class="hero-photo-wrap">
                 <div class="hero-photo-ring">
-                    <img src="profile-photo-optimized.jpg" alt="Md Robiul Islam SAKIB" width="280" height="280">
+                    <img src="Sakib_protfolio.PNG" alt="Md Robiul Islam SAKIB" width="280" height="280">
                 </div>
                 <div class="hero-photo-glow"></div>
                 <div class="float-badge top-right">
@@ -1645,7 +1659,7 @@
 
             <div class="about-visual fade-up">
                 <div class="about-photo-wrap">
-                    <img src="profile-photo-hires.jpg" alt="Md Robiul Islam SAKIB" loading="lazy" width="360" height="420">
+                    <img src="Sakib_protfolio.PNG" alt="Md Robiul Islam SAKIB" loading="lazy" width="360" height="420">
                     <div class="about-photo-overlay"></div>
                 </div>
                 <div class="about-card-float">
@@ -2361,7 +2375,7 @@ const NODE_COLORS = [
 ];
 const NODE_COUNT  = isMobile ? 28 : 60;
 const MAX_DIST    = isMobile ? 115 : 150;
-const BASE_SPEED  = isMobile ? 0.28 : 0.45;
+const BASE_SPEED  = isMobile ? 0.7 : 1.4;
 
 function resizeCanvas() {
     canvas.width  = window.innerWidth;
@@ -2393,10 +2407,10 @@ function spawnPulse(iA, iB) {
     pulses.push({ iA, iB, t: 0, speed: 0.008 + Math.random() * 0.014, color: c });
 }
 
-let mouse = { x: -999, y: -999 };
+let mouse = { x: null, y: null };
 if (!isMobile) {
     window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
-    window.addEventListener('mouseleave', ()  => { mouse.x = -999; mouse.y = -999; });
+    window.addEventListener('mouseleave', ()  => { mouse.x = null; mouse.y = null; });
 }
 
 let frame = 0;
@@ -2412,16 +2426,25 @@ function drawNeural() {
         if (n.x < 0 || n.x > canvas.width)  { n.vx *= -1; n.x = Math.max(0, Math.min(canvas.width,  n.x)); }
         if (n.y < 0 || n.y > canvas.height) { n.vy *= -1; n.y = Math.max(0, Math.min(canvas.height, n.y)); }
 
-        // Mouse repulsion / attraction (desktop)
-        if (!isMobile && mouse.x > 0) {
+        // Light friction to keep motion smooth
+        n.vx *= 0.995;
+        n.vy *= 0.995;
+
+        // Mouse attraction (desktop) — proportional force, stronger when closer
+        if (!isMobile && mouse.x !== null) {
             const dx = mouse.x - n.x, dy = mouse.y - n.y;
             const d  = Math.sqrt(dx * dx + dy * dy);
-            if (d < 200) { n.vx += dx * 0.00005; n.vy += dy * 0.00005; }
+            if (d < 260 && d > 0) {
+                const force = (1 - d / 260) * 0.007;
+                n.vx += (dx / d) * force;
+                n.vy += (dy / d) * force;
+            }
         }
 
-        // Speed cap
+        // Speed cap — normalized so direction is preserved
         const spd = Math.sqrt(n.vx * n.vx + n.vy * n.vy);
-        if (spd > 1.1) { n.vx *= 0.97; n.vy *= 0.97; }
+        const MAX_SPD = 3.5;
+        if (spd > MAX_SPD) { n.vx = (n.vx / spd) * MAX_SPD; n.vy = (n.vy / spd) * MAX_SPD; }
 
         // Activation pulse timer
         n.pulseTimer--;
