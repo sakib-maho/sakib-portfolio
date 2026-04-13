@@ -13,28 +13,14 @@ _Part of the `sakib-maho` project showcase series with consistent documentation 
 
 Personal portfolio website presenting engineering experience, selected projects, and contact information.
 
-## Live Demo
-
-- Website: [sakib-maho.github.io/sakib-portfolio](https://sakib-maho.github.io/sakib-portfolio/)
-
-## Preview
-
-![Portfolio preview](./Sakib_protfolio.PNG)
-
-## Highlights
+## Features
 
 - Professional summary and technical experience
 - Featured project section with practical outcomes
 - Contact section for hiring and collaboration
 - Lightweight static setup deployable via GitHub Pages
 
-## Tech Stack
-
-- HTML, CSS, JavaScript
-- Responsive layout and custom visual assets
-- GitHub Pages for hosting
-
-## Run Locally
+## Quick Start
 
 ### Option 1: Open directly
 
@@ -47,6 +33,24 @@ python3 -m http.server 8080
 ```
 
 Then open [http://localhost:8080](http://localhost:8080).
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE).
+
+## Live Demo
+
+- Website: [sakib-maho.github.io/sakib-portfolio](https://sakib-maho.github.io/sakib-portfolio/)
+
+## Preview
+
+![Portfolio preview](./Sakib_protfolio.PNG)
+
+## Tech Stack
+
+- HTML, CSS, JavaScript
+- Responsive layout and custom visual assets
+- GitHub Pages for hosting
 
 ## Project Structure
 
@@ -81,7 +85,3 @@ If you deploy manually:
 - Location: Tokyo, Japan
 - LinkedIn: [linkedin.com/in/msakib162004](https://linkedin.com/in/msakib162004)
 - GitHub: [github.com/sakib-maho](https://github.com/sakib-maho)
-
-## License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE).
