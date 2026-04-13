@@ -297,7 +297,7 @@
         width: 100%; height: 100%;
         pointer-events: none;
         z-index: 0;
-        opacity: 0.35;
+        opacity: 0.75;
     }
 
     /* ===== UTILITY ===== */
@@ -1261,7 +1261,12 @@
     @media (max-width: 768px) {
         section { padding: 80px 0; }
 
-        .aurora-orb { display: none; }
+        .aurora-orb {
+            filter: blur(60px);
+        }
+        .aurora-1 { width: 320px; height: 320px; top: -80px; right: -60px; }
+        .aurora-2 { width: 260px; height: 260px; bottom: 10%; left: -80px; }
+        .aurora-3 { width: 200px; height: 200px; top: 50%; right: 5%; }
 
         .nav-links { display: none; }
         .hamburger { display: flex; }
@@ -1307,19 +1312,19 @@
     }
     .aurora-1 {
         width: 700px; height: 700px;
-        background: radial-gradient(circle, rgba(124,58,237,0.1) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba(124,58,237,0.22) 0%, transparent 70%);
         top: -200px; right: -150px;
         animation: auroraFloat 14s ease-in-out infinite;
     }
     .aurora-2 {
         width: 550px; height: 550px;
-        background: radial-gradient(circle, rgba(0,212,255,0.07) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba(0,212,255,0.18) 0%, transparent 70%);
         bottom: 15%; left: -150px;
         animation: auroraFloat 18s ease-in-out infinite reverse;
     }
     .aurora-3 {
         width: 400px; height: 400px;
-        background: radial-gradient(circle, rgba(244,114,182,0.06) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba(244,114,182,0.15) 0%, transparent 70%);
         top: 55%; right: 15%;
         animation: auroraFloat 22s ease-in-out infinite 6s;
     }
@@ -2342,98 +2347,164 @@ function typeRole() {
 
 setTimeout(typeRole, 800);
 
-// ===== NEURAL CANVAS =====
+// ===== AI NEURAL CANVAS =====
 const canvas = document.getElementById('neural-canvas');
 const isMobile = window.innerWidth <= 768;
-if (isMobile) { canvas.style.display = 'none'; }
-const ctx = isMobile ? null : canvas.getContext('2d');
-let nodes = [];
-let mouse = { x: -999, y: -999 };
+const ctx = canvas.getContext('2d');
+let neuralPaused = false;
+
+// Node palette: cyan (input), purple (hidden), pink (output) — like a real neural net
+const NODE_COLORS = [
+    { r: 0,   g: 212, b: 255 },  // cyan
+    { r: 124, g: 58,  b: 237 },  // purple
+    { r: 244, g: 114, b: 182 },  // pink
+];
+const NODE_COUNT  = isMobile ? 28 : 60;
+const MAX_DIST    = isMobile ? 115 : 150;
+const BASE_SPEED  = isMobile ? 0.28 : 0.45;
 
 function resizeCanvas() {
-    if (isMobile) return;
-    canvas.width = window.innerWidth;
+    canvas.width  = window.innerWidth;
     canvas.height = window.innerHeight;
 }
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
-window.addEventListener('mousemove', e => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
-});
-
-// Create nodes
-const NODE_COUNT = 60;
+// Nodes
+let nodes = [];
 for (let i = 0; i < NODE_COUNT; i++) {
+    const color = NODE_COLORS[Math.floor(Math.random() * NODE_COLORS.length)];
     nodes.push({
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
-        r: Math.random() * 2 + 1
+        vx: (Math.random() - 0.5) * BASE_SPEED * 2,
+        vy: (Math.random() - 0.5) * BASE_SPEED * 2,
+        r:  Math.random() * 1.8 + 1.4,
+        color,
+        pulse:      0,                          // activation glow 0→1
+        pulseTimer: Math.floor(Math.random() * 250),
     });
 }
 
+// Data pulses (glowing dots that travel along connections)
+let pulses = [];
+function spawnPulse(iA, iB) {
+    const c = nodes[Math.random() < 0.5 ? iA : iB].color;
+    pulses.push({ iA, iB, t: 0, speed: 0.008 + Math.random() * 0.014, color: c });
+}
+
+let mouse = { x: -999, y: -999 };
+if (!isMobile) {
+    window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+    window.addEventListener('mouseleave', ()  => { mouse.x = -999; mouse.y = -999; });
+}
+
+let frame = 0;
 function drawNeural() {
     if (!ctx || neuralPaused) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    frame++;
 
-    // Update node positions
+    // ── Update nodes ──────────────────────────────
     nodes.forEach(n => {
         n.x += n.vx;
         n.y += n.vy;
-        if (n.x < 0 || n.x > canvas.width)  n.vx *= -1;
-        if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
+        if (n.x < 0 || n.x > canvas.width)  { n.vx *= -1; n.x = Math.max(0, Math.min(canvas.width,  n.x)); }
+        if (n.y < 0 || n.y > canvas.height) { n.vy *= -1; n.y = Math.max(0, Math.min(canvas.height, n.y)); }
 
-        // Gentle mouse attraction
-        const dx = mouse.x - n.x;
-        const dy = mouse.y - n.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 180) {
-            n.vx += dx * 0.00008;
-            n.vy += dy * 0.00008;
+        // Mouse repulsion / attraction (desktop)
+        if (!isMobile && mouse.x > 0) {
+            const dx = mouse.x - n.x, dy = mouse.y - n.y;
+            const d  = Math.sqrt(dx * dx + dy * dy);
+            if (d < 200) { n.vx += dx * 0.00005; n.vy += dy * 0.00005; }
         }
 
-        // Speed limit
-        const speed = Math.sqrt(n.vx * n.vx + n.vy * n.vy);
-        if (speed > 1.2) { n.vx *= 0.98; n.vy *= 0.98; }
+        // Speed cap
+        const spd = Math.sqrt(n.vx * n.vx + n.vy * n.vy);
+        if (spd > 1.1) { n.vx *= 0.97; n.vy *= 0.97; }
+
+        // Activation pulse timer
+        n.pulseTimer--;
+        if (n.pulseTimer <= 0) {
+            n.pulse = 1.0;
+            n.pulseTimer = 100 + Math.floor(Math.random() * 320);
+        }
+        if (n.pulse > 0) n.pulse = Math.max(0, n.pulse - 0.022);
     });
 
-    // Draw connections
+    // ── Draw connections + spawn data pulses ──────
     for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
             const dx = nodes[i].x - nodes[j].x;
             const dy = nodes[i].y - nodes[j].y;
             const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < 140) {
-                const opacity = (1 - dist / 140) * 0.5;
+            if (dist < MAX_DIST) {
+                const alpha = (1 - dist / MAX_DIST) * 0.6;
+                const c = nodes[i].color;
                 ctx.beginPath();
                 ctx.moveTo(nodes[i].x, nodes[i].y);
                 ctx.lineTo(nodes[j].x, nodes[j].y);
-                ctx.strokeStyle = `rgba(0,212,255,${opacity})`;
-                ctx.lineWidth = 0.6;
+                ctx.strokeStyle = `rgba(${c.r},${c.g},${c.b},${alpha})`;
+                ctx.lineWidth = 0.7;
                 ctx.stroke();
+
+                // Occasionally fire a pulse along this edge
+                if (frame % 3 === 0 && Math.random() < 0.0018) spawnPulse(i, j);
             }
         }
     }
 
-    // Draw nodes
+    // ── Draw data pulses ──────────────────────────
+    pulses.forEach(p => {
+        const a = nodes[p.iA], b = nodes[p.iB];
+        const x = a.x + (b.x - a.x) * p.t;
+        const y = a.y + (b.y - a.y) * p.t;
+        const { r: cr, g: cg, b: cb } = p.color;
+        ctx.shadowBlur  = 12;
+        ctx.shadowColor = `rgba(${cr},${cg},${cb},1)`;
+        ctx.beginPath();
+        ctx.arc(x, y, 2.8, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${cr},${cg},${cb},1)`;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+        p.t += p.speed;
+    });
+    pulses = pulses.filter(p => p.t <= 1);
+
+    // ── Draw nodes ────────────────────────────────
     nodes.forEach(n => {
+        const { r: cr, g: cg, b: cb } = n.color;
+
+        // Activation glow ring
+        if (n.pulse > 0) {
+            const glowR = n.r + n.pulse * 14;
+            const grad  = ctx.createRadialGradient(n.x, n.y, n.r, n.x, n.y, glowR);
+            grad.addColorStop(0, `rgba(${cr},${cg},${cb},${n.pulse * 0.45})`);
+            grad.addColorStop(1, `rgba(${cr},${cg},${cb},0)`);
+            ctx.beginPath();
+            ctx.arc(n.x, n.y, glowR, 0, Math.PI * 2);
+            ctx.fillStyle = grad;
+            ctx.fill();
+        }
+
+        // Core dot with glow
+        ctx.shadowBlur  = 7;
+        ctx.shadowColor = `rgba(${cr},${cg},${cb},0.9)`;
         ctx.beginPath();
         ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(0,212,255,0.6)';
+        ctx.fillStyle = `rgba(${cr},${cg},${cb},0.9)`;
         ctx.fill();
+        ctx.shadowBlur = 0;
     });
 
     requestAnimationFrame(drawNeural);
 }
-let neuralPaused = false;
+
 document.addEventListener('visibilitychange', () => {
     neuralPaused = document.hidden;
-    if (!neuralPaused && !isMobile) drawNeural();
+    if (!neuralPaused) drawNeural();
 });
-if (!isMobile) drawNeural();
+drawNeural();
 
 // ===== CONTACT FORM =====
 document.getElementById('contact-form').addEventListener('submit', async function(e) {
