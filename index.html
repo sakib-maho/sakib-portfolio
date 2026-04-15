@@ -1625,14 +1625,14 @@
 <section id="about">
     <div class="container">
         <div class="section-label fade-up" data-i18n="about.label">about me</div>
-        <h2 class="section-title fade-up" data-i18n="about.title">Backend Engineer building AI-powered systems.</h2>
+        <h2 class="section-title fade-up" data-i18n="about.title">Full-Stack Engineer building AI-powered systems.</h2>
         <div class="about-grid">
             <div class="about-text fade-up">
                 <p data-i18n-html="about.p1">
-                    I'm <span class="about-highlight">Sakib</span> — a backend-focused software engineer with 4+ years building production systems. I currently work in an engineering leadership role at <a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" class="about-highlight" style="text-decoration:none;">BrandCloud Inc. (NDI Division)</a> in Tokyo, Japan.
+                    I'm <span class="about-highlight">Sakib</span> — a full-stack software engineer with 4+ years building production systems. I currently work in an engineering leadership role at <a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" class="about-highlight" style="text-decoration:none;">BrandCloud Inc. (NDI Division)</a> in Tokyo, Japan.
                 </p>
                 <p data-i18n-html="about.p2">
-                    My work sits at the intersection of <span class="about-highlight">AI/LLM integration</span> and product engineering. I design RAG pipelines, build API-first services, and deploy on <span class="about-highlight">AWS cloud infrastructure</span> with Docker and CI/CD.
+                    My work sits at the intersection of <span class="about-highlight">AI/LLM integration</span> and product engineering. I design RAG pipelines, build API-first services, and deploy on <span class="about-highlight">AWS, Google Cloud, and Cloudflare</span> with Docker and CI/CD.
                 </p>
                 <p data-i18n="about.p3">
                     I mentor engineers through code review and architecture decisions, and I focus on reliable delivery, clean design, and measurable product outcomes.
@@ -1744,9 +1744,12 @@
                 <h4 data-i18n="skills.cloud">Cloud & DevOps</h4>
                 <div class="tag-cloud">
                     <span class="tag">AWS</span>
+                    <span class="tag">Google Cloud</span>
+                    <span class="tag">Cloudflare</span>
                     <span class="tag">Docker</span>
                     <span class="tag">Nginx</span>
                     <span class="tag">CI/CD</span>
+                    <span class="tag">DNS</span>
                     <span class="tag">Vercel</span>
                     <span class="tag">GitHub Actions</span>
                 </div>
@@ -1760,6 +1763,7 @@
                     <span class="tag">PostgreSQL</span>
                     <span class="tag">Redis</span>
                     <span class="tag">DynamoDB</span>
+                    <span class="tag">RDS</span>
                     <span class="tag">ChromaDB</span>
                     <span class="tag">MinIO</span>
                 </div>
@@ -2668,9 +2672,9 @@ const translations = {
         'hero.float2': 'Tokyo, Japan',
         'scroll.hint': 'scroll',
         'about.label': 'about me',
-        'about.title': 'Backend Engineer building AI-powered systems.',
-        'about.p1': 'I\'m <span class="about-highlight">Sakib</span> — a backend-focused software engineer with 4+ years building production systems. I currently work in an engineering leadership role at <a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" class="about-highlight" style="text-decoration:none;">BrandCloud Inc. (NDI Division)</a> in Tokyo, Japan.',
-        'about.p2': 'My work sits at the intersection of <span class="about-highlight">AI/LLM integration</span> and product engineering. I design RAG pipelines, build API-first services, and deploy on <span class="about-highlight">AWS cloud infrastructure</span> with Docker and CI/CD.',
+        'about.title': 'Full-Stack Engineer building AI-powered systems.',
+        'about.p1': 'I\'m <span class="about-highlight">Sakib</span> — a full-stack software engineer with 4+ years building production systems. I currently work in an engineering leadership role at <a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" class="about-highlight" style="text-decoration:none;">BrandCloud Inc. (NDI Division)</a> in Tokyo, Japan.',
+        'about.p2': 'My work sits at the intersection of <span class="about-highlight">AI/LLM integration</span> and product engineering. I design RAG pipelines, build API-first services, and deploy on <span class="about-highlight">AWS, Google Cloud, and Cloudflare</span> with Docker and CI/CD.',
         'about.p3': 'I mentor engineers through code review and architecture decisions, and I focus on reliable delivery, clean design, and measurable product outcomes.',
         'stat.years': 'Years Building',
         'stat.engineers': 'Engineers Led',
@@ -2785,7 +2789,7 @@ const translations = {
         'nav.projects': 'プロジェクト',
         'nav.contact': 'お問い合わせ',
         'hero.badge': 'AI・エンジニアリング職を探しています',
-        'hero.desc': '思考するインテリジェントシステムを構築しています。LLM統合、RAGパイプライン、クラウドネイティブアーキテクチャ — アイデアから本番環境まで、<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-weight:600;text-decoration:none;">株式会社ブランドクラウド</a>で実現しています。',
+        'hero.desc': 'インテリジェントなシステムを構築しています。LLM統合、RAGパイプライン、クラウドネイティブアーキテクチャ — アイデアから本番環境まで、<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-weight:600;text-decoration:none;">株式会社ブランドクラウド</a>で実現しています。',
         'hero.cta1': '実績を見る',
         'hero.cta2': '連絡する',
         'hero.cta3': 'CVをダウンロード',
@@ -2793,9 +2797,9 @@ const translations = {
         'hero.float2': '東京・日本',
         'scroll.hint': 'スクロール',
         'about.label': '私について',
-        'about.title': 'AI活用のプロダクトを作るバックエンドエンジニア。',
-        'about.p1': '私は<span class="about-highlight">Sakib</span>です。バックエンドを軸に、4年以上にわたり本番環境のシステム開発に携わってきました。現在は東京の<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" class="about-highlight" style="text-decoration:none;">株式会社ブランドクラウド（NDI部門）</a>で、エンジニアリングリーダーとして開発を推進しています。',
-        'about.p2': '私の強みは<span class="about-highlight">AI/LLM統合</span>とプロダクトエンジニアリングの両立です。RAGパイプラインの設計、APIファーストなサービス開発、<span class="about-highlight">AWSクラウド基盤</span>でのDocker/CI/CD運用まで一貫して担当しています。',
+        'about.title': 'AI活用のプロダクトを作るフルスタックエンジニア。',
+        'about.p1': '私は<span class="about-highlight">Sakib</span>です。フルスタックエンジニアとして、4年以上にわたり本番環境のシステム開発に携わってきました。現在は東京の<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" class="about-highlight" style="text-decoration:none;">株式会社ブランドクラウド（NDI部門）</a>で、エンジニアリングリーダーとして開発を推進しています。',
+        'about.p2': '私の強みは<span class="about-highlight">AI/LLM統合</span>とプロダクトエンジニアリングの両立です。RAGパイプラインの設計、APIファーストなサービス開発、<span class="about-highlight">AWS・Google Cloud・Cloudflare</span>を活用したDocker/CI/CD運用まで一貫して担当しています。',
         'about.p3': 'コードレビューや設計判断を通じてチームを支援し、安定したデリバリー、保守しやすい設計、そして成果につながる開発を重視しています。',
         'stat.years': '年の経験',
         'stat.engineers': 'エンジニアをリード',
@@ -2806,7 +2810,7 @@ const translations = {
         'about.status': '求職中',
         'skills.label': '技術スキル',
         'skills.title': 'フルスタック — そしてそれ以上。',
-        'skills.sub': 'LLMファインチューニングからFlutterアプリまで。重要なところに深く踏み込みます。',
+        'skills.sub': 'LLMファインチューニングからFlutterアプリまで。必要なところには徹底的に深掘りします。',
         'skills.ai': 'AI / ML 統合',
         'skills.backend': 'バックエンド開発',
         'skills.frontend': 'フロントエンド開発',
@@ -2894,10 +2898,10 @@ const translations = {
         'proj.8.desc': 'Make.comワークフローでインバウンドリードを処理し、OpenAIでエンリッチメントして、構造化データを軽量CRMとしてGoogleスプレッドシートに直接同期するAIリード受付システム。',
         'proj.9.role': 'AIデベロッパー',
         'proj.9.title': 'Chatwork AI Bot',
-        'proj.9.desc': 'Chatworkワークフロー向けAI搭載ボット統合 — チームコミュニケーションの自動化、クエリへのインテリジェントな応答、LLMバックのレスポンスによる社内メッセージプロセスの効率化。',
+        'proj.9.desc': 'Chatworkワークフロー向けAI搭載ボット統合 — チームコミュニケーションの自動化、クエリへのインテリジェントな応答、LLMによるレスポンスで社内メッセージプロセスを効率化。',
         'proj.10.role': 'バックエンドエンジニア · ソロ',
         'proj.10.title': 'AIサポートコパイロット RAG',
-        'proj.10.desc': '社内サポートコパイロット向けのプロダクションスタイルRAGバックエンド — ドキュメントを取り込み、関連チャンクを検索し、FastAPIサービス経由でチャンク引用付きの根拠ある回答を返す。DockerとCIで運用。',
+        'proj.10.desc': '社内サポートコパイロット向けのプロダクションスタイルRAGバックエンド — ドキュメントを取り込み、関連チャンクを検索し、FastAPIサービス経由で引用元付きの根拠のある回答を返す。DockerとCIで運用。',
         'proj.11.role': 'バックエンドエンジニア · ソロ',
         'proj.11.title': 'AIワークフローエージェントOps',
         'proj.11.desc': '承認ゲート、実行追跡、リトライ処理を備えたAI支援ワークフローオーケストレーションのバックエンド — エージェントと人間のレビュアーがFastAPIの単一パイプラインで連携。DockerとCIで運用。',
