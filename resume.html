@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sakib — Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --ink:      #111827;
+  --ink2:     #374151;
+  --muted:    #6b7280;
+  --pale:     #9ca3af;
+  --rule:     #e5e7eb;
+  --bg:       #f9fafb;
+  --accent:   #4f46e5;
+  --accent-l: #eef2ff;
+  --green:    #059669;
+  --white:    #ffffff;
+}
+
+html, body {
+  height: 1122px;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: #dde1e9;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.page {
+  width: 210mm;
+  height: 1122px;
+  margin: 0 auto;
+  background: var(--white);
+  display: grid;
+  grid-template-columns: 72mm 1fr;
+  grid-template-rows: auto 1fr;
+  box-shadow: 0 8px 48px rgba(0,0,0,.2);
+  overflow: hidden;
+}
+
+/* ═══════════════════════════════════════
+   FULL-WIDTH TOP BAR
+═══════════════════════════════════════ */
+.topbar {
+  grid-column: 1 / -1;
+  background: var(--accent);
+  height: 5px;
+}
+
+/* ═══════════════════════════════════════
+   LEFT COLUMN
+═══════════════════════════════════════ */
+.left {
+  background: var(--bg);
+  border-right: 1px solid var(--rule);
+  padding: 18px 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Name block */
+.name-block {}
+.name-block h1 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 16pt;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.15;
+  letter-spacing: -0.3px;
+}
+.name-block .role {
+  font-size: 7pt;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: var(--accent);
+  margin-top: 5px;
+}
+.name-block .open {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+  background: #dcfce7;
+  color: var(--green);
+  font-size: 6.5pt;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.open-dot {
+  width: 5px; height: 5px;
+  background: var(--green);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Stats */
+.stats-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+.stat-card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+.stat-card .n {
+  font-size: 13pt;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+.stat-card .l {
+  font-size: 6pt;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+  line-height: 1.3;
+}
+
+/* Section header (left col) */
+.lsec { }
+.lsec-title {
+  font-size: 6.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.lsec-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+
+/* Contact */
+.contact-list { display: flex; flex-direction: column; gap: 4px; }
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 7pt;
+  color: var(--ink2);
+  text-decoration: none;
+  line-height: 1.3;
+  word-break: break-all;
+}
+.contact-item svg {
+  width: 11px; height: 11px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* Skills */
+.skill-block { margin-bottom: 7px; }
+.skill-block:last-child { margin-bottom: 0; }
+.skill-cat {
+  font-size: 7pt;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+.tags { display: flex; flex-wrap: wrap; gap: 2px; }
+.tag {
+  font-size: 6.5pt;
+  font-weight: 500;
+  padding: 1.5px 5px;
+  border-radius: 4px;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  color: var(--ink2);
+}
+.tag.ai {
+  background: var(--accent-l);
+  border-color: #c7d2fe;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Education */
+.edu-item { margin-bottom: 6px; }
+.edu-deg { font-size: 7pt; font-weight: 600; color: var(--ink); line-height: 1.3; }
+.edu-school { font-size: 6.5pt; color: var(--accent); margin-top: 1px; }
+.edu-year { font-size: 6.5pt; color: var(--pale); margin-top: 1px; }
+
+/* Languages */
+.lang-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.lang-name { font-size: 7pt; font-weight: 600; color: var(--ink); }
+.lang-dots { display: flex; gap: 3px; }
+.dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--rule);
+}
+.dot.on { background: var(--accent); }
+
+/* ═══════════════════════════════════════
+   RIGHT COLUMN
+═══════════════════════════════════════ */
+.right {
+  padding: 12px 14px 10px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Section header (right col) */
+.rsec-title {
+  font-size: 6.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.rsec-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+
+/* Summary */
+.summary-box {
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+}
+.summary-box p {
+  font-size: 8pt;
+  color: var(--ink2);
+  line-height: 1.55;
+}
+
+/* Jobs */
+.job { display: grid; grid-template-columns: 20px 1fr; gap: 0 10px; }
+.job-line-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.job-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2.5px solid var(--accent);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.job-dot.dim { border-color: var(--pale); }
+.job-line {
+  width: 1.5px;
+  flex: 1;
+  background: var(--rule);
+  margin-top: 3px;
+}
+.job-content { padding-bottom: 6px; }
+.job:last-child .job-content { padding-bottom: 0; }
+.job:last-child .job-line { display: none; }
+
+.job-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 1px;
+}
+.job-title {
+  font-size: 8.5pt;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.job-date {
+  font-size: 6.5pt;
+  color: var(--pale);
+  white-space: nowrap;
+  padding-top: 1px;
+}
+.job-co {
+  font-size: 7pt;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.job-badge {
+  font-size: 6pt;
+  background: var(--accent-l);
+  color: var(--accent);
+  border-radius: 3px;
+  padding: 1px 5px;
+  margin-left: 4px;
+  font-weight: 600;
+}
+.job ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.job ul li {
+  font-size: 7.5pt;
+  color: var(--ink2);
+  line-height: 1.45;
+  padding-left: 10px;
+  position: relative;
+}
+.job ul li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+.job ul li strong { color: var(--ink); font-weight: 600; }
+
+/* Projects */
+.proj-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 7px;
+}
+.proj-card {
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 6px 8px;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.proj-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2.5px;
+  background: var(--accent);
+}
+.proj-name {
+  font-size: 7.5pt;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+  margin-bottom: 2px;
+}
+.proj-sub {
+  font-size: 6.5pt;
+  color: var(--accent);
+  font-weight: 500;
+}
+.proj-stack {
+  font-size: 6pt;
+  color: var(--pale);
+  margin: 3px 0;
+}
+.proj-desc {
+  font-size: 7pt;
+  color: var(--muted);
+  line-height: 1.45;
+}
+.proj-link {
+  display: inline-block;
+  margin-top: 3px;
+  font-size: 6pt;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.proj-card.nda { background: var(--bg); }
+.proj-card.nda::before { background: var(--pale); }
+.proj-card.nda .proj-link { color: var(--pale); }
+
+@media print {
+  body { background: #fff; }
+  .page { margin: 0; box-shadow: none; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- top accent bar -->
+  <div class="topbar"></div>
+
+  <!-- ════════ LEFT COLUMN ════════ -->
+  <div class="left">
+
+    <!-- Name -->
+    <div class="name-block">
+      <h1>Md Robiul<br>Islam Sakib</h1>
+      <div class="role">Senior AI Engineer<br>&amp; Engineering Lead</div>
+      <div class="open"><span class="open-dot"></span> Open to opportunities</div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-block">
+      <div class="stat-card"><div class="n">4.5+</div><div class="l">Years experience</div></div>
+      <div class="stat-card"><div class="n">12</div><div class="l">Engineers led</div></div>
+      <div class="stat-card"><div class="n">86</div><div class="l">GitHub repos</div></div>
+      <div class="stat-card"><div class="n">6</div><div class="l">AI projects shipped</div></div>
+    </div>
+
+    <!-- Contact -->
+    <div class="lsec">
+      <div class="lsec-title">Contact</div>
+      <div class="contact-list">
+        <span class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+          Tokyo, Japan
+        </span>
+        <a class="contact-item" href="mailto:mrobiulislamsakib@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+          mrobiulislamsakib@gmail.com
+        </a>
+        <a class="contact-item" href="tel:+819095345799">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 1.18 2 2 0 014 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.34 1.85.574 2.81.7A2 2 0 0122 16.92z"/></svg>
+          +81-90-9534-5799
+        </a>
+        <a class="contact-item" href="https://linkedin.com/in/msakib162004">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          linkedin.com/in/msakib162004
+        </a>
+        <a class="contact-item" href="https://github.com/sakib-maho">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          github.com/sakib-maho
+        </a>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="lsec">
+      <div class="lsec-title">Skills</div>
+
+      <div class="skill-block">
+        <div class="skill-cat">AI &amp; LLM</div>
+        <div class="tags">
+          <span class="tag ai">OpenAI GPT-4o</span>
+          <span class="tag ai">Claude</span>
+          <span class="tag ai">Gemini</span>
+          <span class="tag ai">LangChain</span>
+          <span class="tag ai">LangGraph</span>
+          <span class="tag ai">LlamaIndex</span>
+          <span class="tag ai">RAG Pipelines</span>
+          <span class="tag ai">ChromaDB</span>
+          <span class="tag ai">Pinecone</span>
+          <span class="tag ai">HuggingFace</span>
+          <span class="tag ai">Fine-Tuning (LoRA)</span>
+          <span class="tag ai">Prompt Eng.</span>
+          <span class="tag ai">Agent Workflows</span>
+          <span class="tag ai">CrewAI</span>
+          <span class="tag ai">Ollama</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <div class="skill-cat">MLOps &amp; Infra</div>
+        <div class="tags">
+          <span class="tag">MLOps / LLMOps</span>
+          <span class="tag">LangSmith</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">Docker</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">CI/CD</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <div class="skill-cat">Backend</div>
+        <div class="tags">
+          <span class="tag">Django</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Golang</span>
+          <span class="tag">Python</span>
+          <span class="tag">REST / GraphQL</span>
+          <span class="tag">Web Scraping</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <div class="skill-cat">Frontend</div>
+        <div class="tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">React</span>
+          <span class="tag">Vue.js</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Tailwind CSS</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <div class="skill-cat">Cloud</div>
+        <div class="tags">
+          <span class="tag">AWS</span>
+          <span class="tag">GCP</span>
+          <span class="tag">Vercel</span>
+          <span class="tag">Nginx</span>
+          <span class="tag">Cloudflare</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <div class="skill-cat">Databases</div>
+        <div class="tags">
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Redis</span>
+          <span class="tag">DynamoDB</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">Weaviate</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <div class="skill-cat">Automation</div>
+        <div class="tags">
+          <span class="tag">N8N</span>
+          <span class="tag">Make.com</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="lsec">
+      <div class="lsec-title">Education</div>
+      <div class="edu-item">
+        <div class="edu-deg">B.Sc. Computer Science &amp; Engineering</div>
+        <div class="edu-school">University · Bangladesh</div>
+        <div class="edu-year">2018 — 2022</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-deg">Engineering &amp; Professional Program</div>
+        <div class="edu-school">B-JET · Japan</div>
+        <div class="edu-year">2022</div>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="lsec">
+      <div class="lsec-title">Languages</div>
+      <div class="lang-row">
+        <span class="lang-name">English</span>
+        <div class="lang-dots">
+          <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div>
+        </div>
+      </div>
+      <div class="lang-row">
+        <span class="lang-name">Japanese</span>
+        <div class="lang-dots">
+          <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+      </div>
+      <div class="lang-row">
+        <span class="lang-name">Bengali</span>
+        <div class="lang-dots">
+          <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /left -->
+
+  <!-- ════════ RIGHT COLUMN ════════ -->
+  <div class="right">
+
+    <!-- Summary -->
+    <div>
+      <div class="rsec-title">About</div>
+      <div class="summary-box">
+        <p>Full-stack AI engineer with 4.5+ years shipping production LLM integrations, multi-provider RAG systems, and agent workflows (OpenAI, Claude, Gemini) from architecture to AWS. Currently VPoE at an AI-first startup in Tokyo — leading 12 engineers, owning end-to-end architecture of an enterprise multi-LLM platform, and fluent in Japanese (日本語).</p>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div>
+      <div class="rsec-title">Experience</div>
+
+      <!-- VP -->
+      <div class="job">
+        <div class="job-line-col">
+          <div class="job-dot"></div>
+          <div class="job-line"></div>
+        </div>
+        <div class="job-content">
+          <div class="job-head">
+            <div class="job-title">VP of Engineering &amp; Full-Stack AI Lead <span class="job-badge">12-eng startup</span></div>
+            <span class="job-date">Nov 2024 — Present</span>
+          </div>
+          <div class="job-co">BrandCloud Inc. (NDI Division) · Tokyo, Japan</div>
+          <ul>
+            <li>Architected <strong>KnowledgeLinks AI</strong> — multi-tenant enterprise RAG system (OpenAI, Claude, Gemini) with sub-second streaming, source-cited answers, and LangSmith-monitored evaluation pipelines on AWS</li>
+            <li>Authored AI-first technical roadmap; drove adoption of LangGraph agent workflows, RAG, and LLM eval from zero to production across the full product stack</li>
+            <li>Lead 12 engineers across BE/FE/mobile (promoted Engineer → VPoE in 26 months); own AWS infrastructure, CI/CD, and Docker + GitHub Actions workflows</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Senior -->
+      <div class="job">
+        <div class="job-line-col">
+          <div class="job-dot"></div>
+          <div class="job-line"></div>
+        </div>
+        <div class="job-content">
+          <div class="job-head">
+            <div class="job-title">Senior Software Engineer</div>
+            <span class="job-date">Oct 2023 — Oct 2024</span>
+          </div>
+          <div class="job-co">BrandCloud Inc. · Tokyo, Japan</div>
+          <ul>
+            <li>Led full-stack build of <strong>Benrimono</strong> — on-demand delivery app with real-time GPS, push notifications, and serverless AWS backend (Lambda + DynamoDB) for iOS &amp; Android</li>
+            <li>Introduced the company's first production LLM integrations; established prompt engineering and LLM API patterns adopted company-wide; directly mentored 3 junior engineers</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SWE -->
+      <div class="job">
+        <div class="job-line-col">
+          <div class="job-dot"></div>
+          <div class="job-line"></div>
+        </div>
+        <div class="job-content">
+          <div class="job-head">
+            <div class="job-title">Software Engineer</div>
+            <span class="job-date">Sep 2022 — Sep 2023</span>
+          </div>
+          <div class="job-co">BrandCloud Inc. · Tokyo, Japan</div>
+          <ul>
+            <li>Built and maintained Django REST APIs and React / Vue.js UIs across production services; optimised PostgreSQL schemas and Redis caching strategies for high-read endpoints</li>
+            <li>Containerised all services with Docker; improved CI pipeline reliability and increased test coverage, measurably reducing production regressions</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- B-JET -->
+      <div class="job">
+        <div class="job-line-col">
+          <div class="job-dot dim"></div>
+          <div class="job-line"></div>
+        </div>
+        <div class="job-content">
+          <div class="job-head">
+            <div class="job-title">Trainee Engineer</div>
+            <span class="job-date">May 2022 — Sep 2022</span>
+          </div>
+          <div class="job-co">B-JET · Japan</div>
+          <ul>
+            <li>Intensive program in software craftsmanship, Agile delivery, and cross-cultural communication; built conversational Japanese proficiency</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Intern -->
+      <div class="job">
+        <div class="job-line-col">
+          <div class="job-dot dim"></div>
+          <div class="job-line"></div>
+        </div>
+        <div class="job-content">
+          <div class="job-head">
+            <div class="job-title">Software Engineer Intern</div>
+            <span class="job-date">Nov 2021 — Apr 2022</span>
+          </div>
+          <div class="job-co">W3Engineers Ltd. · Bangladesh</div>
+          <ul>
+            <li>Shipped production features across Go, Flask, Node.js/Express, and Vue.js for 3+ client projects, delivering on deadline in a fast-paced agency environment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div>
+      <div class="rsec-title">Selected Projects</div>
+      <div class="proj-grid">
+
+        <div class="proj-card nda">
+          <div class="proj-name">KnowledgeLinks AI <span class="proj-sub">· RAG System</span></div>
+          <div class="proj-stack">Django · Next.js · OpenAI · LangSmith · AWS · Docker</div>
+          <div class="proj-desc">Multi-tenant RAG platform — sub-second streaming, cited answers, and LangSmith eval pipelines across 3 LLM providers on AWS.</div>
+          <span class="proj-link">Private / NDA</span>
+        </div>
+
+        <div class="proj-card nda">
+          <div class="proj-name">Benrimono <span class="proj-sub">· Delivery App</span></div>
+          <div class="proj-stack">Flutter · AWS Lambda · DynamoDB · Vercel</div>
+          <div class="proj-desc">iOS/Android on-demand delivery platform with real-time GPS, push notifications, and serverless backend at scale.</div>
+          <span class="proj-link">Private / NDA</span>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-name">AI Support Copilot RAG</div>
+          <div class="proj-stack">Python · FastAPI · RAG · Docker · GitHub Actions</div>
+          <div class="proj-desc">Production RAG backend — ingests docs, retrieves chunks, returns cited answers via FastAPI with Docker CI.</div>
+          <a class="proj-link" href="https://github.com/sakib-maho/ai-support-copilot-rag">View on GitHub →</a>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-name">AI Workflow Agent Ops</div>
+          <div class="proj-stack">Python · FastAPI · LangGraph · Docker · GitHub Actions</div>
+          <div class="proj-desc">Multi-agent orchestration backend with human-in-the-loop approval gates, execution tracking, and automatic retry — agents and reviewers in one pipeline.</div>
+          <a class="proj-link" href="https://github.com/sakib-maho/ai-workflow-agent-ops">View on GitHub →</a>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-name">AI Video Generator</div>
+          <div class="proj-stack">Python · Google Gemini · FFmpeg · Automation</div>
+          <div class="proj-desc">Detects trending topics, generates scripts with Gemini, and produces daily short-form videos via FFmpeg — hands-free.</div>
+          <a class="proj-link" href="https://github.com/sakib-maho/ai-video-generate">View on GitHub →</a>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-name">AI Lead Intake &amp; CRM</div>
+          <div class="proj-stack">Python · OpenAI · Make.com · Google Sheets</div>
+          <div class="proj-desc">AI-powered lead intake that enriches inbound leads with OpenAI and syncs structured data into Google Sheets as a lightweight CRM.</div>
+          <a class="proj-link" href="https://github.com/sakib-maho/ai-lead-intake-crm-automation">View on GitHub →</a>
+        </div>
+
+        <div class="proj-card nda">
+          <div class="proj-name">Chatwork AI Bot</div>
+          <div class="proj-stack">Python · OpenAI API · Vercel · Chatwork API</div>
+          <div class="proj-desc">LLM-powered Chatwork bot that auto-responds to queries, automates internal team messaging, and handles intelligent notifications.</div>
+          <span class="proj-link">Private / NDA</span>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-name">E-Commerce Auction Platform</div>
+          <div class="proj-stack">Django · JavaScript · WebSockets · PostgreSQL</div>
+          <div class="proj-desc">eBay-style auction platform with real-time bidding via WebSockets, user watchlists, category discovery, and a Django backend with full auth.</div>
+          <a class="proj-link" href="https://github.com/sakib-maho/E-Commerce-Auction">View on GitHub →</a>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-name">Web Scraping System</div>
+          <div class="proj-stack">Python · PostgreSQL · Automation</div>
+          <div class="proj-desc">Automated extraction of images and structured data from target URLs with dynamic schema creation, deduplication, and storage.</div>
+          <a class="proj-link" href="https://github.com/sakib-maho/Web-Scraping">View on GitHub →</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /right -->
+
+</div><!-- /page -->
+</body>
+</html>
