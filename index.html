@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sakib — AI Developer & Engineering Lead</title>
 
-    <meta name="description" content="Md Robiul Islam SAKIB — AI Developer, VPoE & Full-Stack Lead. Building intelligent systems with LLMs, RAG pipelines, and cloud-native architectures.">
+    <meta name="description" content="Md Robiul Islam SAKIB — VP of Engineering & AI developer in Tokyo. Multi-LLM RAG, production APIs, AWS, and full-stack delivery at BrandCloud (NDI).">
     <meta name="keywords" content="AI Developer, VPoE, Full-Stack, LLM, RAG, Django, Next.js, AWS, OpenAI, Claude, BrandCloud">
     <meta name="author" content="Md Robiul Islam SAKIB">
     <meta name="robots" content="index, follow">
@@ -16,7 +16,7 @@
         "@type": "Person",
         "name": "Md Robiul Islam SAKIB",
         "jobTitle": "AI Developer & Vice President of Engineering",
-        "description": "AI Developer and VPoE building intelligent systems with LLMs, RAG pipelines, and cloud-native architectures.",
+        "description": "VP of Engineering and AI developer in Tokyo. Ships multi-LLM RAG, production APIs, and cloud-native systems at BrandCloud (NDI).",
         "url": "https://sakib-maho.github.io/sakib-portfolio/",
         "image": "https://sakib-maho.github.io/sakib-portfolio/Sakib_protfolio.PNG",
         "email": "mrobiulislamsakib@gmail.com",
@@ -28,11 +28,11 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sakib-maho.github.io/sakib-portfolio/">
     <meta property="og:title" content="Sakib — AI Developer & Engineering Lead">
-    <meta property="og:description" content="Building intelligent systems with LLMs, RAG pipelines, and cloud-native architectures.">
+    <meta property="og:description" content="VP of Engineering & AI developer in Tokyo. Multi-LLM RAG, production APIs, AWS, full-stack — BrandCloud NDI.">
     <meta property="og:image" content="https://sakib-maho.github.io/sakib-portfolio/Sakib_protfolio.PNG">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Sakib — AI Developer & Engineering Lead">
-    <meta property="twitter:description" content="Building intelligent systems with LLMs, RAG pipelines, and cloud-native architectures.">
+    <meta property="twitter:description" content="VP of Engineering & AI developer in Tokyo. Multi-LLM RAG, production APIs, AWS, full-stack — BrandCloud NDI.">
     <meta property="twitter:image" content="https://sakib-maho.github.io/sakib-portfolio/Sakib_protfolio.PNG">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg?v=6">
@@ -219,6 +219,12 @@
         box-shadow: 0 0 20px var(--glow-c);
     }
     .nav-cta::after { display: none !important; }
+
+    .nav-resume {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.84rem;
+        letter-spacing: 0.03em;
+    }
 
     /* Language Toggle */
     .lang-toggle {
@@ -429,6 +435,17 @@
     }
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
 
+    .hero-tagline {
+        font-size: clamp(0.82rem, 1.5vw, 0.95rem);
+        color: var(--text-3);
+        font-family: 'JetBrains Mono', monospace;
+        letter-spacing: 0.06em;
+        line-height: 1.55;
+        text-transform: uppercase;
+        max-width: 540px;
+        margin-bottom: 18px;
+    }
+
     .hero-desc {
         font-size: 1.05rem;
         color: var(--text-2);
@@ -606,6 +623,30 @@
         line-height: 1.85;
         margin-bottom: 20px;
         font-size: 1rem;
+    }
+
+    .about-proof {
+        list-style: none;
+        padding: 0;
+        margin: 8px 0 0;
+    }
+    .about-proof li {
+        position: relative;
+        padding-left: 1.1rem;
+        margin-bottom: 10px;
+        color: var(--text-2);
+        font-size: 0.96rem;
+        line-height: 1.55;
+    }
+    .about-proof li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.55em;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--cyan), var(--purple));
     }
 
     .about-highlight {
@@ -899,6 +940,21 @@
         color: var(--text-2);
         line-height: 1.75;
     }
+    .timeline-desc ul.timeline-highlights {
+        margin: 0;
+        padding-left: 1.1rem;
+        list-style: disc;
+    }
+    .timeline-desc ul.timeline-highlights li {
+        margin-bottom: 8px;
+    }
+    .timeline-desc ul.timeline-highlights li:last-child {
+        margin-bottom: 0;
+    }
+    .timeline-desc ul.timeline-highlights strong {
+        color: var(--text-1);
+        font-weight: 600;
+    }
 
     .timeline-tags {
         display: flex;
@@ -918,6 +974,83 @@
 
     /* ===== PROJECTS ===== */
     #projects { background: var(--bg); }
+
+    /* ===== EDUCATION ===== */
+    #education {
+        background: var(--bg);
+    }
+    .edu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        align-items: stretch;
+    }
+    .edu-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 28px 28px 24px;
+        transition: var(--transition);
+    }
+    .edu-card:hover {
+        border-color: var(--border-h);
+        transform: translateY(-2px);
+    }
+    .edu-degree {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--text-1);
+        margin-bottom: 8px;
+        line-height: 1.35;
+    }
+    .edu-school {
+        font-size: 0.92rem;
+        color: var(--cyan);
+        font-weight: 500;
+        margin-bottom: 14px;
+    }
+    .edu-date {
+        font-size: 0.8rem;
+        color: var(--text-3);
+        font-family: 'JetBrains Mono', monospace;
+        letter-spacing: 0.04em;
+    }
+    .edu-lang-block {
+        grid-column: 1 / -1;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 28px;
+        margin-top: 8px;
+    }
+    .edu-lang-block h3 {
+        font-size: 0.75rem;
+        font-family: 'JetBrains Mono', monospace;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-3);
+        margin-bottom: 16px;
+    }
+    .edu-lang-rows {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px 32px;
+    }
+    .edu-lang-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        font-size: 0.9rem;
+        color: var(--text-2);
+    }
+    .edu-lang-row:last-child { border-bottom: none; }
+    .edu-lang-name {
+        font-weight: 600;
+        color: var(--text-1);
+    }
 
     .projects-grid {
         display: grid;
@@ -1494,7 +1627,7 @@
 <div id="scroll-progress"></div>
 
 <!-- Back to Top -->
-<a href="#home" id="back-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+<a href="#home" id="back-top" data-i18n-aria="a11y.backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
 
 <!-- Aurora Orbs -->
 <div class="aurora-orb aurora-1"></div>
@@ -1512,6 +1645,8 @@
             <li><a href="#about" data-i18n="nav.about">About</a></li>
             <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
             <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="#education" data-i18n="nav.education">Education</a></li>
+            <li><a href="sakib-cv.pdf" download class="nav-resume" data-i18n="nav.resume">Résumé</a></li>
             <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
             <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Let's Talk</a></li>
         </ul>
@@ -1519,7 +1654,7 @@
             <button class="lang-btn active" data-lang="en">EN</button>
             <button class="lang-btn" data-lang="ja">JP</button>
         </div>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <button class="hamburger" id="hamburger" data-i18n-aria="a11y.menu" aria-label="Toggle menu">
             <span></span><span></span><span></span>
         </button>
     </nav>
@@ -1533,6 +1668,8 @@
     <a href="#about" class="mobile-link" data-i18n="nav.about">About</a>
     <a href="#skills" class="mobile-link" data-i18n="nav.skills">Skills</a>
     <a href="#experience" class="mobile-link" data-i18n="nav.experience">Experience</a>
+    <a href="#education" class="mobile-link" data-i18n="nav.education">Education</a>
+    <a href="sakib-cv.pdf" download class="mobile-link nav-resume" data-i18n="nav.resume">Résumé</a>
     <a href="#projects" class="mobile-link" data-i18n="nav.projects">Projects</a>
     <a href="#contact" class="mobile-link" data-i18n="nav.contact">Contact</a>
     <div class="lang-toggle">
@@ -1552,8 +1689,9 @@
                 </div>
                 <h1 class="hero-name">Robiul Islam <span class="name-glow">SAKIB</span></h1>
                 <div class="hero-role" id="hero-role">AI Developer & Engineering Lead</div>
+                <p class="hero-tagline" data-i18n="hero.tagline">VP of Engineering · Tokyo · LLMs, RAG &amp; full-stack delivery</p>
                 <p class="hero-desc" data-i18n-html="hero.desc">
-                    Building intelligent systems that think. LLM integrations, RAG pipelines, and cloud-native architectures — from idea to production at <a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-weight:600;text-decoration:none;">BrandCloud Inc.</a>
+                    I ship production AI: multi-LLM RAG, agent-style workflows, and reliable APIs. VP of Engineering for NDI at <a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-weight:600;text-decoration:none;">BrandCloud Inc.</a> (Tokyo), leading 12 engineers across architecture, AWS, and CI/CD.
                 </p>
                 <div class="hero-actions">
                     <a href="#projects" class="btn btn-primary">
@@ -1625,7 +1763,7 @@
 <section id="about">
     <div class="container">
         <div class="section-label fade-up" data-i18n="about.label">about me</div>
-        <h2 class="section-title fade-up" data-i18n="about.title">Full-Stack Engineer building AI-powered systems.</h2>
+        <h2 class="section-title fade-up" data-i18n="about.title">VP-level engineer — delivering AI systems to production.</h2>
         <div class="about-grid">
             <div class="about-text fade-up">
                 <p data-i18n-html="about.p1">
@@ -1635,8 +1773,13 @@
                     My work sits at the intersection of <span class="about-highlight">AI/LLM integration</span> and product engineering. I design RAG pipelines, build API-first services, and deploy on <span class="about-highlight">AWS, Google Cloud, and Cloudflare</span> with Docker and CI/CD.
                 </p>
                 <p data-i18n="about.p3">
-                    I mentor engineers through code review and architecture decisions, and I focus on reliable delivery, clean design, and measurable product outcomes.
+                    I mentor through code review and architecture decisions, optimizing for reliability, velocity, and clear ownership — not vanity complexity.
                 </p>
+                <ul class="about-proof">
+                    <li data-i18n="about.hl1">NDI division: strategy for 12 engineers; enterprise RAG (KnowledgeLinks AI) and AI-first delivery.</li>
+                    <li data-i18n="about.hl2">Hands-on across Django, Next.js, Flutter, AWS serverless, PostgreSQL, Redis, and vector/RAG stacks.</li>
+                    <li data-i18n="about.hl3">Outcome-focused: secure LLM patterns, cost-aware inference, pipelines teams can run without heroics.</li>
+                </ul>
                 <div class="stats-row">
                     <div class="stat-card fade-up">
                         <span class="stat-num" data-target="4" data-suffix="+">0</span>
@@ -1665,7 +1808,7 @@
                 <div class="about-card-float">
                     <div class="label" data-i18n="about.building.label">Currently building</div>
                     <div class="value" data-i18n="about.building.value">AI Video Pipeline</div>
-                    <div style="margin-top:12px;" class="label">Status</div>
+                    <div style="margin-top:12px;" class="label" data-i18n="about.status.label">Status</div>
                     <div style="display:flex;align-items:center;gap:6px;margin-top:4px;">
                         <span style="width:7px;height:7px;background:var(--emerald);border-radius:50%;display:inline-block;animation:pulse 2s infinite;"></span>
                         <span style="font-size:0.85rem;color:var(--emerald);font-weight:600;" data-i18n="about.status">Open to work</span>
@@ -1799,12 +1942,13 @@
                     <div class="timeline-date" data-i18n="exp.1.date">11/2024 — Present · Current</div>
                     <h3 class="timeline-title" data-i18n="exp.1.title">VP of Engineering & Full-Stack Lead</h3>
                     <div class="timeline-company" data-i18n-html="exp.1.company"><a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a> (NDI Division) · Tokyo, Japan</div>
-                    <p class="timeline-desc" data-i18n="exp.1.desc">
-                        Leading technical strategy for the NDI division. Oversee a 12-engineer team, define
-                        architecture standards, and drive AI-first product delivery. Built KnowledgeLinks AI — an
-                        enterprise RAG system using OpenAI, Claude, and Gemini. Own AWS infrastructure and CI/CD
-                        practices to keep delivery reliable and scalable.
-                    </p>
+                    <div class="timeline-desc" data-i18n-html="exp.1.desc">
+                        <ul class="timeline-highlights">
+                            <li>Set technical direction for NDI; lead <strong>12 engineers</strong> across AI and product delivery.</li>
+                            <li>Shipped <strong>KnowledgeLinks AI</strong> — enterprise RAG with OpenAI, Claude, and Gemini; citations and grounded answers.</li>
+                            <li>Own <strong>AWS and CI/CD</strong>: repeatable releases, security baselines, and operability for LLM workloads.</li>
+                        </ul>
+                    </div>
                     <div class="timeline-tags">
                         <span class="timeline-tag">LLM / RAG</span>
                         <span class="timeline-tag">AI Architecture</span>
@@ -1824,12 +1968,13 @@
                     <div class="timeline-date" data-i18n="exp.2.date">10/2023 — 10/2024 · 1 year</div>
                     <h3 class="timeline-title" data-i18n="exp.2.title">Senior Software Engineer</h3>
                     <div class="timeline-company" data-i18n-html="exp.2.company"><a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a> · Tokyo, Japan</div>
-                    <p class="timeline-desc" data-i18n="exp.2.desc">
-                        Took ownership of complex full-stack features and systems. Led development of the Benrimono
-                        on-demand delivery platform, including the Flutter app, serverless AWS backend, and real-time
-                        tracking. Introduced early LLM capabilities for internal tools and customer-facing workflows,
-                        and helped standardize code review and design patterns across the team.
-                    </p>
+                    <div class="timeline-desc" data-i18n-html="exp.2.desc">
+                        <ul class="timeline-highlights">
+                            <li>Led <strong>Benrimono</strong>: Flutter apps, serverless AWS (Lambda / API Gateway), <strong>DynamoDB</strong>, real-time tracking.</li>
+                            <li>Introduced early <strong>LLM-powered</strong> flows for internal tools and customer-facing features.</li>
+                            <li>Mentored engineers; raised consistency on API design, reviews, and production readiness.</li>
+                        </ul>
+                    </div>
                     <div class="timeline-tags">
                         <span class="timeline-tag">Flutter</span>
                         <span class="timeline-tag">Next.js</span>
@@ -1848,12 +1993,13 @@
                     <div class="timeline-date" data-i18n="exp.3.date">09/2022 — 09/2023 · 1 year</div>
                     <h3 class="timeline-title" data-i18n="exp.3.title">Software Engineer</h3>
                     <div class="timeline-company" data-i18n-html="exp.3.company"><a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a> · Tokyo, Japan</div>
-                    <p class="timeline-desc" data-i18n="exp.3.desc">
-                        Joined BrandCloud as a full-time software engineer and became a core contributor across the
-                        stack. Built and maintained Django REST APIs, developed UI features with React and Vue.js,
-                        and supported PostgreSQL/Redis-backed systems. Worked with product and design teams to ship
-                        customer-facing features while improving testing and deployment workflows.
-                    </p>
+                    <div class="timeline-desc" data-i18n-html="exp.3.desc">
+                        <ul class="timeline-highlights">
+                            <li>Core contributor on <strong>Django</strong> REST APIs, <strong>React / Vue</strong> UIs, <strong>PostgreSQL</strong> + Redis.</li>
+                            <li>Shipped with product and design while tightening tests, deploy hygiene, and on-call readiness.</li>
+                            <li>Foundation for senior work on mobile, serverless backends, and AI integration.</li>
+                        </ul>
+                    </div>
                     <div class="timeline-tags">
                         <span class="timeline-tag">Django</span>
                         <span class="timeline-tag">React</span>
@@ -1911,6 +2057,36 @@
     </div>
 </section>
 
+<!-- ===== EDUCATION ===== -->
+<section id="education">
+    <div class="container">
+        <div class="section-label fade-up" data-i18n="edu.label">education</div>
+        <h2 class="section-title fade-up" data-i18n="edu.title">Formal training &amp; credentials.</h2>
+        <p class="section-sub fade-up" data-i18n="edu.sub">CS foundation and Japan-focused professional training — complementary to hands-on production work.</p>
+
+        <div class="edu-grid">
+            <div class="edu-card fade-up">
+                <div class="edu-degree" data-i18n="edu.1.degree">B.Sc. Computer Science &amp; Engineering</div>
+                <div class="edu-school" data-i18n="edu.1.school">University · Bangladesh</div>
+                <div class="edu-date" data-i18n="edu.1.date">2018 — 2022</div>
+            </div>
+            <div class="edu-card fade-up">
+                <div class="edu-degree" data-i18n="edu.2.degree">Engineering &amp; Professional Program</div>
+                <div class="edu-school" data-i18n="edu.2.school">B-JET · Japan</div>
+                <div class="edu-date" data-i18n="edu.2.date">2022</div>
+            </div>
+            <div class="edu-lang-block fade-up">
+                <h3 data-i18n="edu.lang.title">Languages</h3>
+                <div class="edu-lang-rows">
+                    <div class="edu-lang-row"><span class="edu-lang-name" data-i18n="edu.lang.en.lab">English</span><span data-i18n="edu.lang.en">Professional working proficiency</span></div>
+                    <div class="edu-lang-row"><span class="edu-lang-name" data-i18n="edu.lang.ja.lab">Japanese</span><span data-i18n="edu.lang.ja">Conversational — business context in Japan</span></div>
+                    <div class="edu-lang-row"><span class="edu-lang-name" data-i18n="edu.lang.bn.lab">Bengali</span><span data-i18n="edu.lang.bn">Native</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ===== PROJECTS ===== -->
 <section id="projects">
     <div class="container">
@@ -1935,7 +2111,7 @@
                 <div class="project-body">
                     <span class="project-role-badge" data-i18n="proj.1.role">Full-Stack Lead · Technical Architect</span>
                     <h3 class="project-title" data-i18n="proj.1.title">KnowledgeLinks AI</h3>
-                    <p class="project-desc" data-i18n="proj.1.desc">Enterprise AI knowledge management system. Employees query internal documents via multi-LLM RAG pipelines and get instant, cited answers. Deployed on AWS with real-time streaming responses.</p>
+                    <p class="project-desc" data-i18n="proj.1.desc">Enterprise knowledge Q&amp;A: internal documents, multi-LLM RAG, and cited answers. AWS-hosted with streaming — built for grounded responses teams can trust.</p>
                     <div class="project-tech">
                         <span class="tech-pill">Django</span>
                         <span class="tech-pill">Next.js</span>
@@ -1945,6 +2121,7 @@
                         <span class="tech-pill">Docker</span>
                     </div>
                     <div class="project-links">
+                        <a href="https://knowledgelinks.ai/lp1/" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> <span data-i18n="proj.1.link">Product site</span></a>
                         <span class="project-link" style="color:var(--text-3);cursor:default;border-bottom:none;"><i class="fas fa-lock"></i> <span data-i18n="proj.private">Private / NDA</span></span>
                     </div>
                 </div>
@@ -2225,11 +2402,11 @@
     <div class="container">
         <div class="footer-inner">
             <a href="#home" class="footer-logo">SAKIB.ai</a>
-            <p class="footer-copy" data-i18n="footer.copy">© 2025 Md Robiul Islam SAKIB. All rights reserved.</p>
+            <p class="footer-copy" data-i18n="footer.copy">© 2026 Md Robiul Islam SAKIB. All rights reserved.</p>
             <div class="footer-social">
-                <a href="https://linkedin.com/in/msakib162004" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/sakib-maho" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:mrobiulislamsakib@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/msakib162004" target="_blank" rel="noopener noreferrer" data-i18n-aria="a11y.linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/sakib-maho" target="_blank" rel="noopener noreferrer" data-i18n-aria="a11y.github" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:mrobiulislamsakib@gmail.com" data-i18n-aria="a11y.email" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </div>
@@ -2403,6 +2580,9 @@ setTimeout(typeRole, 800);
 // ===== AI NEURAL CANVAS =====
 const canvas = document.getElementById('neural-canvas');
 const isMobile = window.innerWidth <= 768;
+if (prefersReducedMotion) {
+    canvas.style.display = 'none';
+} else {
 const ctx = canvas.getContext('2d');
 let neuralPaused = false;
 
@@ -2567,10 +2747,14 @@ document.addEventListener('visibilitychange', () => {
     if (!neuralPaused) drawNeural();
 });
 drawNeural();
+} /* end neural canvas when motion is allowed */
 
 // ===== CONTACT FORM =====
 document.getElementById('contact-form').addEventListener('submit', async function(e) {
     e.preventDefault();
+
+    const tForm = () => translations[document.documentElement.lang === 'ja' ? 'ja' : 'en'];
+    const tf = tForm();
 
     const btn = document.getElementById('send-btn');
     const btnText = document.getElementById('btn-text');
@@ -2585,7 +2769,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
 
     btn.disabled = true;
     btnIcon.className = 'fas fa-spinner fa-spin';
-    btnText.textContent = 'Sending...';
+    btnText.textContent = tf['form.sending'];
     status.className = '';
     status.style.display = 'none';
 
@@ -2594,34 +2778,35 @@ document.getElementById('contact-form').addEventListener('submit', async functio
         await emailjs.sendForm('service_4e9hnz8', 'template_256xc48', this);
 
         btnIcon.className = 'fas fa-check';
-        btnText.textContent = 'Message Sent!';
+        btnText.textContent = tf['form.sent'];
         btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
 
         status.className = 'success';
-        status.textContent = 'Thanks! I\'ll get back to you within 24 hours.';
+        status.textContent = tf['form.successMsg'];
 
         this.reset();
 
         setTimeout(() => {
             btn.disabled = false;
             btnIcon.className = 'fas fa-paper-plane';
-            btnText.textContent = 'Send Message';
+            btnText.textContent = tForm()['form.send'];
             btn.style.background = '';
             status.className = '';
             status.style.display = 'none';
         }, 4000);
 
     } catch (err) {
+        const tfErr = tForm();
         btnIcon.className = 'fas fa-exclamation-triangle';
-        btnText.textContent = 'Failed to Send';
+        btnText.textContent = tfErr['form.failed'];
 
         status.className = 'error';
-        status.textContent = 'Something went wrong. Please email me directly at mrobiulislamsakib@gmail.com';
+        status.textContent = tfErr['form.errorMsg'];
 
         setTimeout(() => {
             btn.disabled = false;
             btnIcon.className = 'fas fa-paper-plane';
-            btnText.textContent = 'Send Message';
+            btnText.textContent = tForm()['form.send'];
             btn.style.background = '';
         }, 4000);
     }
@@ -2658,13 +2843,23 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 const translations = {
     en: {
         'loader.text': 'Initializing...',
+        'meta.title': 'Sakib — AI Developer & Engineering Lead',
+        'meta.description': 'Md Robiul Islam SAKIB — VP of Engineering & AI developer in Tokyo. Multi-LLM RAG, production APIs, AWS, and full-stack delivery at BrandCloud (NDI).',
+        'a11y.backTop': 'Back to top',
+        'a11y.menu': 'Open or close navigation menu',
+        'a11y.linkedin': 'LinkedIn profile (opens in a new tab)',
+        'a11y.github': 'GitHub profile (opens in a new tab)',
+        'a11y.email': 'Send email',
         'nav.about': 'About',
         'nav.skills': 'Skills',
         'nav.experience': 'Experience',
+        'nav.education': 'Education',
+        'nav.resume': 'Résumé',
         'nav.projects': 'Projects',
         'nav.contact': "Let's Talk",
         'hero.badge': 'Open to AI & Engineering roles',
-        'hero.desc': 'Building intelligent systems that think. LLM integrations, RAG pipelines, and cloud-native architectures — from idea to production at <a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-weight:600;text-decoration:none;">BrandCloud Inc.</a>',
+        'hero.tagline': 'VP of Engineering · Tokyo · LLMs, RAG & full-stack delivery',
+        'hero.desc': 'I ship production AI: multi-LLM RAG, agent-style workflows, and reliable APIs. VP of Engineering for NDI at <a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-weight:600;text-decoration:none;">BrandCloud Inc.</a> (Tokyo), leading 12 engineers across architecture, AWS, and CI/CD.',
         'hero.cta1': 'View My Work',
         'hero.cta2': 'Get In Touch',
         'hero.cta3': 'Download CV',
@@ -2672,10 +2867,13 @@ const translations = {
         'hero.float2': 'Tokyo, Japan',
         'scroll.hint': 'scroll',
         'about.label': 'about me',
-        'about.title': 'Full-Stack Engineer building AI-powered systems.',
+        'about.title': 'VP-level engineer — delivering AI systems to production.',
         'about.p1': 'I\'m <span class="about-highlight">Sakib</span> — a full-stack software engineer with 4+ years building production systems. I currently work in an engineering leadership role at <a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" class="about-highlight" style="text-decoration:none;">BrandCloud Inc. (NDI Division)</a> in Tokyo, Japan.',
         'about.p2': 'My work sits at the intersection of <span class="about-highlight">AI/LLM integration</span> and product engineering. I design RAG pipelines, build API-first services, and deploy on <span class="about-highlight">AWS, Google Cloud, and Cloudflare</span> with Docker and CI/CD.',
-        'about.p3': 'I mentor engineers through code review and architecture decisions, and I focus on reliable delivery, clean design, and measurable product outcomes.',
+        'about.p3': 'I mentor through code review and architecture decisions, optimizing for reliability, velocity, and clear ownership — not vanity complexity.',
+        'about.hl1': 'NDI division: strategy for 12 engineers; enterprise RAG (KnowledgeLinks AI) and AI-first delivery.',
+        'about.hl2': 'Hands-on across Django, Next.js, Flutter, AWS serverless, PostgreSQL, Redis, and vector/RAG stacks.',
+        'about.hl3': 'Outcome-focused: secure LLM patterns, cost-aware inference, pipelines teams can run without heroics.',
         'stat.years': 'Years Building',
         'stat.engineers': 'Engineers Led',
         'stat.repos': 'GitHub Repos',
@@ -2683,6 +2881,7 @@ const translations = {
         'about.building.label': 'Currently building',
         'about.building.value': 'AI Video Pipeline',
         'about.status': 'Open to work',
+        'about.status.label': 'Status',
         'skills.label': 'technical skills',
         'skills.title': 'The full stack — and then some.',
         'skills.sub': 'From LLM fine-tuning to Flutter apps. I go deep where it matters.',
@@ -2695,6 +2894,22 @@ const translations = {
         'exp.label': 'career journey',
         'exp.title': 'Career progression<br>in software engineering.',
         'exp.sub': '4+ years across backend, AI integration, and engineering leadership.',
+        'edu.label': 'education',
+        'edu.title': 'Formal training & credentials.',
+        'edu.sub': 'CS foundation and Japan-focused professional training — complementary to hands-on production work.',
+        'edu.1.degree': 'B.Sc. Computer Science & Engineering',
+        'edu.1.school': 'University · Bangladesh',
+        'edu.1.date': '2018 — 2022',
+        'edu.2.degree': 'Engineering & Professional Program',
+        'edu.2.school': 'B-JET · Japan',
+        'edu.2.date': '2022',
+        'edu.lang.title': 'Languages',
+        'edu.lang.en.lab': 'English',
+        'edu.lang.en': 'Professional working proficiency',
+        'edu.lang.ja.lab': 'Japanese',
+        'edu.lang.ja': 'Conversational — business context in Japan',
+        'edu.lang.bn.lab': 'Bengali',
+        'edu.lang.bn': 'Native',
         'proj.label': 'featured projects',
         'proj.title': "Things I've built.",
         'proj.sub': 'Production systems across AI, mobile, and cloud — solving real problems.',
@@ -2724,19 +2939,24 @@ const translations = {
         'form.subject.ph': "What's this about?",
         'form.message.ph': 'Tell me about your project or idea...',
         'form.send': 'Send Message',
-        'footer.copy': '© 2025 Md Robiul Islam SAKIB. All rights reserved.',
+        'form.sending': 'Sending...',
+        'form.sent': 'Message Sent!',
+        'form.successMsg': 'Thanks! I\'ll get back to you within 24 hours.',
+        'form.failed': 'Failed to Send',
+        'form.errorMsg': 'Something went wrong. Please email me directly at mrobiulislamsakib@gmail.com',
+        'footer.copy': '© 2026 Md Robiul Islam SAKIB. All rights reserved.',
         'exp.1.date': '11/2024 — Present · Current',
         'exp.1.title': 'VP of Engineering & Full-Stack Lead',
         'exp.1.company': '<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a> (NDI Division) · Tokyo, Japan',
-        'exp.1.desc': 'Leading technical strategy for the NDI division. Oversee a 12-engineer team, define architecture standards, and drive AI-first product delivery. Built KnowledgeLinks AI — an enterprise RAG system using OpenAI, Claude, and Gemini. Own AWS infrastructure and CI/CD practices to keep delivery reliable and scalable.',
+        'exp.1.desc': '<ul class="timeline-highlights"><li>Set technical direction for NDI; lead <strong>12 engineers</strong> across AI and product delivery.</li><li>Shipped <strong>KnowledgeLinks AI</strong> — enterprise RAG with OpenAI, Claude, and Gemini; citations and grounded answers.</li><li>Own <strong>AWS and CI/CD</strong>: repeatable releases, security baselines, and operability for LLM workloads.</li></ul>',
         'exp.2.date': '10/2023 — 10/2024 · 1 year',
         'exp.2.title': 'Senior Software Engineer',
         'exp.2.company': '<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a> · Tokyo, Japan',
-        'exp.2.desc': 'Took ownership of complex full-stack features and systems. Led development of the Benrimono on-demand delivery platform, including the Flutter app, serverless AWS backend, and real-time tracking. Introduced early LLM capabilities for internal tools and customer-facing workflows, and helped standardize code review and design patterns across the team.',
+        'exp.2.desc': '<ul class="timeline-highlights"><li>Led <strong>Benrimono</strong>: Flutter apps, serverless AWS (Lambda / API Gateway), <strong>DynamoDB</strong>, real-time tracking.</li><li>Introduced early <strong>LLM-powered</strong> flows for internal tools and customer-facing features.</li><li>Mentored engineers; raised consistency on API design, reviews, and production readiness.</li></ul>',
         'exp.3.date': '09/2022 — 09/2023 · 1 year',
         'exp.3.title': 'Software Engineer',
         'exp.3.company': '<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a> · Tokyo, Japan',
-        'exp.3.desc': 'Joined BrandCloud as a full-time software engineer and became a core contributor across the stack. Built and maintained Django REST APIs, developed UI features with React and Vue.js, and supported PostgreSQL/Redis-backed systems. Worked with product and design teams to ship customer-facing features while improving testing and deployment workflows.',
+        'exp.3.desc': '<ul class="timeline-highlights"><li>Core contributor on <strong>Django</strong> REST APIs, <strong>React / Vue</strong> UIs, <strong>PostgreSQL</strong> + Redis.</li><li>Shipped with product and design while tightening tests, deploy hygiene, and on-call readiness.</li><li>Foundation for senior work on mobile, serverless backends, and AI integration.</li></ul>',
         'exp.4.date': '05/2022 — 09/2022 · 5 months',
         'exp.4.title': 'Trainee Engineer',
         'exp.4.company': 'B-JET · Japan',
@@ -2749,7 +2969,8 @@ const translations = {
         'badge.new': 'New',
         'proj.1.role': 'Full-Stack Lead · Technical Architect',
         'proj.1.title': 'KnowledgeLinks AI',
-        'proj.1.desc': 'Enterprise AI knowledge management system. Employees query internal documents via multi-LLM RAG pipelines and get instant, cited answers. Deployed on AWS with real-time streaming responses.',
+        'proj.1.desc': 'Enterprise knowledge Q&A: internal documents, multi-LLM RAG, and cited answers. AWS-hosted with streaming — built for grounded responses teams can trust.',
+        'proj.1.link': 'Product site',
         'proj.2.role': 'Full-Stack Lead · Technical Architect',
         'proj.2.title': 'Benrimono',
         'proj.2.desc': 'On-demand delivery and errand app connecting users with gig workers across iOS and Android. Real-time tracking, push notifications, and serverless AWS backend at scale.',
@@ -2783,13 +3004,23 @@ const translations = {
     },
     ja: {
         'loader.text': '読み込み中...',
+        'meta.title': 'Sakib — AIデベロッパー＆エンジニアリングリード',
+        'meta.description': 'Md Robiul Islam SAKIB — 東京を拠点とするVPエンジニアリング／AIデベロッパー。株式会社ブランドクラウド（NDI）でマルチLLM RAG、本番API、AWS、フルスタック開発を担当。',
+        'a11y.backTop': 'ページ先頭へ戻る',
+        'a11y.menu': 'ナビゲーションメニューを開く／閉じる',
+        'a11y.linkedin': 'LinkedInプロフィール（新しいタブで開く）',
+        'a11y.github': 'GitHubプロフィール（新しいタブで開く）',
+        'a11y.email': 'メールを送る',
         'nav.about': '私について',
         'nav.skills': 'スキル',
         'nav.experience': '経歴',
+        'nav.education': '学歴',
+        'nav.resume': '履歴書',
         'nav.projects': 'プロジェクト',
         'nav.contact': 'お問い合わせ',
         'hero.badge': 'AI・エンジニアリング職を探しています',
-        'hero.desc': 'インテリジェントなシステムを構築しています。LLM統合、RAGパイプライン、クラウドネイティブアーキテクチャ — アイデアから本番環境まで、<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-weight:600;text-decoration:none;">株式会社ブランドクラウド</a>で実現しています。',
+        'hero.tagline': 'VPエンジニアリング · 東京 · LLM / RAG / フルスタック',
+        'hero.desc': '本番のAIを届けます — マルチLLM RAG、エージェント型ワークフロー、信頼できるAPI群。東京の<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-weight:600;text-decoration:none;">株式会社ブランドクラウド</a>・NDI部門でVPエンジニアリングとして、12名規模のアーキテクチャ・AWS・CI/CDをリードしています。',
         'hero.cta1': '実績を見る',
         'hero.cta2': '連絡する',
         'hero.cta3': 'CVをダウンロード',
@@ -2797,10 +3028,13 @@ const translations = {
         'hero.float2': '東京・日本',
         'scroll.hint': 'スクロール',
         'about.label': '私について',
-        'about.title': 'AI活用のプロダクトを作るフルスタックエンジニア。',
+        'about.title': 'VP水準のエンジニア — AIシステムを本番まで届ける。',
         'about.p1': '私は<span class="about-highlight">Sakib</span>です。フルスタックエンジニアとして、4年以上にわたり本番環境のシステム開発に携わってきました。現在は東京の<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" class="about-highlight" style="text-decoration:none;">株式会社ブランドクラウド（NDI部門）</a>で、エンジニアリングリーダーとして開発を推進しています。',
         'about.p2': '私の強みは<span class="about-highlight">AI/LLM統合</span>とプロダクトエンジニアリングの両立です。RAGパイプラインの設計、APIファーストなサービス開発、<span class="about-highlight">AWS・Google Cloud・Cloudflare</span>を活用したDocker/CI/CD運用まで一貫して担当しています。',
-        'about.p3': 'コードレビューや設計判断を通じてチームを支援し、安定したデリバリー、保守しやすい設計、そして成果につながる開発を重視しています。',
+        'about.p3': 'コードレビューと設計判断でチームを支え、派手な複雑さよりも信頼性・スピード・責務の明確さを優先します。',
+        'about.hl1': 'NDI部門：12名の方向づけ、エンタープライズRAG（KnowledgeLinks AI）、AIファーストな開発体制。',
+        'about.hl2': 'Django、Next.js、Flutter、AWSサーバーレス、PostgreSQL、Redis、ベクトル検索/RAGまで実装で踏み込む。',
+        'about.hl3': '成果志向：安全なLLM運用、コスト意識のある推論、属人化しにくいパイプライン。',
         'stat.years': '年の経験',
         'stat.engineers': 'エンジニアをリード',
         'stat.repos': 'GitHubリポジトリ',
@@ -2808,6 +3042,7 @@ const translations = {
         'about.building.label': '現在開発中',
         'about.building.value': 'AI 動画パイプライン',
         'about.status': '求職中',
+        'about.status.label': 'ステータス',
         'skills.label': '技術スキル',
         'skills.title': 'フルスタック — そしてそれ以上。',
         'skills.sub': 'LLMファインチューニングからFlutterアプリまで。必要なところには徹底的に深掘りします。',
@@ -2820,6 +3055,22 @@ const translations = {
         'exp.label': 'キャリア',
         'exp.title': 'ソフトウェアエンジニアとしての<br>キャリアの成長。',
         'exp.sub': '4年以上にわたり、バックエンド、AI統合、エンジニアリングリーダーシップを経験。',
+        'edu.label': '学歴',
+        'edu.title': '正式な訓練と資格。',
+        'edu.sub': 'CSの基礎と日本向けの専門研修 — 実務を補完します。',
+        'edu.1.degree': 'コンピュータサイエンス・工学 学士',
+        'edu.1.school': '大学（バングラデシュ）',
+        'edu.1.date': '2018 — 2022',
+        'edu.2.degree': 'エンジニアリング・専門プログラム',
+        'edu.2.school': 'B-JET · 日本',
+        'edu.2.date': '2022',
+        'edu.lang.title': '言語',
+        'edu.lang.en.lab': '英語',
+        'edu.lang.en': 'ビジネスレベル',
+        'edu.lang.ja.lab': '日本語',
+        'edu.lang.ja': '日常会話 — 日本での業務文脈',
+        'edu.lang.bn.lab': 'ベンガル語',
+        'edu.lang.bn': 'ネイティブ',
         'proj.label': '主要プロジェクト',
         'proj.title': '私が構築したもの。',
         'proj.sub': 'AI、モバイル、クラウド全般の本番システム — 実際の問題を解決。',
@@ -2829,7 +3080,7 @@ const translations = {
         'filter.backend': 'バックエンド',
         'filter.web': 'ウェブ',
         'proj.private': 'プライベート / NDA',
-        'contact.label': 'コンタクト',
+        'contact.label': 'お問い合わせ',
         'contact.title': 'AIを活かしたプロダクトを<br>一緒に作りましょう。',
         'contact.sub': 'AI開発案件、バックエンド/リーダーシップ職、技術相談などお気軽にご連絡ください。',
         'contact.heading': 'お問い合わせ',
@@ -2849,19 +3100,24 @@ const translations = {
         'form.subject.ph': 'ご用件は何ですか？',
         'form.message.ph': 'プロジェクトやアイデアについて教えてください...',
         'form.send': '送信する',
-        'footer.copy': '© 2025 Md Robiul Islam SAKIB. 無断複写・転載を禁じます。',
+        'form.sending': '送信中...',
+        'form.sent': '送信しました',
+        'form.successMsg': 'ありがとうございます。24時間以内にご返信します。',
+        'form.failed': '送信に失敗しました',
+        'form.errorMsg': '送信できませんでした。恐れ入りますが mrobiulislamsakib@gmail.com まで直接メールでご連絡ください。',
+        'footer.copy': '© 2026 Md Robiul Islam SAKIB. 無断複写・転載を禁じます。',
         'exp.1.date': '2024年11月 — 現在 · 在職中',
         'exp.1.title': 'VPエンジニアリング & フルスタックリード',
         'exp.1.company': '<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">株式会社ブランドクラウド</a>（NDI部門）· 東京・日本',
-        'exp.1.desc': 'NDI部門の技術戦略をリード。12名のエンジニアチームを統括し、アーキテクチャ標準の策定とAIファーストなプロダクト開発を推進しています。OpenAI、Claude、Geminiを活用した企業向けRAGシステム「KnowledgeLinks AI」を構築し、AWS基盤とCI/CD運用を通じて、安定かつスケーラブルな開発体制を実現しています。',
+        'exp.1.desc': '<ul class="timeline-highlights"><li>NDI部門で技術方針を策定。<strong>12名</strong>のAI・プロダクト開発をリード。</li><li><strong>KnowledgeLinks AI</strong>をリリース — OpenAI / Claude / Geminiを用いたエンタープライズRAGと引用付き回答。</li><li><strong>AWSとCI/CD</strong>を管轄 — 繰り返し可能なリリース、セキュリティ基線、LLM本番運用の運用性。</li></ul>',
         'exp.2.date': '2023年10月 — 2024年10月 · 1年',
         'exp.2.title': 'シニアソフトウェアエンジニア',
         'exp.2.company': '<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">株式会社ブランドクラウド</a> · 東京・日本',
-        'exp.2.desc': '複雑なフルスタック機能とシステムの中核を担当。オンデマンド配達プラットフォーム「Benrimono」の開発をリードし、Flutterアプリ、サーバーレスAWSバックエンド、リアルタイム追跡基盤を構築しました。社内ツールや顧客向け機能へのLLM活用を早期に導入し、コードレビュー基準と設計パターンの標準化にも貢献しました。',
+        'exp.2.desc': '<ul class="timeline-highlights"><li><strong>Benrimono</strong>をリード — Flutter、サーバーレスAWS（Lambda / API Gateway）、<strong>DynamoDB</strong>、リアルタイム追跡。</li><li>社内ツール・顧客機能の両方に<strong>LLM</strong>活用を早期導入。</li><li>メンタリングとレビューでAPI設計・本番準備の基準を引き上げ。</li></ul>',
         'exp.3.date': '2022年9月 — 2023年9月 · 1年',
         'exp.3.title': 'ソフトウェアエンジニア',
         'exp.3.company': '<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">株式会社ブランドクラウド</a> · 東京・日本',
-        'exp.3.desc': 'BrandCloudに正社員エンジニアとして入社し、フルスタック開発の中核メンバーとして貢献。Django REST APIの開発・保守、React/Vue.jsでのUI実装、PostgreSQL/Redisを用いた運用を担当しました。プロダクト・デザインチームと連携しながら、顧客向け機能の継続的なリリースと、テスト・デプロイ運用の改善を進めました。',
+        'exp.3.desc': '<ul class="timeline-highlights"><li><strong>Django</strong> REST、<strong>React / Vue</strong> UI、<strong>PostgreSQL</strong> + Redisで中核開発。</li><li>プロダクト/デザインと協働し、テスト・デプロイ・オンコール耐性を強化。</li><li>以降のモバイル・サーバーレス・AI統合へつながる土台づくり。</li></ul>',
         'exp.4.date': '2022年5月 — 2022年9月 · 5ヶ月',
         'exp.4.title': 'トレーニーエンジニア',
         'exp.4.company': 'B-JET · 日本',
@@ -2874,7 +3130,8 @@ const translations = {
         'badge.new': '新着',
         'proj.1.role': 'フルスタックリード · 技術アーキテクト',
         'proj.1.title': 'KnowledgeLinks AI',
-        'proj.1.desc': '企業向けAI知識管理システム。従業員がマルチLLM RAGパイプラインを通じて社内ドキュメントを検索し、引用付きの即時回答を取得できます。AWSにデプロイされ、リアルタイムストリーミングレスポンスを提供。',
+        'proj.1.desc': '企業向けナレッジQ&A：社内文書をマルチLLM RAGで検索し、引用付きの回答を生成。AWS上でストリーミング — 再現性と信頼性を重視した設計。',
+        'proj.1.link': 'プロダクトサイト',
         'proj.2.role': 'フルスタックリード · 技術アーキテクト',
         'proj.2.title': 'Benrimono',
         'proj.2.desc': 'iOSとAndroid全体でギグワーカーとユーザーをつなぐオンデマンド配達・お使いアプリ。リアルタイムトラッキング、プッシュ通知、スケーラブルなサーバーレスAWSバックエンドを実装。',
@@ -2940,6 +3197,16 @@ function setLanguage(lang) {
         const key = el.dataset.i18nPlaceholder;
         if (t[key] !== undefined) el.placeholder = t[key];
     });
+
+    document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+        const key = el.dataset.i18nAria;
+        if (t[key] !== undefined) el.setAttribute('aria-label', t[key]);
+    });
+
+    const docTitle = document.querySelector('title');
+    if (docTitle && t['meta.title'] !== undefined) docTitle.textContent = t['meta.title'];
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && t['meta.description'] !== undefined) metaDesc.setAttribute('content', t['meta.description']);
 
     // Update typewriter roles array
     const newRoles = lang === 'ja' ? rolesJA : rolesEN;
