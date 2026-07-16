@@ -1,0 +1,107 @@
+MD ROBIUL ISLAM SAKIB
+Senior Software Engineer | AI / Full-Stack / AWS
+
+Tokyo, Japan
+Email: mrobiulislamsakib@gmail.com
+Phone: +81-90-9534-5799
+LinkedIn: linkedin.com/in/msakib162004
+GitHub: github.com/sakib-maho
+
+================================================================================
+SUMMARY
+================================================================================
+
+Senior Software Engineer and AI Full-Stack Engineer with 4.5+ years of experience building production web applications, AI/RAG systems, and cloud infrastructure. Hands-on across Next.js, React, TypeScript, Python, Django/FastAPI, AWS, Docker, PostgreSQL, Redis, and LLM integrations. Currently working in a hands-on technical lead role, owning architecture, implementation, CI/CD, AWS infrastructure, and engineer mentoring in a Tokyo-based AI product team.
+
+================================================================================
+SKILLS
+================================================================================
+
+Backend: Python, Django, FastAPI, Node.js, REST API, GraphQL, Golang
+Frontend: Next.js, React, TypeScript, Vue.js, Tailwind CSS
+Cloud and DevOps: AWS, Docker, GitHub Actions, CI/CD, Nginx, Cloudflare, Vercel, Kubernetes
+Database: PostgreSQL, Redis, DynamoDB, Supabase, Weaviate, ChromaDB
+AI and LLM: OpenAI, Claude, Gemini, LangChain, LangGraph, LlamaIndex, RAG Pipelines, LangSmith, Prompt Engineering
+Automation: n8n, Make.com
+
+================================================================================
+EXPERIENCE
+================================================================================
+
+Senior Software Engineer / Technical Lead (Official title: VP of Engineering)
+BrandCloud Inc. (NDI Division) | Tokyo, Japan
+November 2024 - Present
+
+- Architected and built KnowledgeLinks AI, a multi-tenant enterprise RAG platform integrating OpenAI, Claude, and Gemini with streaming responses, source-cited answers, and LangSmith-based evaluation
+- Owned hands-on development across backend, frontend, infrastructure, and deployment using Next.js, Python/FastAPI, PostgreSQL, Docker, GitHub Actions, and AWS
+- Designed and maintained cloud infrastructure, CI/CD pipelines, Nginx configuration, Docker-based deployment workflows, and production monitoring
+- Led technical decisions for RAG architecture, prompt engineering, LLM provider integration, document ingestion, retrieval strategy, and evaluation workflows
+
+Senior Software Engineer
+BrandCloud Inc. | Tokyo, Japan
+October 2023 - October 2024
+
+- Built and maintained production Django REST APIs, React/Vue.js UIs, PostgreSQL schemas, Redis caching, and backend services
+- Led full-stack development of Benrimono, an on-demand delivery application with real-time GPS, push notifications, and serverless AWS backend using Lambda and DynamoDB
+- Introduced the company's first production LLM integrations and helped define reusable AI API and prompt engineering patterns
+
+Software Engineer
+BrandCloud Inc. | Tokyo, Japan
+September 2022 - September 2023
+
+- Built and maintained Django REST APIs and React/Vue.js UIs across production services
+- Optimized PostgreSQL schemas, Redis caching, Docker workflows, and CI pipelines to improve release reliability
+
+Trainee Engineer
+B-JET | Japan
+May 2022 - September 2022
+
+- Software craftsmanship, Agile delivery, and cross-cultural engineering program in Japan
+
+Software Engineer Intern
+W3Engineers Ltd. | Bangladesh
+November 2021 - April 2022
+
+- Shipped production features in Go, Flask, Node.js, and Vue.js for client projects
+
+================================================================================
+PROJECTS
+================================================================================
+
+KnowledgeLinks AI | RAG System
+Next.js, FastAPI, OpenAI, Claude, Gemini, LangSmith, PostgreSQL, Docker, AWS
+Multi-tenant enterprise RAG platform using Next.js, Python/FastAPI, OpenAI, Claude, Gemini, LangSmith, PostgreSQL, Docker, and AWS. Built streaming answers, source citation, document ingestion, retrieval workflows, and evaluation pipelines.
+
+Benrimono | Delivery App
+Flutter, AWS Lambda, DynamoDB, GPS, Push notifications
+On-demand delivery platform with real-time GPS, push notifications, AWS Lambda, DynamoDB, Flutter, and web admin features.
+
+AI Support Copilot RAG
+FastAPI, Docker, GitHub Actions
+Production RAG backend with document ingestion, chunk retrieval, source-cited answers, FastAPI APIs, Docker, and GitHub Actions CI/CD.
+GitHub: github.com/sakib-maho/ai-support-copilot-rag
+
+AI Workflow Agent Ops
+LangGraph, FastAPI, Docker
+LangGraph-based multi-agent orchestration backend with human approval gates, execution tracking, retry handling, and FastAPI APIs.
+GitHub: github.com/sakib-maho/ai-workflow-agent-ops
+
+================================================================================
+EDUCATION
+================================================================================
+
+B.Sc. Computer Science and Engineering
+United International University | Bangladesh
+2018 - 2022
+
+Engineering and Professional Program
+B-JET | Japan
+2022
+
+================================================================================
+LANGUAGES
+================================================================================
+
+English: Professional
+Japanese: Conversational
+Bengali: Native

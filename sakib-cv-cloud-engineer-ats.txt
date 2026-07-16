@@ -1,0 +1,125 @@
+MD ROBIUL ISLAM SAKIB
+Cloud Engineer | AWS / GCP / Platform
+
+Tokyo, Japan
+Email: mrobiulislamsakib@gmail.com
+Phone: +81-90-9534-5799
+LinkedIn: linkedin.com/in/msakib162004
+GitHub: github.com/sakib-maho
+
+================================================================================
+SUMMARY
+================================================================================
+
+Cloud-focused engineer with 4.5+ years shipping and operating production systems on AWS and GCP. Hands-on with Cloud Run, Secret Manager, Cloud Build, Lambda, DynamoDB, Docker, CI/CD, IAM service accounts, Nginx, and production troubleshooting. Uses Jira and Confluence daily for tickets, change tracking, and runbook-style documentation. Strong at automation and efficiency with Claude and other LLM tools. Based in Tokyo; seeking Cloud Engineer / platform enablement roles.
+
+================================================================================
+SKILLS
+================================================================================
+
+Cloud Platforms: AWS, GCP, Cloud Run, Secret Manager, Cloud Build, Lambda, DynamoDB, Firebase, IAM, Cloudflare
+Platform and Ops: Docker, CI/CD, GitHub Actions, Nginx, Linux, Monitoring, Troubleshooting, Runbooks
+Collaboration: Jira, Confluence, Slack, GitHub
+Backend / Scripting: Python, FastAPI, Django, Bash, REST API, PostgreSQL, Redis
+AI Efficiency: Claude, Gemini, OpenAI, Automation
+
+================================================================================
+EXPERIENCE
+================================================================================
+
+Senior Software Engineer / Technical Lead (Official title: VP of Engineering)
+BrandCloud Inc. (NDI Division) | Tokyo, Japan
+November 2024 - Present
+
+- Own AWS cloud infrastructure, Docker deployments, Nginx, GitHub Actions CI/CD, and production monitoring for KnowledgeLinks AI and related services
+- Operate day-to-day delivery through Jira (stories, bugs, change tracking) and document procedures and specs in Confluence
+- Drove cost-awareness work on cloud resources (e.g. EBS cost reduction) and production troubleshooting with log analysis and root-cause fixes
+- Use Claude and other LLM tools to accelerate runbooks, scripting, review workflows, and operational documentation
+
+Senior Software Engineer
+BrandCloud Inc. | Tokyo, Japan
+October 2023 - October 2024
+
+- Built and operated Benrimono serverless AWS backend (Lambda, DynamoDB) plus Firebase (GCP) for push notifications and storage
+- Configured IAM-backed service access patterns for serverless workloads; maintained Docker workflows and release pipelines
+- Handled production support requests via Jira with Confluence-backed product/ops documentation
+
+Software Engineer
+BrandCloud Inc. | Tokyo, Japan
+September 2022 - September 2023
+
+- Maintained production Django services with PostgreSQL, Redis, Docker, and CI pipelines
+- Improved release reliability through pipeline fixes, environment configuration, and operational troubleshooting
+
+Trainee Engineer
+B-JET | Japan
+May 2022 - September 2022
+
+- Agile delivery, process discipline, and cross-cultural engineering program in Japan
+
+Software Engineer Intern
+W3Engineers Ltd. | Bangladesh
+November 2021 - April 2022
+
+- Shipped production features and learned ticket-driven delivery for client projects
+
+================================================================================
+PROJECTS
+================================================================================
+
+PDF Job Intake Pipeline | GCP
+Cloud Run, Secret Manager, Cloud Build, IAM, Docker, FastAPI
+PDF to review to CRM sync on GCP Cloud Run Jobs/Services with Secret Manager, Cloud Build, IAM service accounts, and ops runbooks. Private client automation.
+
+Benrimono | AWS + Firebase
+AWS Lambda, DynamoDB, Firebase, IAM
+Delivery platform with serverless AWS (Lambda, DynamoDB) and Firebase (GCP) for push/storage — multi-cloud production ops.
+
+KnowledgeLinks AI | AWS Platform
+AWS, Docker, Nginx, GitHub Actions, PostgreSQL
+Enterprise AI platform infra: Docker deploys, Nginx, CI/CD, AWS hosting, and production monitoring for multi-tenant workloads.
+
+AI Support Copilot RAG
+FastAPI, Docker, GitHub Actions
+Containerized RAG API with Docker packaging and GitHub Actions CI for repeatable deploy automation.
+GitHub: github.com/sakib-maho/ai-support-copilot-rag
+
+AI Workflow Agent Ops
+LangGraph, FastAPI, Docker, CI
+Ops-style agent workflows with approval gates, retries, execution tracking, Docker, and CI — change-control friendly automation.
+GitHub: github.com/sakib-maho/ai-workflow-agent-ops
+
+URL Health Checker CLI
+Go, Concurrent checks, JSON/CSV export
+Concurrent URL health monitoring CLI with retries, timeouts, and JSON/CSV export for ops troubleshooting.
+GitHub: github.com/sakib-maho/go-url-health-checker-cli
+
+AI Lead Intake Automation
+Make.com, OpenAI, Google Sheets, Slack
+Lead intake automation: webhook capture, AI enrichment, Sheets CRM sync, and Slack/Gmail alerts for process efficiency.
+GitHub: github.com/sakib-maho/ai-lead-intake-crm-automation
+
+AI Video Generate
+Python, Gemini, FFmpeg, Scheduled pipeline
+Scheduled short-form video pipeline (Gemini + FFmpeg) showing batch job automation and hands-off operational runs.
+GitHub: github.com/sakib-maho/ai-video-generate
+
+================================================================================
+EDUCATION
+================================================================================
+
+B.Sc. Computer Science and Engineering
+United International University | Bangladesh
+2018 - 2022
+
+Engineering and Professional Program
+B-JET | Japan
+2022
+
+================================================================================
+LANGUAGES
+================================================================================
+
+English: Professional
+Japanese: Conversational
+Bengali: Native
