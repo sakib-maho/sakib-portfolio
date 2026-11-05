@@ -44,7 +44,7 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE).
 
 ## Preview
 
-![Portfolio preview](./Sakib_protfolio.PNG)
+![Portfolio preview](./sakib-1.jpg)
 
 ## Tech Stack
 
@@ -56,7 +56,7 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE).
 
 - `index.html` - Main portfolio page
 - `README.md` - Project documentation
-- `Sakib_protfolio.PNG` - Portfolio preview image
+- `sakib-1.jpg` - Portrait used in the hero and social preview
 - `favicon.svg` / `favicon-sunset.svg` - Favicon assets
 - `*-preview.html` and `*-analysis.html` - Design experiments and review pages
 
