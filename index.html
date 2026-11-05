@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sakib — AI Developer & Engineering Lead</title>
+    <title>Md Robiul Islam Sakib — Senior Backend Engineer / Tech Lead</title>
 
-    <meta name="description" content="Md Robiul Islam SAKIB — VP of Engineering & AI developer in Tokyo. Multi-LLM RAG, production APIs, AWS, and full-stack delivery at BrandCloud (NDI).">
+    <meta name="description" content="Md Robiul Islam Sakib — Senior Backend Engineer / Tech Lead">
     <meta name="keywords" content="AI Developer, VPoE, Full-Stack, LLM, RAG, Django, Next.js, AWS, OpenAI, Claude, BrandCloud">
-    <meta name="author" content="Md Robiul Islam SAKIB">
+    <meta name="author" content="Md Robiul Islam Sakib">
     <meta name="robots" content="index, follow">
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Md Robiul Islam SAKIB",
-        "jobTitle": "AI Developer & Vice President of Engineering",
-        "description": "VP of Engineering and AI developer in Tokyo. Ships multi-LLM RAG, production APIs, and cloud-native systems at BrandCloud (NDI).",
+        "name": "Md Robiul Islam Sakib",
+        "jobTitle": "Senior Backend Engineer / Tech Lead",
+        "description": "Md Robiul Islam Sakib — Senior Backend Engineer / Tech Lead",
         "url": "https://sakib-maho.github.io/sakib-portfolio/",
         "image": "https://sakib-maho.github.io/sakib-portfolio/Sakib_protfolio.PNG",
         "email": "mrobiulislamsakib@gmail.com",
@@ -27,12 +27,12 @@
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sakib-maho.github.io/sakib-portfolio/">
-    <meta property="og:title" content="Sakib — AI Developer & Engineering Lead">
-    <meta property="og:description" content="VP of Engineering & AI developer in Tokyo. Multi-LLM RAG, production APIs, AWS, full-stack — BrandCloud NDI.">
+    <meta property="og:title" content="Md Robiul Islam Sakib — Senior Backend Engineer / Tech Lead">
+    <meta property="og:description" content="Md Robiul Islam Sakib — Senior Backend Engineer / Tech Lead">
     <meta property="og:image" content="https://sakib-maho.github.io/sakib-portfolio/Sakib_protfolio.PNG">
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Sakib — AI Developer & Engineering Lead">
-    <meta property="twitter:description" content="VP of Engineering & AI developer in Tokyo. Multi-LLM RAG, production APIs, AWS, full-stack — BrandCloud NDI.">
+    <meta property="twitter:title" content="Md Robiul Islam Sakib — Senior Backend Engineer / Tech Lead">
+    <meta property="twitter:description" content="Md Robiul Islam Sakib — Senior Backend Engineer / Tech Lead">
     <meta property="twitter:image" content="https://sakib-maho.github.io/sakib-portfolio/Sakib_protfolio.PNG">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg?v=6">
@@ -61,7 +61,7 @@
         --bg:       #050508;
         --surface:  #0c0c1a;
         --card:     #10102a;
-        --border:   rgba(255,255,255,0.06);
+        --border:   rgba(255,255,255,0.14);
         --border-h: rgba(0,212,255,0.25);
 
         --cyan:     #00d4ff;
@@ -73,11 +73,11 @@
         --glow-p:   rgba(124,58,237,0.15);
 
         --text-1:   #e2e8f0;
-        --text-2:   #94a3b8;
-        --text-3:   #8896aa;
+        --text-2:   #c5d0dc;
+        --text-3:   #b7c3d4;
 
         --radius:   16px;
-        --radius-lg:24px;
+        --radius-lg:16px;
         --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
     }
 
@@ -87,6 +87,7 @@
         font-family: 'Space Grotesk', sans-serif;
         background: var(--bg);
         color: var(--text-1);
+        font-size: 16px;
         line-height: 1.6;
         overflow-x: hidden;
     }
@@ -108,7 +109,7 @@
         top: 0; left: 0;
         height: 2px;
         width: 0%;
-        background: linear-gradient(90deg, var(--cyan), var(--purple));
+        background: var(--cyan);
         z-index: 10001;
         transition: width 0.1s linear;
     }
@@ -131,9 +132,9 @@
         width: 56px; height: 56px;
         border: 2px solid var(--border);
         border-top-color: var(--cyan);
-        border-right-color: var(--purple);
+        border-right-color: var(--cyan);
         border-radius: 50%;
-        animation: spin 0.9s linear infinite;
+        animation: none;
     }
     .loader-text {
         margin-top: 20px;
@@ -141,7 +142,7 @@
         font-size: 0.75rem;
         color: var(--text-3);
         letter-spacing: 0.2em;
-        animation: pulse 1.5s ease-in-out infinite;
+        animation: none;
     }
 
     @keyframes spin { to { transform: rotate(360deg); } }
@@ -173,10 +174,7 @@
     .logo {
         font-size: 1.3rem;
         font-weight: 700;
-        background: linear-gradient(135deg, var(--cyan), var(--purple));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: var(--text-1);
         letter-spacing: -0.02em;
         text-decoration: none;
     }
@@ -215,8 +213,8 @@
         transition: var(--transition) !important;
     }
     .nav-cta:hover {
-        background: var(--glow-c);
-        box-shadow: 0 0 20px var(--glow-c);
+        background: transparent;
+        border-color: var(--cyan);
     }
     .nav-cta::after { display: none !important; }
 
@@ -248,9 +246,9 @@
     }
     .lang-btn:hover { color: var(--text-1); border-color: var(--border-h); }
     .lang-btn.active {
-        background: linear-gradient(135deg, var(--cyan), var(--purple));
-        border-color: transparent;
-        color: #fff;
+        background: var(--cyan);
+        border-color: var(--cyan);
+        color: #041018;
     }
 
     /* Hamburger */
@@ -303,7 +301,7 @@
         width: 100%; height: 100%;
         pointer-events: none;
         z-index: 0;
-        opacity: 0.75;
+        opacity: 0.32;
     }
 
     /* ===== UTILITY ===== */
@@ -315,7 +313,7 @@
         z-index: 1;
     }
 
-    section { padding: 120px 0; }
+    section { padding: 96px 0; }
 
     .section-label {
         display: inline-flex;
@@ -345,11 +343,11 @@
     }
 
     .section-sub {
-        font-size: 1.05rem;
+        font-size: 1rem;
         color: var(--text-2);
-        max-width: 520px;
-        line-height: 1.7;
-        margin-bottom: 64px;
+        max-width: 68ch;
+        line-height: 1.6;
+        margin-bottom: 48px;
     }
 
     /* Fade-in animation */
@@ -370,10 +368,10 @@
 
     /* ===== HERO ===== */
     .hero {
-        min-height: 100vh;
+        min-height: 0;
         display: flex;
         align-items: center;
-        padding: 100px 0 80px;
+        padding: 112px 0 96px;
         position: relative;
     }
 
@@ -403,11 +401,10 @@
         width: 6px; height: 6px;
         background: var(--emerald);
         border-radius: 50%;
-        animation: pulse 2s ease-in-out infinite;
     }
 
     .hero-name {
-        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        font-size: clamp(2rem, 4.4vw, 3.6rem);
         font-weight: 700;
         letter-spacing: -0.04em;
         line-height: 1.05;
@@ -416,42 +413,23 @@
     }
 
     .hero-role {
-        font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-        font-weight: 500;
-        color: transparent;
-        background: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        margin-bottom: 24px;
-        min-height: 1.8em;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--text-1);
+        margin-bottom: 12px;
+        line-height: 1.5;
+        max-width: 68ch;
     }
-    .hero-role::after {
-        content: '|';
-        color: var(--cyan);
-        -webkit-text-fill-color: var(--cyan);
-        animation: blink 1s step-end infinite;
-        margin-left: 2px;
-        font-weight: 300;
-    }
-    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
 
     .hero-tagline {
-        font-size: clamp(0.82rem, 1.5vw, 0.95rem);
-        color: var(--text-3);
-        font-family: 'JetBrains Mono', monospace;
-        letter-spacing: 0.06em;
-        line-height: 1.55;
-        text-transform: uppercase;
-        max-width: 540px;
-        margin-bottom: 18px;
-    }
-
-    .hero-desc {
-        font-size: 1.05rem;
+        font-size: 1rem;
+        font-weight: 400;
         color: var(--text-2);
-        line-height: 1.8;
-        max-width: 520px;
-        margin-bottom: 40px;
+        font-family: 'Space Grotesk', sans-serif;
+        letter-spacing: 0;
+        line-height: 1.6;
+        max-width: 68ch;
+        margin-bottom: 28px;
     }
 
     .hero-actions {
@@ -476,35 +454,22 @@
         overflow: hidden;
     }
     .btn-primary {
-        background: linear-gradient(135deg, var(--cyan), var(--purple));
-        color: #fff;
-        box-shadow: 0 4px 24px rgba(0,212,255,0.2);
+        background: var(--cyan);
+        color: #041018;
+        box-shadow: none;
     }
-    .btn-primary::before {
-        content: '';
-        position: absolute;
-        top: 0; left: -100%;
-        width: 60%; height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
-        transform: skewX(-15deg);
-        transition: left 0.55s ease;
-    }
-    .btn-primary:hover::before { left: 150%; }
     .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 32px rgba(0,212,255,0.35);
+        background: #33ddff;
     }
-    .btn-primary:active { transform: translateY(0); }
     .btn-ghost {
         background: transparent;
         color: var(--text-1);
         border: 1px solid var(--border);
     }
     .btn-ghost:hover {
-        border-color: var(--border-h);
+        border-color: var(--cyan);
         color: var(--cyan);
-        background: var(--glow-c);
-        transform: translateY(-2px);
+        background: transparent;
     }
     .btn-ghost:active { transform: translateY(0); }
 
@@ -517,9 +482,8 @@
     .hero-photo-ring {
         width: 280px; height: 280px;
         border-radius: 50%;
-        padding: 3px;
-        background: conic-gradient(from var(--angle), var(--cyan), var(--purple), var(--pink), var(--cyan));
-        animation: rotateBorder 4s linear infinite;
+        padding: 2px;
+        background: var(--cyan);
         position: relative;
     }
 
@@ -540,9 +504,7 @@
         position: absolute;
         inset: -28px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(0,212,255,0.28) 0%, rgba(124,58,237,0.12) 50%, transparent 70%);
-        z-index: -1;
-        animation: glowPulse 3s ease-in-out infinite;
+        display: none;
     }
 
     @keyframes glowPulse {
@@ -568,13 +530,11 @@
         box-shadow: 0 8px 32px rgba(0,0,0,0.3);
     }
     .float-badge i { font-size: 1rem; }
-    .float-badge.top-right { top: -12px; right: -32px; animation: floatY 3s ease-in-out infinite; }
-    .float-badge.bottom-left { bottom: -12px; left: -40px; animation: floatY 3s ease-in-out infinite 1.5s; }
+    .float-badge.bottom-left { bottom: -12px; left: -24px; }
     .float-badge { transition: border-color 0.3s ease, box-shadow 0.3s ease; }
     .float-badge:hover {
         border-color: var(--border-h);
-        box-shadow: 0 12px 36px rgba(0,0,0,0.45), 0 0 20px var(--glow-c);
-        animation-play-state: paused;
+        border-color: var(--cyan);
     }
 
     @keyframes floatY {
@@ -599,7 +559,7 @@
     .scroll-hint .line {
         width: 1px; height: 40px;
         background: var(--text-3);
-        animation: scrollLine 2s ease-in-out infinite;
+        animation: none;
     }
     @keyframes scrollLine {
         0%   { clip-path: inset(0 0 100% 0); }
@@ -620,9 +580,10 @@
 
     .about-text p {
         color: var(--text-2);
-        line-height: 1.85;
+        line-height: 1.6;
         margin-bottom: 20px;
         font-size: 1rem;
+        max-width: 68ch;
     }
 
     .about-proof {
@@ -635,8 +596,8 @@
         padding-left: 1.1rem;
         margin-bottom: 10px;
         color: var(--text-2);
-        font-size: 0.96rem;
-        line-height: 1.55;
+        font-size: 1rem;
+        line-height: 1.6;
     }
     .about-proof li::before {
         content: '';
@@ -646,7 +607,7 @@
         width: 6px;
         height: 6px;
         border-radius: 50%;
-        background: linear-gradient(135deg, var(--cyan), var(--purple));
+        background: var(--cyan);
     }
 
     .about-highlight {
@@ -670,17 +631,12 @@
         transition: var(--transition);
     }
     .stat-card:hover {
-        border-color: var(--border-h);
-        box-shadow: 0 0 24px var(--glow-c);
-        transform: translateY(-4px);
+        border-color: var(--cyan);
     }
     .stat-num {
         font-size: 2.2rem;
         font-weight: 700;
-        background: linear-gradient(135deg, var(--cyan), var(--purple));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: var(--cyan);
         letter-spacing: -0.03em;
         display: block;
     }
@@ -718,22 +674,16 @@
     }
 
     .about-card-float {
-        position: absolute;
-        right: -24px;
-        top: 50%;
-        transform: translateY(-50%);
+        position: relative;
+        margin-left: auto;
+        width: min(280px, 100%);
         background: var(--card);
-        border: 1px solid var(--border-h);
+        border: 1px solid var(--border);
         border-radius: var(--radius);
-        padding: 20px;
-        min-width: 180px;
-        box-shadow: 0 16px 48px rgba(0,0,0,0.4);
-        transition: var(--transition);
+        padding: 24px;
     }
     .about-card-float:hover {
-        transform: translateY(calc(-50% - 4px));
         border-color: var(--cyan);
-        box-shadow: 0 24px 56px rgba(0,0,0,0.5), 0 0 24px var(--glow-c);
     }
     .about-card-float .label {
         font-size: 0.7rem;
@@ -761,8 +711,8 @@
     .bento-card {
         background: var(--card);
         border: 1px solid var(--border);
-        border-radius: var(--radius-lg);
-        padding: 32px;
+        border-radius: var(--radius);
+        padding: 24px;
         transition: var(--transition);
         position: relative;
         overflow: hidden;
@@ -772,16 +722,14 @@
         position: absolute;
         top: 0; left: 0; right: 0;
         height: 2px;
-        background: linear-gradient(90deg, var(--cyan), var(--purple));
+        background: var(--cyan);
         opacity: 0;
+        display: none;
         transition: opacity 0.3s ease;
     }
     .bento-card:hover {
-        border-color: var(--border-h);
-        transform: translateY(-4px);
-        box-shadow: 0 16px 48px rgba(0,212,255,0.08);
+        border-color: var(--cyan);
     }
-    .bento-card:hover::before { opacity: 1; }
 
     .bento-card.wide { grid-column: span 2; }
     .bento-card.tall { grid-row: span 2; }
@@ -795,10 +743,10 @@
         font-size: 1.2rem;
         margin-bottom: 20px;
     }
-    .bento-icon.cyan  { background: rgba(0,212,255,0.12); color: var(--cyan); }
-    .bento-icon.purple{ background: rgba(124,58,237,0.12); color: var(--purple); }
-    .bento-icon.green { background: rgba(16,185,129,0.12); color: var(--emerald); }
-    .bento-icon.pink  { background: rgba(244,114,182,0.12); color: var(--pink); }
+    .bento-icon.cyan,
+    .bento-icon.purple,
+    .bento-icon.green,
+    .bento-icon.pink { background: rgba(0,212,255,0.12); color: var(--cyan); }
 
     .bento-card h4 {
         font-size: 1rem;
@@ -875,7 +823,7 @@
         position: absolute;
         left: 0; top: 8px; bottom: 0;
         width: 1px;
-        background: linear-gradient(to bottom, var(--cyan), var(--purple), transparent);
+        background: var(--border);
     }
 
     .timeline-item {
@@ -891,39 +839,31 @@
         border-radius: 50%;
         background: var(--cyan);
         border: 2px solid var(--bg);
-        box-shadow: 0 0 12px var(--cyan);
     }
-    .timeline-item:nth-child(2) .timeline-dot { background: var(--purple); box-shadow: 0 0 12px var(--purple); }
-    .timeline-item:nth-child(3) .timeline-dot { background: var(--emerald); box-shadow: 0 0 12px var(--emerald); }
-    .timeline-item:nth-child(4) .timeline-dot { background: var(--pink); box-shadow: 0 0 12px var(--pink); }
-    .timeline-item:nth-child(5) .timeline-dot { background: var(--text-3); box-shadow: 0 0 12px rgba(100,116,139,0.6); }
 
     .timeline-card {
         background: var(--card);
         border: 1px solid var(--border);
-        border-radius: var(--radius-lg);
-        padding: 32px;
-        transition: var(--transition);
+        border-radius: 16px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
     }
     .timeline-card:hover {
-        border-color: var(--border-h);
-        transform: translateX(8px);
-        box-shadow: 0 8px 32px rgba(0,212,255,0.06);
+        border-color: var(--cyan);
     }
 
     .timeline-date {
+        order: 3;
         font-family: 'JetBrains Mono', monospace;
         font-size: 0.75rem;
         color: var(--cyan);
-        letter-spacing: 0.08em;
-        margin-bottom: 12px;
+        letter-spacing: 0.04em;
+        margin-bottom: 16px;
     }
-    .timeline-item:nth-child(2) .timeline-date { color: var(--purple); }
-    .timeline-item:nth-child(3) .timeline-date { color: var(--emerald); }
-    .timeline-item:nth-child(4) .timeline-date { color: var(--pink); }
-    .timeline-item:nth-child(5) .timeline-date { color: var(--text-3); }
 
     .timeline-title {
+        order: 2;
         font-size: 1.25rem;
         font-weight: 700;
         color: var(--text-1);
@@ -931,14 +871,17 @@
         margin-bottom: 4px;
     }
     .timeline-company {
-        font-size: 0.9rem;
+        order: 1;
+        font-size: 1rem;
         color: var(--text-2);
-        margin-bottom: 16px;
+        margin-bottom: 4px;
     }
     .timeline-desc {
-        font-size: 0.92rem;
+        order: 4;
+        font-size: 1rem;
         color: var(--text-2);
-        line-height: 1.75;
+        line-height: 1.6;
+        max-width: 68ch;
     }
     .timeline-desc ul.timeline-highlights {
         margin: 0;
@@ -957,6 +900,7 @@
     }
 
     .timeline-tags {
+        order: 5;
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
@@ -989,12 +933,11 @@
         background: var(--card);
         border: 1px solid var(--border);
         border-radius: var(--radius-lg);
-        padding: 28px 28px 24px;
+        padding: 24px;
         transition: var(--transition);
     }
     .edu-card:hover {
-        border-color: var(--border-h);
-        transform: translateY(-2px);
+        border-color: var(--cyan);
     }
     .edu-degree {
         font-size: 1.05rem;
@@ -1061,36 +1004,30 @@
     .project-card {
         background: var(--card);
         border: 1px solid var(--border);
-        border-radius: var(--radius-lg);
+        border-radius: var(--radius);
+        padding: 24px;
         overflow: hidden;
         transition: var(--transition);
         display: flex;
         flex-direction: column;
     }
     .project-card:hover {
-        border-color: var(--border-h);
-        transform: translateY(-6px);
-        box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 40px rgba(0,212,255,0.06);
+        border-color: var(--cyan);
     }
 
     .project-header {
-        height: 140px;
+        height: auto;
         display: flex;
         align-items: center;
-        justify-content: center;
-        font-size: 2.5rem;
-        position: relative;
-        overflow: hidden;
+        justify-content: flex-start;
+        padding: 0;
+        margin-bottom: 12px;
+        font-size: 1.1rem;
+        color: var(--cyan);
     }
-    .project-header.ai     { background: linear-gradient(135deg, rgba(0,212,255,0.12), rgba(124,58,237,0.12)); color: var(--cyan); }
-    .project-header.mobile { background: linear-gradient(135deg, rgba(124,58,237,0.12), rgba(244,114,182,0.12)); color: var(--purple); }
-    .project-header.api    { background: linear-gradient(135deg, rgba(16,185,129,0.12), rgba(0,212,255,0.12)); color: var(--emerald); }
-    .project-header.data   { background: linear-gradient(135deg, rgba(244,114,182,0.12), rgba(124,58,237,0.12)); color: var(--pink); }
-    .project-header.web    { background: linear-gradient(135deg, rgba(0,212,255,0.08), rgba(16,185,129,0.08)); color: var(--cyan); }
-    .project-header.ecom   { background: linear-gradient(135deg, rgba(124,58,237,0.08), rgba(244,114,182,0.08)); color: var(--purple); }
 
     .project-body {
-        padding: 28px;
+        padding: 0;
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -1113,9 +1050,10 @@
         margin-bottom: 12px;
     }
     .project-desc {
-        font-size: 0.88rem;
+        font-size: 1rem;
         color: var(--text-2);
-        line-height: 1.7;
+        line-height: 1.6;
+        max-width: 68ch;
         flex: 1;
         margin-bottom: 20px;
     }
@@ -1140,7 +1078,18 @@
     .project-links {
         display: flex;
         gap: 12px;
+        align-items: center;
         margin-top: auto;
+    }
+    .project-private {
+        display: inline-flex;
+        align-items: center;
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: var(--text-3);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 2px 8px;
     }
     .project-link {
         display: inline-flex;
@@ -1167,8 +1116,9 @@
     .featured-badge {
         position: absolute;
         top: 16px; right: 16px;
-        background: linear-gradient(135deg, var(--cyan), var(--purple));
-        color: var(--text-1);
+        background: transparent;
+        color: var(--cyan);
+        border: 1px solid var(--border);
         font-size: 0.65rem;
         font-weight: 700;
         letter-spacing: 0.1em;
@@ -1245,7 +1195,7 @@
         font-family: 'JetBrains Mono', monospace;
     }
     .contact-item-value {
-        font-size: 0.88rem;
+        font-size: 1rem;
         color: var(--text-1);
         font-weight: 500;
     }
@@ -1278,7 +1228,7 @@
         border-radius: var(--radius);
         color: var(--text-1);
         font-family: 'Space Grotesk', sans-serif;
-        font-size: 0.9rem;
+        font-size: 1rem;
         transition: var(--transition);
         outline: none;
     }
@@ -1332,10 +1282,7 @@
     .footer-logo {
         font-size: 1.1rem;
         font-weight: 700;
-        background: linear-gradient(135deg, var(--cyan), var(--purple));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: var(--text-1);
         text-decoration: none;
     }
     .footer-copy {
@@ -1394,7 +1341,12 @@
     }
 
     @media (max-width: 768px) {
-        section { padding: 80px 0; }
+        section { padding: 72px 0; }
+        .hero { padding: 96px 0 72px; }
+        .hero-photo-ring { width: 168px; height: 168px; }
+        .hero-role, .hero-tagline { margin-left: auto; margin-right: auto; }
+        .hero-actions { flex-direction: column; align-items: stretch; width: 100%; }
+        .hero-actions .btn { width: 100%; justify-content: center; }
 
         .aurora-orb {
             filter: blur(60px);
@@ -1420,8 +1372,7 @@
 
         .about-grid { grid-template-columns: 1fr; gap: 48px; }
         .about-visual { display: flex; justify-content: center; }
-        .about-photo-wrap { width: 100%; max-width: min(320px, 90vw); height: 340px; }
-        .about-card-float { display: none; }
+        .about-card-float { margin: 8px auto 0; }
 
         .bento-grid { grid-template-columns: 1fr; }
         .bento-card.wide { grid-column: span 1; }
@@ -1447,21 +1398,23 @@
     }
     .aurora-1 {
         width: 700px; height: 700px;
-        background: radial-gradient(circle, rgba(124,58,237,0.22) 0%, transparent 70%);
+        display: none;
         top: -200px; right: -150px;
-        animation: auroraFloat 14s ease-in-out infinite;
+        animation: none;
+        opacity: 0.35;
     }
     .aurora-2 {
         width: 550px; height: 550px;
         background: radial-gradient(circle, rgba(0,212,255,0.18) 0%, transparent 70%);
         bottom: 15%; left: -150px;
-        animation: auroraFloat 18s ease-in-out infinite reverse;
+        animation: none;
+        opacity: 0.35;
     }
     .aurora-3 {
         width: 400px; height: 400px;
         background: radial-gradient(circle, rgba(244,114,182,0.15) 0%, transparent 70%);
         top: 55%; right: 15%;
-        animation: auroraFloat 22s ease-in-out infinite 6s;
+        display: none;
     }
     @keyframes auroraFloat {
         0%,100% { transform: translate(0,0) scale(1); }
@@ -1483,7 +1436,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        filter: drop-shadow(0 0 28px rgba(0,212,255,0.45));
+        filter: none;
     }
 
     /* ===== TECH MARQUEE ===== */
@@ -1498,10 +1451,13 @@
     }
     .marquee-track {
         display: flex;
-        gap: 56px;
-        animation: marqueeScroll 28s linear infinite;
-        width: max-content;
-        will-change: transform;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px 32px;
+        animation: none;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
     }
     .marquee-track:hover { animation-play-state: paused; }
     .marquee-item {
@@ -1561,12 +1517,11 @@
         letter-spacing: 0.01em;
     }
     .filter-btn:hover { border-color: var(--border-h); color: var(--cyan); background: var(--glow-c); }
-    .filter-btn:active { transform: scale(0.96); }
     .filter-btn.active {
-        background: linear-gradient(135deg, var(--cyan), var(--purple));
-        border-color: transparent;
-        color: #fff;
-        box-shadow: 0 4px 16px rgba(0,212,255,0.2);
+        background: var(--cyan);
+        border-color: var(--cyan);
+        color: #041018;
+        box-shadow: none;
     }
     .project-card { transition: var(--transition), opacity 0.28s ease; }
     .project-card.hiding { opacity: 0; transform: scale(0.95); pointer-events: none; }
@@ -1600,27 +1555,25 @@
 
     /* ===== PREFERS REDUCED MOTION ===== */
     @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
         *, *::before, *::after {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
+            animation: none !important;
+            transition: none !important;
         }
-        #neural-canvas { display: none; }
-        .aurora-orb { display: none; }
-        .marquee-track { animation: none; overflow: hidden; }
-        .float-badge { animation: none; }
-        .hero-photo-ring { animation: none; background: linear-gradient(135deg, var(--cyan), var(--purple)); }
-        .hero-photo-glow { display: none; }
-        .scroll-hint { display: none; }
+        .fade-up {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+        #neural-canvas, .aurora-orb, .hero-photo-glow { display: none !important; }
     }
     </style>
+    <noscript><style>#loader{display:none!important}.fade-up{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
 
 <!-- Loader -->
-<div id="loader">
+<div id="loader" aria-hidden="true">
     <div class="loader-ring"></div>
-    <div class="loader-text" data-i18n="loader.text">Initializing...</div>
 </div>
 
 <!-- Scroll Progress -->
@@ -1685,38 +1638,30 @@
             <div class="hero-text">
                 <div class="hero-badge">
                     <span class="dot"></span>
-                    <span data-i18n="hero.badge">Open to AI & Engineering roles</span>
+                    <span data-i18n="hero.badge">Open to Senior Backend, AI Engineer &amp; Tech Lead roles</span>
                 </div>
-                <h1 class="hero-name">Robiul Islam <span class="name-glow">SAKIB</span></h1>
-                <div class="hero-role" id="hero-role">AI Developer & Engineering Lead</div>
-                <p class="hero-tagline" data-i18n="hero.tagline">VP of Engineering · Tokyo · LLMs, RAG &amp; full-stack delivery</p>
-                <p class="hero-desc" data-i18n-html="hero.desc">
-                    I ship production AI: multi-LLM RAG, agent-style workflows, and reliable APIs. VP of Engineering for NDI at <a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-weight:600;text-decoration:none;">BrandCloud Inc.</a> (Tokyo), leading 12 engineers across architecture, AWS, and CI/CD.
-                </p>
+                <h1 class="hero-name">Md Robiul Islam <span class="name-glow">SAKIB</span></h1>
+                <div class="hero-role" id="hero-role" data-i18n="hero.role">Senior Backend Engineer / Tech Lead · LLM &amp; RAG</div>
+                <p class="hero-tagline" data-i18n="hero.tagline">VP of Engineering (Technical Lead) at NDI, BrandCloud Inc., Tokyo.</p>
                 <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary">
+                    <a href="sakib-cv.pdf" download class="btn btn-primary">
+                        <i class="fas fa-download"></i> <span data-i18n="hero.cta3">Download CV</span>
+                    </a>
+                    <a href="#projects" class="btn btn-ghost">
                         <i class="fas fa-rocket"></i> <span data-i18n="hero.cta1">View My Work</span>
                     </a>
                     <a href="#contact" class="btn btn-ghost">
                         <i class="fas fa-paper-plane"></i> <span data-i18n="hero.cta2">Get In Touch</span>
-                    </a>
-                    <a href="sakib-cv.pdf" download class="btn btn-cv">
-                        <i class="fas fa-download"></i> <span data-i18n="hero.cta3">Download CV</span>
                     </a>
                 </div>
             </div>
 
             <div class="hero-photo-wrap">
                 <div class="hero-photo-ring">
-                    <img src="Sakib_protfolio.PNG" alt="Md Robiul Islam SAKIB" width="280" height="280">
-                </div>
-                <div class="hero-photo-glow"></div>
-                <div class="float-badge top-right">
-                    <i class="fas fa-brain" style="color:var(--cyan)"></i>
-                    <span data-i18n="hero.float1">AI Developer</span>
+                    <img src="Sakib_protfolio.PNG" alt="Md Robiul Islam Sakib" width="280" height="280">
                 </div>
                 <div class="float-badge bottom-left">
-                    <i class="fas fa-location-dot" style="color:var(--purple)"></i>
+                    <i class="fas fa-location-dot" style="color:var(--cyan)"></i>
                     <span data-i18n="hero.float2">Tokyo, Japan</span>
                 </div>
             </div>
@@ -1742,20 +1687,7 @@
         <span class="marquee-item"><i class="fab fa-docker"></i> Docker</span><span class="marquee-sep"></span>
         <span class="marquee-item"><i class="fas fa-server"></i> Golang</span><span class="marquee-sep"></span>
         <span class="marquee-item"><i class="fas fa-gem"></i> Google Gemini</span><span class="marquee-sep"></span>
-        <span class="marquee-item"><i class="fas fa-layer-group"></i> PostgreSQL</span><span class="marquee-sep"></span>
-        <!-- duplicate for seamless loop -->
-        <span class="marquee-item"><i class="fas fa-robot"></i> OpenAI GPT-4o</span><span class="marquee-sep"></span>
-        <span class="marquee-item"><i class="fas fa-brain"></i> Anthropic Claude</span><span class="marquee-sep"></span>
-        <span class="marquee-item"><i class="fas fa-database"></i> RAG Pipelines</span><span class="marquee-sep"></span>
-        <span class="marquee-item"><i class="fab fa-python"></i> Django</span><span class="marquee-sep"></span>
-        <span class="marquee-item"><i class="fas fa-code"></i> Next.js</span><span class="marquee-sep"></span>
-        <span class="marquee-item"><i class="fab fa-aws"></i> AWS Cloud</span><span class="marquee-sep"></span>
-        <span class="marquee-item"><i class="fas fa-circle-nodes"></i> ChromaDB</span><span class="marquee-sep"></span>
-        <span class="marquee-item"><i class="fas fa-mobile-screen"></i> Flutter</span><span class="marquee-sep"></span>
-        <span class="marquee-item"><i class="fab fa-docker"></i> Docker</span><span class="marquee-sep"></span>
-        <span class="marquee-item"><i class="fas fa-server"></i> Golang</span><span class="marquee-sep"></span>
-        <span class="marquee-item"><i class="fas fa-gem"></i> Google Gemini</span><span class="marquee-sep"></span>
-        <span class="marquee-item"><i class="fas fa-layer-group"></i> PostgreSQL</span><span class="marquee-sep"></span>
+        <span class="marquee-item"><i class="fas fa-layer-group"></i> PostgreSQL</span>
     </div>
 </div>
 
@@ -1763,54 +1695,55 @@
 <section id="about">
     <div class="container">
         <div class="section-label fade-up" data-i18n="about.label">about me</div>
-        <h2 class="section-title fade-up" data-i18n="about.title">VP-level engineer — delivering AI systems to production.</h2>
+        <h2 class="section-title fade-up" data-i18n="about.title">Backend engineer and tech lead building AI systems in production.</h2>
         <div class="about-grid">
             <div class="about-text fade-up">
                 <p data-i18n-html="about.p1">
-                    I'm <span class="about-highlight">Sakib</span> — a full-stack software engineer with 4+ years building production systems. I currently work in an engineering leadership role at <a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" class="about-highlight" style="text-decoration:none;">BrandCloud Inc. (NDI Division)</a> in Tokyo, Japan.
+                    I'm <span class="about-highlight">Sakib</span> — a full-stack software engineer with 5 years building production systems. I currently work in an engineering leadership role at <a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" class="about-highlight" style="text-decoration:none;">BrandCloud Inc. (NDI Division)</a> in Tokyo, Japan.
                 </p>
                 <p data-i18n-html="about.p2">
                     My work sits at the intersection of <span class="about-highlight">AI/LLM integration</span> and product engineering. I design RAG pipelines, build API-first services, and deploy on <span class="about-highlight">AWS, Google Cloud, and Cloudflare</span> with Docker and CI/CD.
                 </p>
                 <p data-i18n="about.p3">
-                    I mentor through code review and architecture decisions, optimizing for reliability, velocity, and clear ownership — not vanity complexity.
+                    I mentor through code review and architecture decisions.
                 </p>
                 <ul class="about-proof">
-                    <li data-i18n="about.hl1">NDI division: strategy for 12 engineers; enterprise RAG (KnowledgeLinks AI) and AI-first delivery.</li>
+                    <li data-i18n="about.hl1">Leading a 19-person team (5 backend, 6 frontend, 3 QA, 3 design, 2 PM).</li>
                     <li data-i18n="about.hl2">Hands-on across Django, Next.js, Flutter, AWS serverless, PostgreSQL, Redis, and vector/RAG stacks.</li>
-                    <li data-i18n="about.hl3">Outcome-focused: secure LLM patterns, cost-aware inference, pipelines teams can run without heroics.</li>
+                    <li data-i18n="about.hl3">Secure LLM patterns and cost-aware inference.</li>
+                    <li data-i18n="about.hl4">Proposed and set up BrandCloud's Bangladesh development company: started remote with 2 engineers, grew to 30, then opened a physical office; now 40 people across engineering, QA and HR.</li>
                 </ul>
                 <div class="stats-row">
                     <div class="stat-card fade-up">
-                        <span class="stat-num" data-target="4" data-suffix="+">0</span>
+                        <span class="stat-num" data-target="5">5</span>
                         <span class="stat-label" data-i18n="stat.years">Years Building</span>
                     </div>
                     <div class="stat-card fade-up">
-                        <span class="stat-num" data-target="12">0</span>
-                        <span class="stat-label" data-i18n="stat.engineers">Engineers Led</span>
+                        <span class="stat-num" data-target="19">19</span>
+                        <span class="stat-label" data-i18n="stat.team">Team Led</span>
                     </div>
                     <div class="stat-card fade-up">
-                        <span class="stat-num" data-target="86">0</span>
+                        <span class="stat-num" data-target="40">40</span>
+                        <span class="stat-label" data-i18n="stat.bd">Bangladesh Team Built</span>
+                    </div>
+                    <div class="stat-card fade-up">
+                        <span class="stat-num" data-target="82">82</span>
                         <span class="stat-label" data-i18n="stat.repos">GitHub Repos</span>
                     </div>
                     <div class="stat-card fade-up">
-                        <span class="stat-num" data-target="6">0</span>
+                        <span class="stat-num" data-target="6">6</span>
                         <span class="stat-label" data-i18n="stat.ai">AI Projects Shipped</span>
                     </div>
                 </div>
             </div>
 
             <div class="about-visual fade-up">
-                <div class="about-photo-wrap">
-                    <img src="Sakib_protfolio.PNG" alt="Md Robiul Islam SAKIB" loading="lazy" width="360" height="420">
-                    <div class="about-photo-overlay"></div>
-                </div>
                 <div class="about-card-float">
                     <div class="label" data-i18n="about.building.label">Currently building</div>
                     <div class="value" data-i18n="about.building.value">AI Video Pipeline</div>
                     <div style="margin-top:12px;" class="label" data-i18n="about.status.label">Status</div>
                     <div style="display:flex;align-items:center;gap:6px;margin-top:4px;">
-                        <span style="width:7px;height:7px;background:var(--emerald);border-radius:50%;display:inline-block;animation:pulse 2s infinite;"></span>
+                        <span style="width:7px;height:7px;background:var(--emerald);border-radius:50%;display:inline-block;"></span>
                         <span style="font-size:0.85rem;color:var(--emerald);font-weight:600;" data-i18n="about.status">Open to work</span>
                     </div>
                 </div>
@@ -1823,8 +1756,8 @@
 <section id="skills">
     <div class="container">
         <div class="section-label fade-up" data-i18n="skills.label">technical skills</div>
-        <h2 class="section-title fade-up" data-i18n="skills.title">The full stack — and then some.</h2>
-        <p class="section-sub fade-up" data-i18n="skills.sub">From LLM fine-tuning to Flutter apps. I go deep where it matters.</p>
+        <h2 class="section-title fade-up" data-i18n="skills.title">Technical skills</h2>
+        <p class="section-sub fade-up" data-i18n="skills.sub">Backend and AI systems in production: Python, TypeScript, Go, PostgreSQL, AWS and GCP, with LLM/RAG on top.</p>
 
         <div class="bento-grid">
             <!-- AI/ML — wide -->
@@ -1834,19 +1767,15 @@
                 <div class="ai-tools-list">
                     <div class="ai-tool-item">
                         <span class="ai-tool-name"><i class="fas fa-circle-nodes" style="color:var(--cyan);margin-right:8px"></i>OpenAI GPT-4 / GPT-4o</span>
-                        <span class="ai-tool-badge">Expert</span>
                     </div>
                     <div class="ai-tool-item">
-                        <span class="ai-tool-name"><i class="fas fa-circle-nodes" style="color:var(--purple);margin-right:8px"></i>Anthropic Claude</span>
-                        <span class="ai-tool-badge">Expert</span>
+                        <span class="ai-tool-name"><i class="fas fa-circle-nodes" style="color:var(--cyan);margin-right:8px"></i>Anthropic Claude</span>
                     </div>
                     <div class="ai-tool-item">
                         <span class="ai-tool-name"><i class="fas fa-circle-nodes" style="color:var(--emerald);margin-right:8px"></i>Google Gemini</span>
-                        <span class="ai-tool-badge">Advanced</span>
                     </div>
                     <div class="ai-tool-item">
-                        <span class="ai-tool-name"><i class="fas fa-database" style="color:var(--pink);margin-right:8px"></i>ChromaDB · RAG Pipelines</span>
-                        <span class="ai-tool-badge">Expert</span>
+                        <span class="ai-tool-name"><i class="fas fa-database" style="color:var(--cyan);margin-right:8px"></i>ChromaDB · RAG Pipelines</span>
                     </div>
                 </div>
             </div>
@@ -1932,21 +1861,21 @@
     <div class="container">
         <div class="section-label fade-up" data-i18n="exp.label">career journey</div>
         <h2 class="section-title fade-up" data-i18n-html="exp.title">Career progression<br>in software engineering.</h2>
-        <p class="section-sub fade-up" data-i18n="exp.sub">4+ years across backend, AI integration, and engineering leadership.</p>
+        <p class="section-sub fade-up" data-i18n="exp.sub">5 years across backend, AI integration, and engineering leadership.</p>
 
         <div class="timeline">
             <!-- VPoE -->
             <div class="timeline-item fade-up">
                 <div class="timeline-dot"></div>
                 <div class="timeline-card">
-                    <div class="timeline-date" data-i18n="exp.1.date">11/2024 — Present · Current</div>
-                    <h3 class="timeline-title" data-i18n="exp.1.title">VP of Engineering & Full-Stack Lead</h3>
-                    <div class="timeline-company" data-i18n-html="exp.1.company"><a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a> (NDI Division) · Tokyo, Japan</div>
+                    <div class="timeline-date" data-i18n="exp.1.date">02/2025 – Present</div>
+                    <h3 class="timeline-title" data-i18n="exp.1.title">Technical Lead / Senior Software Engineer (official title: VP of Engineering)</h3>
+                    <div class="timeline-company" data-i18n-html="exp.1.company">NDI (AI division), <a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a>, Tokyo</div>
                     <div class="timeline-desc" data-i18n-html="exp.1.desc">
                         <ul class="timeline-highlights">
-                            <li>Set technical direction for NDI; lead <strong>12 engineers</strong> across AI and product delivery.</li>
-                            <li>Shipped <strong>KnowledgeLinks AI</strong> — enterprise RAG with OpenAI, Claude, and Gemini; citations and grounded answers.</li>
-                            <li>Own <strong>AWS and CI/CD</strong>: repeatable releases, security baselines, and operability for LLM workloads.</li>
+                            <li>Leading a 19-person team (5 backend, 6 frontend, 3 QA, 3 design, 2 PM).</li>
+                            <li>Proposed and set up BrandCloud's Bangladesh development company: started remote with 2 engineers, grew to 30, then opened a physical office; now 40 people across engineering, QA and HR.</li>
+                            <li><strong>KnowledgeLinks AI.</strong> Multi-tenant enterprise RAG platform on Python/FastAPI, PostgreSQL, Docker and AWS: tenant-aware data model, document ingestion, retrieval with OpenAI, Claude and Gemini, and streaming APIs.</li>
                         </ul>
                     </div>
                     <div class="timeline-tags">
@@ -1965,9 +1894,9 @@
             <div class="timeline-item fade-up">
                 <div class="timeline-dot"></div>
                 <div class="timeline-card">
-                    <div class="timeline-date" data-i18n="exp.2.date">10/2023 — 10/2024 · 1 year</div>
+                    <div class="timeline-date" data-i18n="exp.2.date">10/2023 – 01/2025</div>
                     <h3 class="timeline-title" data-i18n="exp.2.title">Senior Software Engineer</h3>
-                    <div class="timeline-company" data-i18n-html="exp.2.company"><a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a> · Tokyo, Japan</div>
+                    <div class="timeline-company" data-i18n-html="exp.2.company"><a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a>, Tokyo</div>
                     <div class="timeline-desc" data-i18n-html="exp.2.desc">
                         <ul class="timeline-highlights">
                             <li>Led <strong>Benrimono</strong>: Flutter apps, serverless AWS (Lambda / API Gateway), <strong>DynamoDB</strong>, real-time tracking.</li>
@@ -1990,9 +1919,9 @@
             <div class="timeline-item fade-up">
                 <div class="timeline-dot"></div>
                 <div class="timeline-card">
-                    <div class="timeline-date" data-i18n="exp.3.date">09/2022 — 09/2023 · 1 year</div>
+                    <div class="timeline-date" data-i18n="exp.3.date">09/2022 – 09/2023</div>
                     <h3 class="timeline-title" data-i18n="exp.3.title">Software Engineer</h3>
-                    <div class="timeline-company" data-i18n-html="exp.3.company"><a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a> · Tokyo, Japan</div>
+                    <div class="timeline-company" data-i18n-html="exp.3.company"><a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a>, Tokyo</div>
                     <div class="timeline-desc" data-i18n-html="exp.3.desc">
                         <ul class="timeline-highlights">
                             <li>Core contributor on <strong>Django</strong> REST APIs, <strong>React / Vue</strong> UIs, <strong>PostgreSQL</strong> + Redis.</li>
@@ -2015,9 +1944,9 @@
             <div class="timeline-item fade-up">
                 <div class="timeline-dot"></div>
                 <div class="timeline-card">
-                    <div class="timeline-date" data-i18n="exp.4.date">05/2022 — 09/2022 · 5 months</div>
-                    <h3 class="timeline-title" data-i18n="exp.4.title">Trainee Engineer</h3>
-                    <div class="timeline-company" data-i18n="exp.4.company">B-JET · Japan</div>
+                    <div class="timeline-date" data-i18n="exp.4.date">05/2022 – 09/2022</div>
+                    <h3 class="timeline-title" data-i18n="exp.4.title">Software Engineer Trainee</h3>
+                    <div class="timeline-company" data-i18n="exp.4.company">B-JET (JICA program), Miyazaki, Japan</div>
                     <p class="timeline-desc" data-i18n="exp.4.desc">
                         Completed an intensive technical and professional training program in Japan, building
                         engineering discipline and cross-cultural communication skills. Developed a structured approach
@@ -2035,9 +1964,9 @@
             <div class="timeline-item fade-up">
                 <div class="timeline-dot"></div>
                 <div class="timeline-card">
-                    <div class="timeline-date" data-i18n="exp.5.date">11/2021 — 04/2022 · 6 months</div>
+                    <div class="timeline-date" data-i18n="exp.5.date">11/2021 – 04/2022</div>
                     <h3 class="timeline-title" data-i18n="exp.5.title">Software Engineer Intern</h3>
-                    <div class="timeline-company" data-i18n="exp.5.company">W3Engineers Ltd. · Bangladesh</div>
+                    <div class="timeline-company" data-i18n="exp.5.company">W3Engineers Ltd., Dhaka</div>
                     <p class="timeline-desc" data-i18n="exp.5.desc">
                         First professional engineering role. Gained hands-on experience with Go (Beego), Flask,
                         Node.js, Express, Vue.js, and REST APIs. Delivered production features under real deadlines
@@ -2067,8 +1996,8 @@
         <div class="edu-grid">
             <div class="edu-card fade-up">
                 <div class="edu-degree" data-i18n="edu.1.degree">B.Sc. Computer Science &amp; Engineering</div>
-                <div class="edu-school" data-i18n="edu.1.school">University · Bangladesh</div>
-                <div class="edu-date" data-i18n="edu.1.date">2018 — 2022</div>
+                <div class="edu-school" data-i18n="edu.1.school">United International University, Bangladesh</div>
+                <div class="edu-date" data-i18n="edu.1.date">2018–2022</div>
             </div>
             <div class="edu-card fade-up">
                 <div class="edu-degree" data-i18n="edu.2.degree">Engineering &amp; Professional Program</div>
@@ -2078,8 +2007,8 @@
             <div class="edu-lang-block fade-up">
                 <h3 data-i18n="edu.lang.title">Languages</h3>
                 <div class="edu-lang-rows">
-                    <div class="edu-lang-row"><span class="edu-lang-name" data-i18n="edu.lang.en.lab">English</span><span data-i18n="edu.lang.en">Professional working proficiency</span></div>
-                    <div class="edu-lang-row"><span class="edu-lang-name" data-i18n="edu.lang.ja.lab">Japanese</span><span data-i18n="edu.lang.ja">Conversational — business context in Japan</span></div>
+                    <div class="edu-lang-row"><span class="edu-lang-name" data-i18n="edu.lang.en.lab">English</span><span data-i18n="edu.lang.en">Professional</span></div>
+                    <div class="edu-lang-row"><span class="edu-lang-name" data-i18n="edu.lang.ja.lab">Japanese</span><span data-i18n="edu.lang.ja">Conversational</span></div>
                     <div class="edu-lang-row"><span class="edu-lang-name" data-i18n="edu.lang.bn.lab">Bengali</span><span data-i18n="edu.lang.bn">Native</span></div>
                 </div>
             </div>
@@ -2104,6 +2033,58 @@
 
         <div class="projects-grid" id="projects-grid">
 
+            <div class="project-card fade-up" data-cat="ai">
+                <div class="project-header"><i class="fas fa-headset"></i></div>
+                <div class="project-body">
+                    <h3 class="project-title" data-i18n="proj.10.title">AI Support Copilot RAG</h3>
+                    <p class="project-desc" data-i18n="proj.10.desc">Production-style RAG backend for an internal support copilot — ingests documents, retrieves relevant chunks, and returns grounded answers with citations via a FastAPI service. Dockerized with CI.</p>
+                    <div class="project-tech">
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">FastAPI</span>
+                        <span class="tech-pill">RAG</span>
+                        <span class="tech-pill">Docker</span>
+                        <span class="tech-pill">GitHub Actions</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sakib-maho/ai-support-copilot-rag" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-up" data-cat="ai">
+                <div class="project-header"><i class="fas fa-diagram-project"></i></div>
+                <div class="project-body">
+                    <h3 class="project-title" data-i18n="proj.11.title">AI Workflow Agent Ops</h3>
+                    <p class="project-desc" data-i18n="proj.11.desc">Backend for AI-assisted workflow orchestration with approval gates, execution tracking, and retry handling — agents and human reviewers collaborate in a single pipeline via FastAPI. Dockerized with CI.</p>
+                    <div class="project-tech">
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">FastAPI</span>
+                        <span class="tech-pill">Agent Orchestration</span>
+                        <span class="tech-pill">Docker</span>
+                        <span class="tech-pill">GitHub Actions</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sakib-maho/ai-workflow-agent-ops" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-up" data-cat="backend">
+                <div class="project-header"><i class="fas fa-terminal"></i></div>
+                <div class="project-body">
+                    <h3 class="project-title" data-i18n="proj.12.title">Go URL Health Checker CLI</h3>
+                    <p class="project-desc" data-i18n="proj.12.desc">Concurrent URL health monitoring CLI with retries, timeouts, and JSON/CSV export for ops troubleshooting.</p>
+                    <div class="project-tech">
+                        <span class="tech-pill">Go</span>
+                        <span class="tech-pill">Concurrent checks</span>
+                        <span class="tech-pill">JSON/CSV export</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sakib-maho/go-url-health-checker-cli" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+
             <!-- ── AI / LLM ── -->
             <div class="project-card featured fade-up" data-cat="ai">
                 <div class="project-header ai"><i class="fas fa-brain"></i></div>
@@ -2111,18 +2092,20 @@
                 <div class="project-body">
                     <span class="project-role-badge" data-i18n="proj.1.role">Full-Stack Lead · Technical Architect</span>
                     <h3 class="project-title" data-i18n="proj.1.title">KnowledgeLinks AI</h3>
-                    <p class="project-desc" data-i18n="proj.1.desc">Enterprise knowledge Q&amp;A: internal documents, multi-LLM RAG, and cited answers. AWS-hosted with streaming — built for grounded responses teams can trust.</p>
+                    <p class="project-desc" data-i18n="proj.1.desc">Multi-tenant enterprise RAG platform on Python/FastAPI, PostgreSQL, Docker and AWS: tenant-aware data model, document ingestion, retrieval with OpenAI, Claude and Gemini, and streaming APIs.</p>
                     <div class="project-tech">
-                        <span class="tech-pill">Django</span>
-                        <span class="tech-pill">Next.js</span>
-                        <span class="tech-pill">OpenAI GPT-4</span>
-                        <span class="tech-pill">ChromaDB</span>
-                        <span class="tech-pill">AWS</span>
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">FastAPI</span>
+                        <span class="tech-pill">PostgreSQL</span>
                         <span class="tech-pill">Docker</span>
+                        <span class="tech-pill">AWS</span>
+                        <span class="tech-pill">OpenAI</span>
+                        <span class="tech-pill">Claude</span>
+                        <span class="tech-pill">Gemini</span>
                     </div>
                     <div class="project-links">
                         <a href="https://knowledgelinks.ai/lp1/" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> <span data-i18n="proj.1.link">Product site</span></a>
-                        <span class="project-link" style="color:var(--text-3);cursor:default;border-bottom:none;"><i class="fas fa-lock"></i> <span data-i18n="proj.private">Private / NDA</span></span>
+                        <span class="project-private" data-i18n="proj.private">Private</span>
                     </div>
                 </div>
             </div>
@@ -2183,44 +2166,6 @@
                 </div>
             </div>
 
-            <div class="project-card fade-up" data-cat="ai">
-                <div class="project-header ai"><i class="fas fa-headset"></i></div>
-                <div class="project-body">
-                    <span class="project-role-badge" data-i18n="proj.10.role">Backend Engineer · Solo</span>
-                    <h3 class="project-title" data-i18n="proj.10.title">AI Support Copilot RAG</h3>
-                    <p class="project-desc" data-i18n="proj.10.desc">Production-style RAG backend for an internal support copilot — ingests documents, retrieves relevant chunks, and returns grounded answers with citations via a FastAPI service. Dockerized with CI.</p>
-                    <div class="project-tech">
-                        <span class="tech-pill">Python</span>
-                        <span class="tech-pill">FastAPI</span>
-                        <span class="tech-pill">RAG</span>
-                        <span class="tech-pill">Docker</span>
-                        <span class="tech-pill">GitHub Actions</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/sakib-maho/ai-support-copilot-rag" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card fade-up" data-cat="ai">
-                <div class="project-header ai"><i class="fas fa-diagram-project"></i></div>
-                <div class="project-body">
-                    <span class="project-role-badge" data-i18n="proj.11.role">Backend Engineer · Solo</span>
-                    <h3 class="project-title" data-i18n="proj.11.title">AI Workflow Agent Ops</h3>
-                    <p class="project-desc" data-i18n="proj.11.desc">Backend for AI-assisted workflow orchestration with approval gates, execution tracking, and retry handling — agents and human reviewers collaborate in a single pipeline via FastAPI. Dockerized with CI.</p>
-                    <div class="project-tech">
-                        <span class="tech-pill">Python</span>
-                        <span class="tech-pill">FastAPI</span>
-                        <span class="tech-pill">Agent Orchestration</span>
-                        <span class="tech-pill">Docker</span>
-                        <span class="tech-pill">GitHub Actions</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/sakib-maho/ai-workflow-agent-ops" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-
             <!-- ── Mobile ── -->
             <div class="project-card featured fade-up" data-cat="mobile">
                 <div class="project-header mobile"><i class="fas fa-mobile-screen-button"></i></div>
@@ -2237,7 +2182,7 @@
                         <span class="tech-pill">Vercel</span>
                     </div>
                     <div class="project-links">
-                        <span class="project-link" style="color:var(--text-3);cursor:default;border-bottom:none;"><i class="fas fa-lock"></i> <span data-i18n="proj.private">Private / NDA</span></span>
+                        <span class="project-private" data-i18n="proj.private">Private</span>
                     </div>
                 </div>
             </div>
@@ -2343,7 +2288,7 @@
                         </div>
                     </a>
                     <a href="https://linkedin.com/in/msakib162004" target="_blank" rel="noopener noreferrer" class="contact-item">
-                        <div class="contact-item-icon" style="background:rgba(124,58,237,0.12);color:var(--purple)"><i class="fab fa-linkedin"></i></div>
+                        <div class="contact-item-icon" style="background:rgba(0,212,255,0.12);color:var(--cyan)"><i class="fab fa-linkedin"></i></div>
                         <div class="contact-item-text">
                             <span class="contact-item-label" data-i18n="contact.linkedin.label">LinkedIn</span>
                             <span class="contact-item-value">linkedin.com/in/msakib162004</span>
@@ -2360,7 +2305,7 @@
                         <div class="contact-item-icon" style="background:rgba(16,185,129,0.12);color:var(--emerald)"><i class="fas fa-location-dot"></i></div>
                         <div class="contact-item-text">
                             <span class="contact-item-label" data-i18n="contact.location.label">Location</span>
-                            <span class="contact-item-value" data-i18n="contact.location.value">Tsurumaki, Tokyo, Japan</span>
+                            <span class="contact-item-value" data-i18n="contact.location.value">Tokyo, Japan</span>
                         </div>
                     </div>
                 </div>
@@ -2402,7 +2347,7 @@
     <div class="container">
         <div class="footer-inner">
             <a href="#home" class="footer-logo">SAKIB.ai</a>
-            <p class="footer-copy" data-i18n="footer.copy">© 2026 Md Robiul Islam SAKIB. All rights reserved.</p>
+            <p class="footer-copy" data-i18n="footer.copy">© 2026 Md Robiul Islam Sakib. All rights reserved.</p>
             <div class="footer-social">
                 <a href="https://linkedin.com/in/msakib162004" target="_blank" rel="noopener noreferrer" data-i18n-aria="a11y.linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/sakib-maho" target="_blank" rel="noopener noreferrer" data-i18n-aria="a11y.github" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -2490,7 +2435,11 @@ const io = new IntersectionObserver(entries => {
     });
 }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
+if (!prefersReducedMotion) {
 document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+} else {
+    revealAll();
+}
 
 // Trigger immediately visible elements right away
 function triggerVisible() {
@@ -2520,10 +2469,17 @@ document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el))
 function animateCounter(el) {
     if (el.dataset.counted) return;
     el.dataset.counted = '1';
-    const target = parseInt(el.dataset.target);
+    const target = parseInt(el.dataset.target, 10);
     const suffix = el.dataset.suffix || '';
-    let current = 0;
-    const increment = target / 60;
+    if (!Number.isFinite(target)) return;
+    const shown = parseInt(el.textContent, 10);
+    const start = Number.isFinite(shown) ? shown : target;
+    if (start >= target) {
+        el.textContent = String(target) + suffix;
+        return;
+    }
+    let current = start;
+    const increment = Math.max((target - start) / 60, 1);
     const step = () => {
         current = Math.min(current + increment, target);
         el.textContent = Math.floor(current) + suffix;
@@ -2539,50 +2495,14 @@ setTimeout(() => {
     });
 }, 3500);
 
-// ===== ROLE TYPEWRITER =====
-let roles = [
-    'AI Developer & Engineering Lead',
-    'LLM Integration Architect',
-    'Full-Stack Engineer',
-    'VP of Engineering @ BrandCloud'
-];
-let roleIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-const roleEl = document.getElementById('hero-role');
-
-function typeRole() {
-    const current = roles[roleIndex];
-    if (isDeleting) {
-        roleEl.textContent = current.substring(0, charIndex - 1);
-        charIndex--;
-    } else {
-        roleEl.textContent = current.substring(0, charIndex + 1);
-        charIndex++;
-    }
-
-    let delay = isDeleting ? 40 : 70;
-
-    if (!isDeleting && charIndex === current.length) {
-        delay = 2200;
-        isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        roleIndex = (roleIndex + 1) % roles.length;
-        delay = 400;
-    }
-
-    setTimeout(typeRole, delay);
-}
-
-setTimeout(typeRole, 800);
-
 // ===== AI NEURAL CANVAS =====
 const canvas = document.getElementById('neural-canvas');
 const isMobile = window.innerWidth <= 768;
+if (canvas) canvas.style.display = 'none';
 if (prefersReducedMotion) {
-    canvas.style.display = 'none';
-} else {
+    document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+}
+if (false) {
 const ctx = canvas.getContext('2d');
 let neuralPaused = false;
 
@@ -2592,9 +2512,9 @@ const NODE_COLORS = [
     { r: 124, g: 58,  b: 237 },  // purple
     { r: 244, g: 114, b: 182 },  // pink
 ];
-const NODE_COUNT  = isMobile ? 28 : 60;
-const MAX_DIST    = isMobile ? 115 : 150;
-const BASE_SPEED  = isMobile ? 0.7 : 1.4;
+const NODE_COUNT  = isMobile ? 14 : 22;
+const MAX_DIST    = isMobile ? 100 : 120;
+const BASE_SPEED  = isMobile ? 0 : 0.55;
 
 function resizeCanvas() {
     canvas.width  = window.innerWidth;
@@ -2681,7 +2601,7 @@ function drawNeural() {
             const dy = nodes[i].y - nodes[j].y;
             const dist = Math.sqrt(dx * dx + dy * dy);
             if (dist < MAX_DIST) {
-                const alpha = (1 - dist / MAX_DIST) * 0.6;
+                const alpha = (1 - dist / MAX_DIST) * 0.22;
                 const c = nodes[i].color;
                 ctx.beginPath();
                 ctx.moveTo(nodes[i].x, nodes[i].y);
@@ -2691,7 +2611,7 @@ function drawNeural() {
                 ctx.stroke();
 
                 // Occasionally fire a pulse along this edge
-                if (frame % 3 === 0 && Math.random() < 0.0018) spawnPulse(i, j);
+                if (!isMobile && frame % 3 === 0 && Math.random() < 0.0006) spawnPulse(i, j);
             }
         }
     }
@@ -2730,16 +2650,16 @@ function drawNeural() {
         }
 
         // Core dot with glow
-        ctx.shadowBlur  = 7;
-        ctx.shadowColor = `rgba(${cr},${cg},${cb},0.9)`;
+        ctx.shadowBlur  = 4;
+        ctx.shadowColor = `rgba(${cr},${cg},${cb},0.35)`;
         ctx.beginPath();
         ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${cr},${cg},${cb},0.9)`;
+        ctx.fillStyle = `rgba(${cr},${cg},${cb},0.4)`;
         ctx.fill();
         ctx.shadowBlur = 0;
     });
 
-    requestAnimationFrame(drawNeural);
+    if (!isMobile) requestAnimationFrame(drawNeural);
 }
 
 document.addEventListener('visibilitychange', () => {
@@ -2842,9 +2762,8 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 // ===== i18n LANGUAGE SUPPORT =====
 const translations = {
     en: {
-        'loader.text': 'Initializing...',
-        'meta.title': 'Sakib — AI Developer & Engineering Lead',
-        'meta.description': 'Md Robiul Islam SAKIB — VP of Engineering & AI developer in Tokyo. Multi-LLM RAG, production APIs, AWS, and full-stack delivery at BrandCloud (NDI).',
+        'meta.title': 'Md Robiul Islam Sakib — Senior Backend Engineer / Tech Lead',
+        'meta.description': 'Md Robiul Islam Sakib — Senior Backend Engineer / Tech Lead',
         'a11y.backTop': 'Back to top',
         'a11y.menu': 'Open or close navigation menu',
         'a11y.linkedin': 'LinkedIn profile (opens in a new tab)',
@@ -2857,9 +2776,10 @@ const translations = {
         'nav.resume': 'Résumé',
         'nav.projects': 'Projects',
         'nav.contact': "Let's Talk",
-        'hero.badge': 'Open to AI & Engineering roles',
-        'hero.tagline': 'VP of Engineering · Tokyo · LLMs, RAG & full-stack delivery',
-        'hero.desc': 'I ship production AI: multi-LLM RAG, agent-style workflows, and reliable APIs. VP of Engineering for NDI at <a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-weight:600;text-decoration:none;">BrandCloud Inc.</a> (Tokyo), leading 12 engineers across architecture, AWS, and CI/CD.',
+        'hero.badge': 'Open to Senior Backend, AI Engineer & Tech Lead roles',
+        'hero.role': 'Senior Backend Engineer / Tech Lead · LLM & RAG',
+        'hero.tagline': 'VP of Engineering (Technical Lead) at NDI, BrandCloud Inc., Tokyo.',
+        'hero.desc': 'I ship production AI: multi-LLM RAG, agent-style workflows, and reliable APIs. VP of Engineering for NDI at <a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-weight:600;text-decoration:none;">BrandCloud Inc.</a> (Tokyo). Leading a 19-person team (5 backend, 6 frontend, 3 QA, 3 design, 2 PM).',
         'hero.cta1': 'View My Work',
         'hero.cta2': 'Get In Touch',
         'hero.cta3': 'Download CV',
@@ -2867,15 +2787,17 @@ const translations = {
         'hero.float2': 'Tokyo, Japan',
         'scroll.hint': 'scroll',
         'about.label': 'about me',
-        'about.title': 'VP-level engineer — delivering AI systems to production.',
-        'about.p1': 'I\'m <span class="about-highlight">Sakib</span> — a full-stack software engineer with 4+ years building production systems. I currently work in an engineering leadership role at <a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" class="about-highlight" style="text-decoration:none;">BrandCloud Inc. (NDI Division)</a> in Tokyo, Japan.',
+        'about.title': 'Backend engineer and tech lead building AI systems in production.',
+        'about.p1': 'I\'m <span class="about-highlight">Sakib</span> — a full-stack software engineer with 5 years building production systems. I currently work in an engineering leadership role at <a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" class="about-highlight" style="text-decoration:none;">BrandCloud Inc. (NDI Division)</a> in Tokyo, Japan.',
         'about.p2': 'My work sits at the intersection of <span class="about-highlight">AI/LLM integration</span> and product engineering. I design RAG pipelines, build API-first services, and deploy on <span class="about-highlight">AWS, Google Cloud, and Cloudflare</span> with Docker and CI/CD.',
-        'about.p3': 'I mentor through code review and architecture decisions, optimizing for reliability, velocity, and clear ownership — not vanity complexity.',
-        'about.hl1': 'NDI division: strategy for 12 engineers; enterprise RAG (KnowledgeLinks AI) and AI-first delivery.',
+        'about.p3': 'I mentor through code review and architecture decisions.',
+        'about.hl1': 'Leading a 19-person team (5 backend, 6 frontend, 3 QA, 3 design, 2 PM).',
         'about.hl2': 'Hands-on across Django, Next.js, Flutter, AWS serverless, PostgreSQL, Redis, and vector/RAG stacks.',
-        'about.hl3': 'Outcome-focused: secure LLM patterns, cost-aware inference, pipelines teams can run without heroics.',
+        'about.hl3': 'Secure LLM patterns and cost-aware inference.',
+        'about.hl4': 'Proposed and set up BrandCloud\'s Bangladesh development company: started remote with 2 engineers, grew to 30, then opened a physical office; now 40 people across engineering, QA and HR.',
         'stat.years': 'Years Building',
-        'stat.engineers': 'Engineers Led',
+        'stat.team': 'Team Led',
+        'stat.bd': 'Bangladesh Team Built',
         'stat.repos': 'GitHub Repos',
         'stat.ai': 'AI Projects Shipped',
         'about.building.label': 'Currently building',
@@ -2883,8 +2805,8 @@ const translations = {
         'about.status': 'Open to work',
         'about.status.label': 'Status',
         'skills.label': 'technical skills',
-        'skills.title': 'The full stack — and then some.',
-        'skills.sub': 'From LLM fine-tuning to Flutter apps. I go deep where it matters.',
+        'skills.title': 'Technical skills',
+        'skills.sub': 'Backend and AI systems in production: Python, TypeScript, Go, PostgreSQL, AWS and GCP, with LLM/RAG on top.',
         'skills.ai': 'AI / ML Integration',
         'skills.backend': 'Backend Development',
         'skills.frontend': 'Frontend Development',
@@ -2893,21 +2815,21 @@ const translations = {
         'skills.mobile': 'Mobile Development',
         'exp.label': 'career journey',
         'exp.title': 'Career progression<br>in software engineering.',
-        'exp.sub': '4+ years across backend, AI integration, and engineering leadership.',
+        'exp.sub': '5 years across backend, AI integration, and engineering leadership.',
         'edu.label': 'education',
         'edu.title': 'Formal training & credentials.',
         'edu.sub': 'CS foundation and Japan-focused professional training — complementary to hands-on production work.',
         'edu.1.degree': 'B.Sc. Computer Science & Engineering',
-        'edu.1.school': 'University · Bangladesh',
-        'edu.1.date': '2018 — 2022',
+        'edu.1.school': 'United International University, Bangladesh',
+        'edu.1.date': '2018–2022',
         'edu.2.degree': 'Engineering & Professional Program',
         'edu.2.school': 'B-JET · Japan',
         'edu.2.date': '2022',
         'edu.lang.title': 'Languages',
         'edu.lang.en.lab': 'English',
-        'edu.lang.en': 'Professional working proficiency',
+        'edu.lang.en': 'Professional',
         'edu.lang.ja.lab': 'Japanese',
-        'edu.lang.ja': 'Conversational — business context in Japan',
+        'edu.lang.ja': 'Conversational',
         'edu.lang.bn.lab': 'Bengali',
         'edu.lang.bn': 'Native',
         'proj.label': 'featured projects',
@@ -2918,7 +2840,7 @@ const translations = {
         'filter.mobile': 'Mobile',
         'filter.backend': 'Backend',
         'filter.web': 'Web',
-        'proj.private': 'Private / NDA',
+        'proj.private': 'Private',
         'contact.label': 'contact',
         'contact.title': "Let's build something<br>intelligent together.",
         'contact.sub': 'Open to AI engineering projects, leadership roles, and interesting conversations.',
@@ -2929,7 +2851,7 @@ const translations = {
         'contact.linkedin.label': 'LinkedIn',
         'contact.github.label': 'GitHub',
         'contact.location.label': 'Location',
-        'contact.location.value': 'Tsurumaki, Tokyo, Japan',
+        'contact.location.value': 'Tokyo, Japan',
         'form.name': 'Name',
         'form.email': 'Email',
         'form.subject': 'Subject',
@@ -2944,32 +2866,32 @@ const translations = {
         'form.successMsg': 'Thanks! I\'ll get back to you within 24 hours.',
         'form.failed': 'Failed to Send',
         'form.errorMsg': 'Something went wrong. Please email me directly at mrobiulislamsakib@gmail.com',
-        'footer.copy': '© 2026 Md Robiul Islam SAKIB. All rights reserved.',
-        'exp.1.date': '11/2024 — Present · Current',
-        'exp.1.title': 'VP of Engineering & Full-Stack Lead',
-        'exp.1.company': '<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a> (NDI Division) · Tokyo, Japan',
-        'exp.1.desc': '<ul class="timeline-highlights"><li>Set technical direction for NDI; lead <strong>12 engineers</strong> across AI and product delivery.</li><li>Shipped <strong>KnowledgeLinks AI</strong> — enterprise RAG with OpenAI, Claude, and Gemini; citations and grounded answers.</li><li>Own <strong>AWS and CI/CD</strong>: repeatable releases, security baselines, and operability for LLM workloads.</li></ul>',
-        'exp.2.date': '10/2023 — 10/2024 · 1 year',
+        'footer.copy': '© 2026 Md Robiul Islam Sakib. All rights reserved.',
+        'exp.1.date': '02/2025 – Present',
+        'exp.1.title': 'Technical Lead / Senior Software Engineer (official title: VP of Engineering)',
+        'exp.1.company': 'NDI (AI division), <a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a>, Tokyo',
+        'exp.1.desc': '<ul class="timeline-highlights"><li>Leading a 19-person team (5 backend, 6 frontend, 3 QA, 3 design, 2 PM).</li><li>Proposed and set up BrandCloud\'s Bangladesh development company: started remote with 2 engineers, grew to 30, then opened a physical office; now 40 people across engineering, QA and HR.</li><li><strong>KnowledgeLinks AI.</strong> Multi-tenant enterprise RAG platform on Python/FastAPI, PostgreSQL, Docker and AWS: tenant-aware data model, document ingestion, retrieval with OpenAI, Claude and Gemini, and streaming APIs.</li></ul>',
+        'exp.2.date': '10/2023 – 01/2025',
         'exp.2.title': 'Senior Software Engineer',
-        'exp.2.company': '<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a> · Tokyo, Japan',
+        'exp.2.company': '<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a>, Tokyo',
         'exp.2.desc': '<ul class="timeline-highlights"><li>Led <strong>Benrimono</strong>: Flutter apps, serverless AWS (Lambda / API Gateway), <strong>DynamoDB</strong>, real-time tracking.</li><li>Introduced early <strong>LLM-powered</strong> flows for internal tools and customer-facing features.</li><li>Mentored engineers; raised consistency on API design, reviews, and production readiness.</li></ul>',
-        'exp.3.date': '09/2022 — 09/2023 · 1 year',
+        'exp.3.date': '09/2022 – 09/2023',
         'exp.3.title': 'Software Engineer',
-        'exp.3.company': '<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a> · Tokyo, Japan',
+        'exp.3.company': '<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a>, Tokyo',
         'exp.3.desc': '<ul class="timeline-highlights"><li>Core contributor on <strong>Django</strong> REST APIs, <strong>React / Vue</strong> UIs, <strong>PostgreSQL</strong> + Redis.</li><li>Shipped with product and design while tightening tests, deploy hygiene, and on-call readiness.</li><li>Foundation for senior work on mobile, serverless backends, and AI integration.</li></ul>',
-        'exp.4.date': '05/2022 — 09/2022 · 5 months',
-        'exp.4.title': 'Trainee Engineer',
-        'exp.4.company': 'B-JET · Japan',
+        'exp.4.date': '05/2022 – 09/2022',
+        'exp.4.title': 'Software Engineer Trainee',
+        'exp.4.company': 'B-JET (JICA program), Miyazaki, Japan',
         'exp.4.desc': 'Completed an intensive technical and professional training program in Japan, building engineering discipline and cross-cultural communication skills. Developed a structured approach to teamwork and software delivery that I carried into later engineering roles.',
-        'exp.5.date': '11/2021 — 04/2022 · 6 months',
+        'exp.5.date': '11/2021 – 04/2022',
         'exp.5.title': 'Software Engineer Intern',
-        'exp.5.company': 'W3Engineers Ltd. · Bangladesh',
+        'exp.5.company': 'W3Engineers Ltd., Dhaka',
         'exp.5.desc': 'First professional engineering role. Gained hands-on experience with Go (Beego), Flask, Node.js, Express, Vue.js, and REST APIs. Delivered production features under real deadlines and strengthened core habits in clean coding, fast learning, and team collaboration.',
         'badge.featured': 'Featured',
         'badge.new': 'New',
         'proj.1.role': 'Full-Stack Lead · Technical Architect',
         'proj.1.title': 'KnowledgeLinks AI',
-        'proj.1.desc': 'Enterprise knowledge Q&A: internal documents, multi-LLM RAG, and cited answers. AWS-hosted with streaming — built for grounded responses teams can trust.',
+        'proj.1.desc': 'Multi-tenant enterprise RAG platform on Python/FastAPI, PostgreSQL, Docker and AWS: tenant-aware data model, document ingestion, retrieval with OpenAI, Claude and Gemini, and streaming APIs.',
         'proj.1.link': 'Product site',
         'proj.2.role': 'Full-Stack Lead · Technical Architect',
         'proj.2.title': 'Benrimono',
@@ -3001,11 +2923,12 @@ const translations = {
         'proj.11.role': 'Backend Engineer · Solo',
         'proj.11.title': 'AI Workflow Agent Ops',
         'proj.11.desc': 'Backend for AI-assisted workflow orchestration with approval gates, execution tracking, and retry handling — agents and human reviewers collaborate in a single pipeline via FastAPI. Dockerized with CI.',
+        'proj.12.title': 'Go URL Health Checker CLI',
+        'proj.12.desc': 'Concurrent URL health monitoring CLI with retries, timeouts, and JSON/CSV export for ops troubleshooting.',
     },
     ja: {
-        'loader.text': '読み込み中...',
-        'meta.title': 'Sakib — AIデベロッパー＆エンジニアリングリード',
-        'meta.description': 'Md Robiul Islam SAKIB — 東京を拠点とするVPエンジニアリング／AIデベロッパー。株式会社ブランドクラウド（NDI）でマルチLLM RAG、本番API、AWS、フルスタック開発を担当。',
+        'meta.title': 'Md Robiul Islam Sakib — Senior Backend Engineer / Tech Lead',
+        'meta.description': 'Md Robiul Islam Sakib — Senior Backend Engineer / Tech Lead',
         'a11y.backTop': 'ページ先頭へ戻る',
         'a11y.menu': 'ナビゲーションメニューを開く／閉じる',
         'a11y.linkedin': 'LinkedInプロフィール（新しいタブで開く）',
@@ -3018,9 +2941,10 @@ const translations = {
         'nav.resume': '履歴書',
         'nav.projects': 'プロジェクト',
         'nav.contact': 'お問い合わせ',
-        'hero.badge': 'AI・エンジニアリング職を探しています',
-        'hero.tagline': 'VPエンジニアリング · 東京 · LLM / RAG / フルスタック',
-        'hero.desc': '本番のAIを届けます — マルチLLM RAG、エージェント型ワークフロー、信頼できるAPI群。東京の<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-weight:600;text-decoration:none;">株式会社ブランドクラウド</a>・NDI部門でVPエンジニアリングとして、12名規模のアーキテクチャ・AWS・CI/CDをリードしています。',
+        'hero.badge': 'シニアバックエンド、AIエンジニア、テックリードの職を探しています',
+        'hero.role': 'シニアバックエンドエンジニア / テックリード · LLM & RAG',
+        'hero.tagline': 'NDI、BrandCloud Inc.（東京）のVP of Engineering（テクニカルリード）です。',
+        'hero.desc': '本番のAIを届けます — マルチLLM RAG、エージェント型ワークフロー、信頼できるAPI群。NDI、<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-weight:600;text-decoration:none;">BrandCloud Inc.</a>（東京）のVP of Engineering。19名のチームをリード（バックエンド5、フロントエンド6、QA 3、デザイン3、PM 2）。',
         'hero.cta1': '実績を見る',
         'hero.cta2': '連絡する',
         'hero.cta3': 'CVをダウンロード',
@@ -3028,24 +2952,26 @@ const translations = {
         'hero.float2': '東京・日本',
         'scroll.hint': 'スクロール',
         'about.label': '私について',
-        'about.title': 'VP水準のエンジニア — AIシステムを本番まで届ける。',
-        'about.p1': '私は<span class="about-highlight">Sakib</span>です。フルスタックエンジニアとして、4年以上にわたり本番環境のシステム開発に携わってきました。現在は東京の<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" class="about-highlight" style="text-decoration:none;">株式会社ブランドクラウド（NDI部門）</a>で、エンジニアリングリーダーとして開発を推進しています。',
+        'about.title': '本番のAIシステムを作るバックエンドエンジニアであり、テックリード。',
+        'about.p1': '私は<span class="about-highlight">Sakib</span>です。フルスタックエンジニアとして、5年にわたり本番環境のシステム開発に携わってきました。現在は東京の<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" class="about-highlight" style="text-decoration:none;">BrandCloud Inc.（NDI部門）</a>で、エンジニアリングリーダーとして開発を推進しています。',
         'about.p2': '私の強みは<span class="about-highlight">AI/LLM統合</span>とプロダクトエンジニアリングの両立です。RAGパイプラインの設計、APIファーストなサービス開発、<span class="about-highlight">AWS・Google Cloud・Cloudflare</span>を活用したDocker/CI/CD運用まで一貫して担当しています。',
-        'about.p3': 'コードレビューと設計判断でチームを支え、派手な複雑さよりも信頼性・スピード・責務の明確さを優先します。',
-        'about.hl1': 'NDI部門：12名の方向づけ、エンタープライズRAG（KnowledgeLinks AI）、AIファーストな開発体制。',
+        'about.p3': 'コードレビューと設計判断でチームを支えています。',
+        'about.hl1': '19名のチームをリード（バックエンド5、フロントエンド6、QA 3、デザイン3、PM 2）。',
         'about.hl2': 'Django、Next.js、Flutter、AWSサーバーレス、PostgreSQL、Redis、ベクトル検索/RAGまで実装で踏み込む。',
-        'about.hl3': '成果志向：安全なLLM運用、コスト意識のある推論、属人化しにくいパイプライン。',
-        'stat.years': '年の経験',
-        'stat.engineers': 'エンジニアをリード',
+        'about.hl3': '安全なLLM運用と、コストを意識した推論。',
+        'about.hl4': 'BrandCloud Inc.のバングラデシュ開発会社を提案し設立。リモートのエンジニア2名から始め、30名まで拡大したあとオフィスを開設。現在はエンジニアリング、QA、人事を含め40名。',
+        'stat.years': '構築年数',
+        'stat.team': 'リードしたチーム',
+        'stat.bd': '構築したバングラデシュチーム',
         'stat.repos': 'GitHubリポジトリ',
-        'stat.ai': 'AIプロジェクト出荷',
+        'stat.ai': '出荷したAIプロジェクト',
         'about.building.label': '現在開発中',
         'about.building.value': 'AI 動画パイプライン',
         'about.status': '求職中',
         'about.status.label': 'ステータス',
         'skills.label': '技術スキル',
-        'skills.title': 'フルスタック — そしてそれ以上。',
-        'skills.sub': 'LLMファインチューニングからFlutterアプリまで。必要なところには徹底的に深掘りします。',
+        'skills.title': '技術スキル',
+        'skills.sub': '本番のバックエンドとAIシステム。Python、TypeScript、Go、PostgreSQL、AWS、GCP。その上にLLM/RAG。',
         'skills.ai': 'AI / ML 統合',
         'skills.backend': 'バックエンド開発',
         'skills.frontend': 'フロントエンド開発',
@@ -3054,21 +2980,21 @@ const translations = {
         'skills.mobile': 'モバイル開発',
         'exp.label': 'キャリア',
         'exp.title': 'ソフトウェアエンジニアとしての<br>キャリアの成長。',
-        'exp.sub': '4年以上にわたり、バックエンド、AI統合、エンジニアリングリーダーシップを経験。',
+        'exp.sub': '5年にわたり、バックエンド、AI統合、エンジニアリングリーダーシップを経験。',
         'edu.label': '学歴',
         'edu.title': '正式な訓練と資格。',
         'edu.sub': 'CSの基礎と日本向けの専門研修 — 実務を補完します。',
-        'edu.1.degree': 'コンピュータサイエンス・工学 学士',
-        'edu.1.school': '大学（バングラデシュ）',
-        'edu.1.date': '2018 — 2022',
+        'edu.1.degree': 'B.Sc. Computer Science & Engineering',
+        'edu.1.school': 'United International University, Bangladesh',
+        'edu.1.date': '2018–2022',
         'edu.2.degree': 'エンジニアリング・専門プログラム',
         'edu.2.school': 'B-JET · 日本',
         'edu.2.date': '2022',
         'edu.lang.title': '言語',
         'edu.lang.en.lab': '英語',
-        'edu.lang.en': 'ビジネスレベル',
+        'edu.lang.en': 'プロフェッショナル',
         'edu.lang.ja.lab': '日本語',
-        'edu.lang.ja': '日常会話 — 日本での業務文脈',
+        'edu.lang.ja': '会話',
         'edu.lang.bn.lab': 'ベンガル語',
         'edu.lang.bn': 'ネイティブ',
         'proj.label': '主要プロジェクト',
@@ -3079,7 +3005,7 @@ const translations = {
         'filter.mobile': 'モバイル',
         'filter.backend': 'バックエンド',
         'filter.web': 'ウェブ',
-        'proj.private': 'プライベート / NDA',
+        'proj.private': '非公開',
         'contact.label': 'お問い合わせ',
         'contact.title': 'AIを活かしたプロダクトを<br>一緒に作りましょう。',
         'contact.sub': 'AI開発案件、バックエンド/リーダーシップ職、技術相談などお気軽にご連絡ください。',
@@ -3090,7 +3016,7 @@ const translations = {
         'contact.linkedin.label': 'LinkedIn',
         'contact.github.label': 'GitHub',
         'contact.location.label': '所在地',
-        'contact.location.value': '鶴巻・東京・日本',
+        'contact.location.value': '東京, 日本',
         'form.name': 'お名前',
         'form.email': 'メールアドレス',
         'form.subject': '件名',
@@ -3105,32 +3031,32 @@ const translations = {
         'form.successMsg': 'ありがとうございます。24時間以内にご返信します。',
         'form.failed': '送信に失敗しました',
         'form.errorMsg': '送信できませんでした。恐れ入りますが mrobiulislamsakib@gmail.com まで直接メールでご連絡ください。',
-        'footer.copy': '© 2026 Md Robiul Islam SAKIB. 無断複写・転載を禁じます。',
-        'exp.1.date': '2024年11月 — 現在 · 在職中',
-        'exp.1.title': 'VPエンジニアリング & フルスタックリード',
-        'exp.1.company': '<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">株式会社ブランドクラウド</a>（NDI部門）· 東京・日本',
-        'exp.1.desc': '<ul class="timeline-highlights"><li>NDI部門で技術方針を策定。<strong>12名</strong>のAI・プロダクト開発をリード。</li><li><strong>KnowledgeLinks AI</strong>をリリース — OpenAI / Claude / Geminiを用いたエンタープライズRAGと引用付き回答。</li><li><strong>AWSとCI/CD</strong>を管轄 — 繰り返し可能なリリース、セキュリティ基線、LLM本番運用の運用性。</li></ul>',
-        'exp.2.date': '2023年10月 — 2024年10月 · 1年',
+        'footer.copy': '© 2026 Md Robiul Islam Sakib. 無断複写・転載を禁じます。',
+        'exp.1.date': '02/2025 – Present',
+        'exp.1.title': 'テクニカルリード / シニアソフトウェアエンジニア（正式肩書: VP of Engineering）',
+        'exp.1.company': 'NDI（AI部門）, <a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a>, 東京',
+        'exp.1.desc': '<ul class="timeline-highlights"><li>19名のチームをリード（バックエンド5、フロントエンド6、QA 3、デザイン3、PM 2）。</li><li>BrandCloud Inc.のバングラデシュ開発会社を提案し設立。リモートのエンジニア2名から始め、30名まで拡大したあとオフィスを開設。現在はエンジニアリング、QA、人事を含め40名。</li><li><strong>KnowledgeLinks AI。</strong> Python/FastAPI、PostgreSQL、Docker、AWS上のマルチテナント企業向けRAG基盤。テナント対応データモデル、ドキュメント取り込み、OpenAI・Claude・Geminiによる検索、ストリーミングAPI。</li></ul>',
+        'exp.2.date': '10/2023 – 01/2025',
         'exp.2.title': 'シニアソフトウェアエンジニア',
-        'exp.2.company': '<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">株式会社ブランドクラウド</a> · 東京・日本',
+        'exp.2.company': '<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a>, 東京',
         'exp.2.desc': '<ul class="timeline-highlights"><li><strong>Benrimono</strong>をリード — Flutter、サーバーレスAWS（Lambda / API Gateway）、<strong>DynamoDB</strong>、リアルタイム追跡。</li><li>社内ツール・顧客機能の両方に<strong>LLM</strong>活用を早期導入。</li><li>メンタリングとレビューでAPI設計・本番準備の基準を引き上げ。</li></ul>',
-        'exp.3.date': '2022年9月 — 2023年9月 · 1年',
+        'exp.3.date': '09/2022 – 09/2023',
         'exp.3.title': 'ソフトウェアエンジニア',
-        'exp.3.company': '<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">株式会社ブランドクラウド</a> · 東京・日本',
+        'exp.3.company': '<a href="https://brandcloud.co.jp/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">BrandCloud Inc.</a>, 東京',
         'exp.3.desc': '<ul class="timeline-highlights"><li><strong>Django</strong> REST、<strong>React / Vue</strong> UI、<strong>PostgreSQL</strong> + Redisで中核開発。</li><li>プロダクト/デザインと協働し、テスト・デプロイ・オンコール耐性を強化。</li><li>以降のモバイル・サーバーレス・AI統合へつながる土台づくり。</li></ul>',
-        'exp.4.date': '2022年5月 — 2022年9月 · 5ヶ月',
-        'exp.4.title': 'トレーニーエンジニア',
-        'exp.4.company': 'B-JET · 日本',
+        'exp.4.date': '05/2022 – 09/2022',
+        'exp.4.title': 'ソフトウェアエンジニア研修生',
+        'exp.4.company': 'B-JET（JICAプログラム）, 宮崎, 日本',
         'exp.4.desc': '日本で技術・ビジネス両面の集中トレーニングを修了し、エンジニアリングの基礎体力と異文化コミュニケーション力を強化。チームでの協働と、プロセスを重視した開発スタイルの土台を築きました。',
-        'exp.5.date': '2021年11月 — 2022年4月 · 6ヶ月',
+        'exp.5.date': '11/2021 – 04/2022',
         'exp.5.title': 'ソフトウェアエンジニア インターン',
-        'exp.5.company': 'W3Engineers Ltd. · バングラデシュ',
+        'exp.5.company': 'W3Engineers Ltd., ダッカ',
         'exp.5.desc': '初の実務エンジニア経験として、Go（Beego）、Flask、Node.js、Express、Vue.js、REST APIに幅広く携わりました。実際の納期の中で本番機能を開発し、素早いキャッチアップ、クリーンな実装、チーム協働の基礎を身につけました。',
         'badge.featured': '注目',
         'badge.new': '新着',
         'proj.1.role': 'フルスタックリード · 技術アーキテクト',
         'proj.1.title': 'KnowledgeLinks AI',
-        'proj.1.desc': '企業向けナレッジQ&A：社内文書をマルチLLM RAGで検索し、引用付きの回答を生成。AWS上でストリーミング — 再現性と信頼性を重視した設計。',
+        'proj.1.desc': 'Python/FastAPI、PostgreSQL、Docker、AWS上のマルチテナント企業向けRAG基盤。テナント対応データモデル、ドキュメント取り込み、OpenAI・Claude・Geminiによる検索、ストリーミングAPI。',
         'proj.1.link': 'プロダクトサイト',
         'proj.2.role': 'フルスタックリード · 技術アーキテクト',
         'proj.2.title': 'Benrimono',
@@ -3162,21 +3088,10 @@ const translations = {
         'proj.11.role': 'バックエンドエンジニア · ソロ',
         'proj.11.title': 'AIワークフローエージェントOps',
         'proj.11.desc': '承認ゲート、実行追跡、リトライ処理を備えたAI支援ワークフローオーケストレーションのバックエンド — エージェントと人間のレビュアーがFastAPIの単一パイプラインで連携。DockerとCIで運用。',
+        'proj.12.title': 'Go URL Health Checker CLI',
+        'proj.12.desc': 'リトライ、タイムアウト、JSON/CSV出力付きの並行URLヘルスチェックCLI。運用の切り分け用。',
     }
 };
-
-const rolesEN = [
-    'AI Developer & Engineering Lead',
-    'LLM Integration Architect',
-    'Full-Stack Engineer',
-    'VP of Engineering @ BrandCloud'
-];
-const rolesJA = [
-    'AIデベロッパー & エンジニアリングリード',
-    'LLM統合アーキテクト',
-    'フルスタックエンジニア',
-    'BrandCloud VPエンジニアリング'
-];
 
 function setLanguage(lang) {
     const t = translations[lang];
@@ -3207,10 +3122,6 @@ function setLanguage(lang) {
     if (docTitle && t['meta.title'] !== undefined) docTitle.textContent = t['meta.title'];
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc && t['meta.description'] !== undefined) metaDesc.setAttribute('content', t['meta.description']);
-
-    // Update typewriter roles array
-    const newRoles = lang === 'ja' ? rolesJA : rolesEN;
-    roles.splice(0, roles.length, ...newRoles);
 
     // Update active button state
     document.querySelectorAll('.lang-btn').forEach(btn => {

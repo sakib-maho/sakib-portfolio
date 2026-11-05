@@ -1,9 +1,10 @@
 MD ROBIUL ISLAM SAKIB
-Cloud Engineer | AWS / GCP / Platform
+Senior Software Engineer | Cloud & Platform
 
 Tokyo, Japan
 Email: mrobiulislamsakib@gmail.com
 Phone: +81-90-9534-5799
+Portfolio: sakib-maho.github.io/sakib-portfolio
 LinkedIn: linkedin.com/in/msakib162004
 GitHub: github.com/sakib-maho
 
@@ -11,7 +12,7 @@ GitHub: github.com/sakib-maho
 SUMMARY
 ================================================================================
 
-Cloud-focused engineer with 4.5+ years shipping and operating production systems on AWS and GCP. Hands-on with Cloud Run, Secret Manager, Cloud Build, Lambda, DynamoDB, Docker, CI/CD, IAM service accounts, Nginx, and production troubleshooting. Uses Jira and Confluence daily for tickets, change tracking, and runbook-style documentation. Strong at automation and efficiency with Claude and other LLM tools. Based in Tokyo; seeking Cloud Engineer / platform enablement roles.
+Senior Software Engineer with 5 years shipping and operating production systems on AWS and GCP. Hands-on with Cloud Run, Secret Manager, Cloud Build, Lambda, DynamoDB, Docker, CI/CD, IAM service accounts, Nginx, and production troubleshooting. Uses Jira and Confluence daily for tickets, change tracking, and runbook-style documentation. Strong at automation and efficiency with Claude and other LLM tools. Based in Tokyo; seeking Senior Software Engineer roles with strong cloud/platform ownership.
 
 ================================================================================
 SKILLS
@@ -27,13 +28,13 @@ AI Efficiency: Claude, Gemini, OpenAI, Automation
 EXPERIENCE
 ================================================================================
 
-Senior Software Engineer / Technical Lead (Official title: VP of Engineering)
+Senior Software Engineer / Technical Lead
 BrandCloud Inc. (NDI Division) | Tokyo, Japan
 November 2024 - Present
 
 - Own AWS cloud infrastructure, Docker deployments, Nginx, GitHub Actions CI/CD, and production monitoring for KnowledgeLinks AI and related services
 - Operate day-to-day delivery through Jira (stories, bugs, change tracking) and document procedures and specs in Confluence
-- Drove cost-awareness work on cloud resources (e.g. EBS cost reduction) and production troubleshooting with log analysis and root-cause fixes
+- Drove cost-awareness initiatives across cloud resources (e.g. EBS rightsizing and cost reduction) and led production troubleshooting through log analysis and root-cause fixes to improve system reliability
 - Use Claude and other LLM tools to accelerate runbooks, scripting, review workflows, and operational documentation
 
 Senior Software Engineer
@@ -85,8 +86,8 @@ Containerized RAG API with Docker packaging and GitHub Actions CI for repeatable
 GitHub: github.com/sakib-maho/ai-support-copilot-rag
 
 AI Workflow Agent Ops
-LangGraph, FastAPI, Docker, CI
-Ops-style agent workflows with approval gates, retries, execution tracking, Docker, and CI — change-control friendly automation.
+FastAPI, Docker, CI
+Ops-style workflow backend with approval gates, retries, execution tracking, Docker, and CI — change-control friendly automation.
 GitHub: github.com/sakib-maho/ai-workflow-agent-ops
 
 URL Health Checker CLI
