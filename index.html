@@ -38,7 +38,7 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg?v=6">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon.svg?v=6">
     <link rel="canonical" href="https://sakib-maho.github.io/sakib-portfolio/">
-    <meta name="theme-color" content="#050508">
+    <meta name="theme-color" content="#0B0F17">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,10 +58,11 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-        --bg:       #050508;
-        --surface:  #0c0c1a;
-        --card:     #10102a;
-        --border:   rgba(255,255,255,0.14);
+        --bg:       #0B0F17;
+        --bg-alt:   #0F1424;
+        --surface:  var(--bg-alt);
+        --card:     #151B2B;
+        --border:   #1F2937;
         --border-h: rgba(0,212,255,0.25);
 
         --cyan:     #00d4ff;
@@ -157,7 +158,7 @@
         transition: var(--transition);
     }
     header.scrolled {
-        background: rgba(5,5,8,0.85);
+        background: var(--bg-alt);
         backdrop-filter: blur(24px);
         border-bottom: 1px solid var(--border);
     }
@@ -276,7 +277,7 @@
         display: none;
         position: fixed;
         top: 72px; left: 0; right: 0;
-        background: rgba(5,5,8,0.97);
+        background: var(--bg-alt);
         backdrop-filter: blur(24px);
         border-bottom: 1px solid var(--border);
         padding: 24px;
@@ -670,7 +671,7 @@
     .about-photo-overlay {
         position: absolute;
         inset: 0;
-        background: linear-gradient(to top, rgba(5,5,8,0.65) 0%, transparent 30%);
+        background: linear-gradient(to top, rgba(11,15,23,0.65) 0%, transparent 30%);
     }
 
     .about-card-float {
